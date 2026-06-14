@@ -55,9 +55,11 @@ function renderHome(query = '') {
 function gameCard(g) {
   return `
     <a class="game-card" href="#game/${g.id}" aria-label="${escHtml(g.title)}">
-      <div class="card-num">Game #${g.id}</div>
-      <div class="card-title">${escHtml(g.title)}</div>
-      ${g.players ? `<div class="card-players">Players: ${escHtml(g.players)}</div>` : ''}
+      <div class="card-inner">
+        <div class="card-num">Game #${g.id}</div>
+        <div class="card-title">${escHtml(g.title)}</div>
+        ${g.players ? `<div class="card-players">Players: ${escHtml(g.players)}</div>` : ''}
+      </div>
     </a>`;
 }
 
