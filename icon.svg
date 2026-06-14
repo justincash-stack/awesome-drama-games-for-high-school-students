@@ -1,0 +1,45 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Red background -->
+  <rect width="512" height="512" fill="#E63946"/>
+  <!-- Ben-Day dot overlay -->
+  <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+    <circle cx="10" cy="10" r="3.5" fill="rgba(0,0,0,0.12)"/>
+  </pattern>
+  <rect width="512" height="512" fill="url(#dots)"/>
+  <!-- Face -->
+  <ellipse cx="256" cy="272" rx="190" ry="208" fill="#FFD60A" stroke="#0D0D0D" stroke-width="14"/>
+  <!-- Left eyebrow -->
+  <path d="M 82 148 Q 138 96 196 124" fill="none" stroke="#0D0D0D" stroke-width="18" stroke-linecap="round"/>
+  <!-- Right eyebrow -->
+  <path d="M 316 124 Q 374 96 430 148" fill="none" stroke="#0D0D0D" stroke-width="18" stroke-linecap="round"/>
+  <!-- Left eye white -->
+  <ellipse cx="156" cy="210" rx="62" ry="70" fill="white" stroke="#0D0D0D" stroke-width="12"/>
+  <!-- Left pupil -->
+  <circle cx="168" cy="224" r="40" fill="#0D0D0D"/>
+  <!-- Left eye shine -->
+  <circle cx="184" cy="206" r="14" fill="white"/>
+  <!-- Right eye white -->
+  <ellipse cx="356" cy="210" rx="62" ry="70" fill="white" stroke="#0D0D0D" stroke-width="12"/>
+  <!-- Right pupil -->
+  <circle cx="368" cy="224" r="40" fill="#0D0D0D"/>
+  <!-- Right eye shine -->
+  <circle cx="384" cy="206" r="14" fill="white"/>
+  <!-- Mouth - big open O shout -->
+  <ellipse cx="256" cy="388" rx="118" ry="84" fill="#E63946" stroke="#0D0D0D" stroke-width="12"/>
+  <!-- Top teeth -->
+  <rect x="148" y="332" width="216" height="48" rx="6" fill="white"/>
+  <!-- Teeth dividers -->
+  <line x1="199" y1="332" x2="199" y2="380" stroke="#0D0D0D" stroke-width="5"/>
+  <line x1="255" y1="332" x2="255" y2="380" stroke="#0D0D0D" stroke-width="5"/>
+  <line x1="311" y1="332" x2="311" y2="380" stroke="#0D0D0D" stroke-width="5"/>
+  <!-- Tongue -->
+  <ellipse cx="256" cy="436" rx="74" ry="36" fill="#C1121F"/>
+  <!-- Cheek blush dots (pop art) -->
+  <circle cx="86" cy="316" r="18" fill="rgba(230,57,70,0.35)"/>
+  <circle cx="64" cy="296" r="10" fill="rgba(230,57,70,0.25)"/>
+  <circle cx="426" cy="316" r="18" fill="rgba(230,57,70,0.35)"/>
+  <circle cx="448" cy="296" r="10" fill="rgba(230,57,70,0.25)"/>
+  <!-- Exclamation marks in corners for pop art feel -->
+  <text x="50" y="80" font-family="sans-serif" font-size="52" font-weight="900" fill="#FFD60A" stroke="#0D0D0D" stroke-width="3" paint-order="stroke">!</text>
+  <text x="440" y="80" font-family="sans-serif" font-size="52" font-weight="900" fill="#FFD60A" stroke="#0D0D0D" stroke-width="3" paint-order="stroke">!</text>
+</svg>

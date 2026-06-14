@@ -1,0 +1,26 @@
+{
+  "name": "100 Awesome Drama Games for High School Students",
+  "short_name": "Drama Games",
+  "description": "100 drama games for high school students by Justin Cash",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FAFAFA",
+  "theme_color": "#E63946",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["education", "entertainment"],
+  "lang": "en"
+}

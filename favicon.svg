@@ -1,0 +1,20 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" fill="#E63946"/>
+  <ellipse cx="16" cy="18" rx="13" ry="13.5" fill="#FFD60A" stroke="#0D0D0D" stroke-width="1.5"/>
+  <!-- Eyebrows -->
+  <path d="M 5 9 Q 9.5 6 13 8" fill="none" stroke="#0D0D0D" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M 19 8 Q 22.5 6 27 9" fill="none" stroke="#0D0D0D" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Eyes -->
+  <ellipse cx="10" cy="14" rx="4" ry="4.5" fill="white" stroke="#0D0D0D" stroke-width="1.2"/>
+  <circle cx="10.8" cy="15" r="2.6" fill="#0D0D0D"/>
+  <circle cx="11.8" cy="13.5" r="1" fill="white"/>
+  <ellipse cx="22" cy="14" rx="4" ry="4.5" fill="white" stroke="#0D0D0D" stroke-width="1.2"/>
+  <circle cx="22.8" cy="15" r="2.6" fill="#0D0D0D"/>
+  <circle cx="23.8" cy="13.5" r="1" fill="white"/>
+  <!-- Mouth -->
+  <ellipse cx="16" cy="25.5" rx="7.5" ry="5.5" fill="#E63946" stroke="#0D0D0D" stroke-width="1.2"/>
+  <rect x="9.5" y="22" width="13" height="3.5" rx="1" fill="white"/>
+  <line x1="13" y1="22" x2="13" y2="25.5" stroke="#0D0D0D" stroke-width="0.8"/>
+  <line x1="16" y1="22" x2="16" y2="25.5" stroke="#0D0D0D" stroke-width="0.8"/>
+  <line x1="19" y1="22" x2="19" y2="25.5" stroke="#0D0D0D" stroke-width="0.8"/>
+</svg>

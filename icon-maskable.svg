@@ -1,0 +1,29 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Maskable icon needs safe zone: content within central 80% circle -->
+  <rect width="512" height="512" fill="#E63946"/>
+  <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+    <circle cx="10" cy="10" r="3.5" fill="rgba(0,0,0,0.12)"/>
+  </pattern>
+  <rect width="512" height="512" fill="url(#dots)"/>
+  <!-- Face - kept within safe zone -->
+  <ellipse cx="256" cy="268" rx="172" ry="188" fill="#FFD60A" stroke="#0D0D0D" stroke-width="12"/>
+  <!-- Left eyebrow -->
+  <path d="M 100 158 Q 152 112 204 136" fill="none" stroke="#0D0D0D" stroke-width="15" stroke-linecap="round"/>
+  <!-- Right eyebrow -->
+  <path d="M 308 136 Q 360 112 412 158" fill="none" stroke="#0D0D0D" stroke-width="15" stroke-linecap="round"/>
+  <!-- Left eye -->
+  <ellipse cx="162" cy="210" rx="54" ry="60" fill="white" stroke="#0D0D0D" stroke-width="10"/>
+  <circle cx="172" cy="222" r="34" fill="#0D0D0D"/>
+  <circle cx="186" cy="208" r="12" fill="white"/>
+  <!-- Right eye -->
+  <ellipse cx="350" cy="210" rx="54" ry="60" fill="white" stroke="#0D0D0D" stroke-width="10"/>
+  <circle cx="360" cy="222" r="34" fill="#0D0D0D"/>
+  <circle cx="374" cy="208" r="12" fill="white"/>
+  <!-- Mouth -->
+  <ellipse cx="256" cy="376" rx="106" ry="76" fill="#E63946" stroke="#0D0D0D" stroke-width="10"/>
+  <rect x="158" y="324" width="196" height="44" rx="5" fill="white"/>
+  <line x1="207" y1="324" x2="207" y2="368" stroke="#0D0D0D" stroke-width="4.5"/>
+  <line x1="256" y1="324" x2="256" y2="368" stroke="#0D0D0D" stroke-width="4.5"/>
+  <line x1="305" y1="324" x2="305" y2="368" stroke="#0D0D0D" stroke-width="4.5"/>
+  <ellipse cx="256" cy="422" rx="66" ry="30" fill="#C1121F"/>
+</svg>
