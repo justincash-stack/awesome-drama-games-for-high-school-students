@@ -126,27 +126,29 @@ const GAMES = [
   },
   {
     "id": 6,
-    "title": "Backwards Interview",
-    "players": "4 (1 interviewer + 1 expert + 2 support players)",
-    "setup": "Ask the audience for an interview topic and an unusual area of expertise. Two players take the roles of interviewer and expert. The other two take supporting roles — camera operator, co-host, floor manager, or studio audience member.",
-    "howToPlay": "The interview runs completely in reverse. It begins at the very end — the closing farewell — and works backwards to the very first greeting. Answers come before the questions that prompted them. Handshakes get untaken. The challenge is to make the reverse order feel like it actually makes sense, moment by moment.",
-    "purpose": "This game tests listening, logic, and commitment. Players must think about where the scene has come from rather than where it is going. When done well, the audience experiences the satisfying click of a story told completely backwards. Keep the action focused — the fewer moving parts, the cleaner the reverse logic.",
+    "title": "Four Square Emotions",
+    "players": "4",
+    "setup": "Divide the playing area into four clearly marked quadrants — use tape on the floor, four chairs at the corners, or simply agree on the boundaries. Label each quadrant with a different strong emotion: Happy, Angry, Sad, and Afraid (or substitute audience suggestions). Each player begins in one quadrant, immediately inhabiting that emotion.",
+    "howToPlay": "Ask the audience for a simple scenario and a starting relationship between the four characters. The scene begins with all four players in their starting quadrants, each performing in their assigned emotion. As the scene develops, players move freely between quadrants — but the instant a player steps into a new quadrant, they must shift to that quadrant's emotion, even mid-sentence and regardless of what they were just saying or doing. Players can stay put to hold their current emotion, or deliberately cross into a different quadrant to drive the scene from a new emotional place. The scene ends when a natural story moment is reached.",
+    "purpose": "Players must simultaneously track the story, maintain their character, and shift emotion the instant they cross into a new zone. The comedy and drama come from the emotional whiplash — an argument that becomes overwhelmingly sad the moment a character steps sideways, or joy erupting in the middle of a tense standoff. The best moments happen when players start using their spatial awareness deliberately, choosing which quadrant to enter to reshape the scene.",
     "prompts": [
-      "(TV or radio format + expert's area of knowledge)",
-      "A breakfast TV show — the world's leading expert on competitive cheese rolling",
-      "A late-night talk show — a scientist who has just discovered that pigeons are evolving faster than humans",
-      "A sports news program — the coach of a team that won using a completely unconventional strategy",
-      "A cooking show — a chef who invented a twelve-course meal from ingredients found at a service station",
-      "A documentary — a historian who has just proved that a famous event happened in the wrong order",
-      "A news program — a mayor announcing a new law that nobody asked for and everybody hates",
-      "A wildlife documentary — a naturalist who spent three years living with a species that turned out not to exist",
-      "A business program — an entrepreneur whose ridiculous product has become the best-selling item of the year",
-      "A children's TV show — a scientist explaining a discovery so enormous even the host cannot understand it",
-      "A radio interview — an author whose book about a very boring topic has inexplicably become an international bestseller"
+      "(Scenario + starting relationship between the four characters)",
+      "A surprise family reunion that nobody actually wanted",
+      "Four co-workers trapped in an office lift on the last day before a long holiday",
+      "A wedding rehearsal dinner where someone has just made an unexpected announcement",
+      "Four friends attempting to assemble flat-pack furniture together with one missing instruction sheet",
+      "A school staff room on the morning of a very important inspection",
+      "Four travellers stranded at an airport with only one seat left on the last flight home",
+      "A cooking competition where two of the four contestants already know who is going to win",
+      "A hospital waiting room where everyone is waiting for the same piece of news",
+      "Four members of a book club who have all clearly not read the book",
+      "A housemates' meeting called to discuss something nobody wants to admit they did"
     ],
     "variations": [
-      "After running the interview backwards, replay it forwards at double speed using the same beats.",
-      "Support players can interrupt with technical problems, forcing the pair to justify and continue in reverse."
+      "Rotate the emotion labels to different quadrants mid-scene — all four players instantly recalibrate.",
+      "Allow the teacher or a designated audience member to call out a new emotion for a specific quadrant on the fly, replacing whatever was there.",
+      "Add a central fifth zone — any player standing in the middle of the space can choose any emotion they like.",
+      "Run the same scenario twice with the emotions assigned to different quadrants — compare how the story and relationships change."
     ]
   },
   {
@@ -279,7 +281,7 @@ const GAMES = [
     "title": "Changing Channels",
     "players": "4",
     "setup": "Ask the audience for four different TV genres — for example, cooking show, nature documentary, soap opera, game show. Assign one genre to each player. All four agree on a simple shared scenario that will run through all the channels.",
-    "howToPlay": "One player acts as the remote control caller — or this role is given to the audience. The scene begins with one player presenting the shared scenario in their assigned TV genre. When the caller shouts \"Change channel!\", the scene instantly switches to the next player, who picks up exactly where the story left off — but filtered entirely through their different genre. The same story beat, a completely different television style. Channels can switch at any moment, even mid-sentence.",
+    "howToPlay": "The teacher or a designated audience member acts as the remote control caller, leaving all four players free to inhabit their TV genres. The scene begins with one player presenting the shared scenario in their assigned TV genre. When the caller shouts \"Change channel!\", the scene instantly switches to the next player, who picks up exactly where the story left off — but filtered entirely through their different genre. The same story beat, a completely different television style. Channels can switch at any moment, even mid-sentence.",
     "purpose": "Players must hold two things in mind at once — the shared story running through all channels, and the specific conventions of their own genre. The story should actually continue across channels, not reset each time. If a character confessed something on the soap opera channel, that confession still exists when the cooking show host picks it up.",
     "prompts": [
       "(Shared scenario + four TV genres)",
@@ -1896,7 +1898,7 @@ const GAMES = [
     "id": 78,
     "title": "Soap Series",
     "players": "4",
-    "setup": "Ask the audience for the name of the soap opera, a location it is set in (a family home, a hospital, a luxury hotel, a small town), and the names of two or three characters who have a complicated history. Establish that this is not the first episode — the audience is tuning in mid-series, and everyone on screen has a past.",
+    "setup": "Ask the audience for the name of the soap opera, a location it is set in (a family home, a hospital, a luxury hotel, a small town), and the names of four characters who have a complicated history. Establish that this is not the first episode — the audience is tuning in mid-series, and everyone on screen has a past.",
     "howToPlay": "The players perform a scene in full soap opera style: heightened emotion, dramatic pauses, meaningful glances, shocking revelations, and secrets barely concealed beneath the surface of ordinary conversation. Every scene must end on a cliffhanger — a door slamming, a letter discovered, a confession begun and interrupted, a face turning to the camera in horror. After the cliffhanger, the scene resets as the next episode begins — sometimes picking up moments later, sometimes skipping forward. The drama must escalate with each episode.",
     "purpose": "Soap opera demands extreme commitment to extreme emotion — players must treat every revelation as though it is the most important thing that has ever happened. The comedy comes from the full-throated sincerity of the performance, not from winking at the audience about how ridiculous it all is. Secrets, betrayals, long-lost relatives, misidentified paternity, and improbably timed returns are all required.",
     "prompts": [
