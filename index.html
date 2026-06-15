@@ -558,6 +558,375 @@
       box-shadow: 4px 4px 0 var(--black);
     }
 
+    /* ── FILTER BAR ── */
+    #filter-bar {
+      background: #111;
+      border-bottom: 4px solid var(--orange);
+      padding: 10px 28px;
+    }
+    .filter-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      align-items: center;
+    }
+    .filter-group { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
+    .filter-lbl {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.68rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.38);
+      white-space: nowrap;
+      margin-right: 2px;
+    }
+    .flt {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border: 2px solid rgba(255,255,255,0.2);
+      background: transparent;
+      color: rgba(255,255,255,0.6);
+      cursor: pointer;
+      transition: all 0.1s;
+      white-space: nowrap;
+      border-radius: 2px;
+    }
+    .flt:hover { border-color: var(--yellow); color: var(--yellow); }
+    .flt.active { background: var(--yellow); border-color: var(--yellow); color: var(--black); }
+    .flt[data-val="high"].active   { background: var(--red);   border-color: var(--red);   color: #fff; }
+    .flt[data-val="medium"].active { background: var(--yellow); border-color: var(--yellow); color: var(--black); }
+    .flt[data-val="low"].active    { background: var(--cyan);  border-color: var(--cyan);  color: var(--black); }
+    .flt[data-val="beginner"].active     { background: #22c55e; border-color: #22c55e; color: #fff; }
+    .flt[data-val="intermediate"].active { background: var(--yellow); border-color: var(--yellow); color: var(--black); }
+    .flt[data-val="advanced"].active     { background: var(--red); border-color: var(--red); color: #fff; }
+    .filter-sep {
+      width: 1px; height: 20px; background: rgba(255,255,255,0.12);
+      align-self: center; flex-shrink: 0;
+    }
+    .filter-clear-all {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: transparent;
+      border: none;
+      color: var(--orange);
+      cursor: pointer;
+      padding: 4px 6px;
+      display: none;
+      text-decoration: underline;
+    }
+    .teacher-info-btn {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: transparent;
+      border: 2px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.4);
+      cursor: pointer;
+      padding: 4px 10px;
+      margin-left: auto;
+      transition: all 0.1s;
+      border-radius: 2px;
+    }
+    .teacher-info-btn:hover { border-color: var(--yellow); color: var(--yellow); }
+
+    /* ── CARD METADATA ── */
+    .card-meta { display: flex; gap: 5px; align-items: center; margin-bottom: 6px; }
+    .energy-pip { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+    .energy-pip.high   { background: var(--red); }
+    .energy-pip.medium { background: var(--yellow); border: 1px solid #bbb; }
+    .energy-pip.low    { background: var(--cyan); }
+    .diff-badge {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 1px 5px;
+      border-radius: 2px;
+    }
+    .diff-badge.beginner     { background: #dcfce7; color: #166534; }
+    .diff-badge.intermediate { background: #fef9c3; color: #854d0e; }
+    .diff-badge.advanced     { background: #fee2e2; color: #991b1b; }
+
+    /* ── SKILL TAGS (detail view) ── */
+    .detail-meta { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; align-items: center; }
+    .detail-energy-badge {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 2px;
+    }
+    .detail-energy-badge.high   { background: var(--red);    color: #fff; }
+    .detail-energy-badge.medium { background: var(--yellow); color: var(--black); }
+    .detail-energy-badge.low    { background: var(--cyan);   color: var(--black); }
+    .detail-diff-badge {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 2px;
+    }
+    .detail-diff-badge.beginner     { background: rgba(34,197,94,0.25);  color: #86efac; }
+    .detail-diff-badge.intermediate { background: rgba(250,204,21,0.2);  color: var(--yellow); }
+    .detail-diff-badge.advanced     { background: rgba(239,68,68,0.2);   color: #fca5a5; }
+    .skill-tag {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border: 1.5px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.07);
+      border-radius: 2px;
+    }
+
+    /* ── PROJECTOR LAUNCH BUTTON (on detail page) ── */
+    .proj-launch-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--black);
+      border: 3px solid rgba(255,255,255,0.35);
+      color: rgba(255,255,255,0.8);
+      padding: 8px 18px;
+      cursor: pointer;
+      margin-top: 14px;
+      margin-left: 8px;
+      transition: all 0.12s;
+    }
+    .proj-launch-btn:hover { border-color: var(--yellow); color: var(--yellow); background: rgba(255,214,10,0.08); }
+
+    /* ── PROJECTOR OVERLAY ── */
+    #proj-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #0a0a0a;
+      color: #fff;
+      flex-direction: column;
+    }
+    #proj-overlay.active { display: flex; }
+    .proj-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 28px;
+      border-bottom: 2px solid #1e1e1e;
+      flex-shrink: 0;
+    }
+    .proj-gamenum {
+      font-family: 'Anton', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      color: rgba(255,255,255,0.3);
+      text-transform: uppercase;
+    }
+    .proj-close-btn {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: transparent;
+      border: 2px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.5);
+      padding: 5px 14px;
+      cursor: pointer;
+      transition: all 0.1s;
+    }
+    .proj-close-btn:hover { border-color: #ef4444; color: #ef4444; }
+    .proj-gametitle {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(2.4rem, 5.5vw, 4.8rem);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      padding: 14px 28px 8px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .proj-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      flex: 1;
+      overflow: hidden;
+      padding: 0 20px;
+      min-height: 0;
+    }
+    .proj-col {
+      padding: 14px;
+      overflow-y: auto;
+    }
+    .proj-col + .proj-col { border-left: 2px solid #1e1e1e; }
+    .proj-sec-label {
+      font-family: 'Anton', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      color: rgba(255,255,255,0.28);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      background: #1a1a1a;
+      display: inline-block;
+      padding: 3px 8px;
+    }
+    .proj-sec-text {
+      font-size: clamp(0.95rem, 1.9vw, 1.28rem);
+      line-height: 1.7;
+      color: rgba(255,255,255,0.86);
+    }
+    /* ── TIMER (in projector) ── */
+    .proj-timer-bar {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 28px;
+      border-top: 2px solid #1a1a1a;
+      background: #0f0f0f;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+    }
+    .t-presets { display: flex; gap: 5px; }
+    .t-pre {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.73rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: transparent;
+      border: 2px solid #2a2a2a;
+      color: rgba(255,255,255,0.35);
+      padding: 5px 10px;
+      cursor: pointer;
+      transition: all 0.1s;
+    }
+    .t-pre:hover { border-color: var(--yellow); color: var(--yellow); }
+    .t-pre.active { border-color: var(--yellow); color: var(--yellow); }
+    .t-display {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      letter-spacing: 0.04em;
+      color: #fff;
+      min-width: 160px;
+      text-align: center;
+      font-variant-numeric: tabular-nums;
+      transition: color 0.3s;
+    }
+    .t-display.warn   { color: #f97316; }
+    .t-display.danger { color: var(--red); }
+    .t-display.done   { color: var(--red); animation: tFlash 0.55s infinite alternate; }
+    @keyframes tFlash { from { opacity:1; } to { opacity:0.3; } }
+    .t-btns { display: flex; gap: 8px; }
+    .t-btn {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.83rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: #1c1c1c;
+      border: 2px solid #333;
+      color: rgba(255,255,255,0.7);
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: all 0.1s;
+    }
+    .t-btn:hover { background: #2a2a2a; border-color: var(--yellow); color: var(--yellow); }
+    .t-btn.t-primary { background: var(--yellow); border-color: var(--yellow); color: var(--black); }
+    .t-btn.t-primary:hover { background: #ffe040; }
+
+    /* ── TEACHER MODAL ── */
+    #teacher-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9998;
+      background: rgba(0,0,0,0.78);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    #teacher-modal.active { display: flex; }
+    .teacher-box {
+      background: var(--white);
+      max-width: 680px;
+      width: 100%;
+      max-height: 88vh;
+      overflow-y: auto;
+      border: 5px solid var(--black);
+      box-shadow: 10px 10px 0 var(--yellow);
+    }
+    .teacher-head {
+      background: var(--black);
+      color: var(--yellow);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+    }
+    .teacher-head-title {
+      font-family: 'Anton', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .teacher-close-btn {
+      background: transparent;
+      border: 2px solid rgba(255,255,255,0.35);
+      color: rgba(255,255,255,0.7);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 4px 12px;
+      cursor: pointer;
+      transition: all 0.1s;
+    }
+    .teacher-close-btn:hover { border-color: var(--red); color: var(--red); }
+    .teacher-body {
+      padding: 26px 28px;
+      font-size: 0.97rem;
+      line-height: 1.72;
+      color: var(--black);
+    }
+    .teacher-body h3 {
+      font-family: 'Anton', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin: 22px 0 8px;
+      padding-left: 10px;
+      border-left: 4px solid var(--yellow);
+    }
+    .teacher-body h3:first-child { margin-top: 0; }
+    .teacher-body p  { margin-bottom: 12px; }
+    .teacher-body ul { padding-left: 22px; margin-bottom: 12px; }
+    .teacher-body li { margin-bottom: 7px; }
+
     /* ── TRANSITIONS ── */
     .fade-in { animation: fadeIn 0.18s ease; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
@@ -623,6 +992,38 @@
     </div>
   </div>
 
+  <div id="filter-bar">
+    <div class="filter-inner">
+      <div class="filter-group">
+        <span class="filter-lbl">Energy</span>
+        <button class="flt" data-filter="energy" data-val="high">High</button>
+        <button class="flt" data-filter="energy" data-val="medium">Medium</button>
+        <button class="flt" data-filter="energy" data-val="low">Low</button>
+      </div>
+      <div class="filter-sep"></div>
+      <div class="filter-group">
+        <span class="filter-lbl">Difficulty</span>
+        <button class="flt" data-filter="difficulty" data-val="beginner">Beginner</button>
+        <button class="flt" data-filter="difficulty" data-val="intermediate">Intermediate</button>
+        <button class="flt" data-filter="difficulty" data-val="advanced">Advanced</button>
+      </div>
+      <div class="filter-sep"></div>
+      <div class="filter-group">
+        <span class="filter-lbl">Skills</span>
+        <button class="flt" data-filter="skill" data-val="character">Character</button>
+        <button class="flt" data-filter="skill" data-val="ensemble">Ensemble</button>
+        <button class="flt" data-filter="skill" data-val="physicality">Physicality</button>
+        <button class="flt" data-filter="skill" data-val="storytelling">Storytelling</button>
+        <button class="flt" data-filter="skill" data-val="spontaneity">Spontaneity</button>
+        <button class="flt" data-filter="skill" data-val="voice">Voice</button>
+        <button class="flt" data-filter="skill" data-val="focus">Focus</button>
+        <button class="flt" data-filter="skill" data-val="listening">Listening</button>
+      </div>
+      <button class="filter-clear-all" id="filter-clear-all">Clear filters</button>
+      <button class="teacher-info-btn" id="teacher-info-btn">For Teachers</button>
+    </div>
+  </div>
+
   <main>
     <div id="home-view">
       <div id="games-container"></div>
@@ -652,6 +1053,68 @@
     <div class="install-actions">
       <button class="install-btn install-dismiss" id="install-dismiss">Not now</button>
       <button class="install-btn" id="install-btn">Install</button>
+    </div>
+  </div>
+
+  <!-- PROJECTOR OVERLAY -->
+  <div id="proj-overlay" role="dialog" aria-modal="true" aria-label="Projector Mode">
+    <div class="proj-topbar">
+      <span class="proj-gamenum" id="proj-gamenum"></span>
+      <button class="proj-close-btn" id="proj-close-btn">&#x2715; Exit Projector</button>
+    </div>
+    <div class="proj-gametitle" id="proj-gametitle"></div>
+    <div class="proj-body">
+      <div class="proj-col">
+        <div class="proj-sec-label">Set-up</div>
+        <div class="proj-sec-text" id="proj-setup"></div>
+      </div>
+      <div class="proj-col">
+        <div class="proj-sec-label">How to Play</div>
+        <div class="proj-sec-text" id="proj-howto"></div>
+      </div>
+    </div>
+    <div class="proj-timer-bar">
+      <div class="t-presets">
+        <button class="t-pre" data-mins="2">2 min</button>
+        <button class="t-pre" data-mins="5">5 min</button>
+        <button class="t-pre" data-mins="10">10 min</button>
+        <button class="t-pre" data-mins="15">15 min</button>
+        <button class="t-pre" data-mins="20">20 min</button>
+      </div>
+      <div class="t-display" id="t-display">–:––</div>
+      <div class="t-btns">
+        <button class="t-btn t-primary" id="t-start">Start</button>
+        <button class="t-btn" id="t-reset">Reset</button>
+        <button class="t-btn" id="t-extend">+1 min</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEACHER MODAL -->
+  <div id="teacher-modal" role="dialog" aria-modal="true" aria-label="For Teachers">
+    <div class="teacher-box">
+      <div class="teacher-head">
+        <span class="teacher-head-title">For Teachers</span>
+        <button class="teacher-close-btn" id="teacher-close-btn">Close &#x2715;</button>
+      </div>
+      <div class="teacher-body">
+        <h3>The 4-Player Format</h3>
+        <p>Every game in this collection is designed for four active participants at a time. This reflects how improv-style drama games work best: small enough for clarity, large enough for ensemble dynamics.</p>
+        <h3>Running Games with Your Class</h3>
+        <ul>
+          <li><strong>Volunteer groups:</strong> Ask for four student volunteers to play a single round while the rest of the class watches. Rotate volunteers between rounds.</li>
+          <li><strong>Teams of four:</strong> Divide the class into teams of four and run rounds simultaneously or back-to-back. All students stay active.</li>
+          <li><strong>Odd numbers:</strong> If you have 3 students, one player can take two roles or you can step in as the fourth. If you have 5, a fifth player can be a silent observer who swaps in next round.</li>
+        </ul>
+        <h3>Projector Mode</h3>
+        <p>Open any game and tap <strong>Projector Mode</strong> to display the setup and instructions on a class screen. Students can see the rules while you facilitate. The built-in timer helps keep rounds on track.</p>
+        <h3>Using the Filters</h3>
+        <ul>
+          <li><strong>Energy:</strong> High-energy games need space and movement. Low-energy games suit quieter, focused moments.</li>
+          <li><strong>Difficulty:</strong> Beginner games need no prior drama experience. Advanced games work best with students who have strong ensemble skills.</li>
+          <li><strong>Skills:</strong> Filter by the outcome you want to develop — voice, physicality, storytelling, and more.</li>
+        </ul>
+      </div>
     </div>
   </div>
 

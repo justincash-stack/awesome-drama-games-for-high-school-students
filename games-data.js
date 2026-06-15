@@ -22,7 +22,14 @@ const GAMES = [
     "variations": [
       "The director can step into the scene themselves, triggering another player to take over as director.",
       "Instead of an Oscar speech, players deliver an over-the-top sporting victory interview or a villain's dramatic monologue."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "voice",
+      "spontaneity"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 2,
@@ -47,7 +54,14 @@ const GAMES = [
     "variations": [
       "Give each player a different adjective so all four characters are driven by contrasting qualities at once.",
       "Halfway through, the teacher calls a brand new adjective and all players must instantly switch without breaking the scene."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "physicality",
+      "ensemble"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 3,
@@ -72,7 +86,14 @@ const GAMES = [
     "variations": [
       "Once players reach Z, reverse direction and work back from Z to A.",
       "Play with all four players on stage at once, rotating who speaks in a circle — faster and more chaotic."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "focus",
+      "listening",
+      "spontaneity"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 4,
@@ -97,7 +118,14 @@ const GAMES = [
     "variations": [
       "Only one nominated player may use asides — their inner voice becomes the running thread of the scene.",
       "A player can ask the audience during their aside what their character should do next."
-    ]
+    ],
+    "energy": "low",
+    "skills": [
+      "character",
+      "storytelling",
+      "focus"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 5,
@@ -122,7 +150,14 @@ const GAMES = [
     "variations": [
       "All four players are on stage and nobody — including the audience — knows who the Assassin is until the last player is eliminated.",
       "Give the Assassin a specific method: they can only eliminate others through flattery, or by offering food and drink."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "storytelling",
+      "spontaneity"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 6,
@@ -147,7 +182,14 @@ const GAMES = [
     "variations": [
       "One player acts as a remote control caller and can switch between forward and reverse at any point during the scene.",
       "Play the scene backwards first, then replay it forwards — the audience sees whether the two versions match up."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "focus",
+      "storytelling",
+      "physicality"
+    ],
+    "difficulty": "advanced"
   },
   {
     "id": 7,
@@ -172,7 +214,14 @@ const GAMES = [
     "variations": [
       "Play as a full circle with all four players — each adds a rhyming line in turn, and anyone who hesitates or fails to rhyme sits down.",
       "Give the lead player a specific emotion — furious, lovesick, exhausted — and they must rap in that style while still landing the rhyme."
-    ]
+    ],
+    "energy": "high",
+    "skills": [
+      "voice",
+      "spontaneity",
+      "ensemble"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 8,
@@ -197,7 +246,14 @@ const GAMES = [
     "variations": [
       "One player acts as director and calls \"before\" or \"after\" after each scene — keeps the pace faster and more unpredictable.",
       "If the audience asks for a scene already played, replay it but add one new piece of information that changes how the audience understands everything."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "storytelling",
+      "character",
+      "focus"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 9,
@@ -222,7 +278,14 @@ const GAMES = [
     "variations": [
       "Any player can break into song at any moment without waiting for the director's signal.",
       "Each time a player sings, another player must join in and harmonise — even if they have no idea where the melody is going."
-    ]
+    ],
+    "energy": "high",
+    "skills": [
+      "voice",
+      "character",
+      "spontaneity"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 10,
@@ -247,7 +310,14 @@ const GAMES = [
     "variations": [
       "The caller can also shout \"Change!\" at a physical action, forcing the player to redo it in a completely different way.",
       "Increase the speed of \"Change!\" calls as the scene progresses, pushing players to respond faster and faster."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "spontaneity",
+      "focus",
+      "listening"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 11,
@@ -272,7 +342,14 @@ const GAMES = [
     "variations": [
       "Switch channels back and forth rapidly, forcing players to pick up mid-sentence from wherever the story was when that channel was last on.",
       "Add a fifth channel — the audience — who can call out a genre of their own at any time and nominate a player to perform it."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "spontaneity",
+      "ensemble"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 12,
@@ -297,7 +374,14 @@ const GAMES = [
     "variations": [
       "Players swap character offers halfway through without stopping — immediately adopt another player's character and continue.",
       "Tell the audience each player's offer before the scene begins so they can watch the offers collide."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "physicality",
+      "spontaneity"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 13,
@@ -322,7 +406,14 @@ const GAMES = [
     "variations": [
       "Add the reserve player as a third character — the caller can now swap between any two of the three.",
       "Any player can call \"Swap!\" themselves, turning it into a strategic tool rather than an external interruption."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "physicality",
+      "listening"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 14,
@@ -347,7 +438,14 @@ const GAMES = [
     "variations": [
       "The caller shouts \"Original!\" at any point — the player must instantly replace their cliché with something genuinely fresh, then return to clichés on the next line.",
       "Assign each player a specific type of cliché: sports metaphors, old proverbs, movie quotes, therapy-speak."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "storytelling",
+      "spontaneity"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 15,
@@ -372,7 +470,14 @@ const GAMES = [
     "variations": [
       "After the first commercial, the caller shouts a completely different genre — horror, romance, nature documentary — and the group must re-pitch the same product in that style.",
       "One player is a dissatisfied customer who must be won over by the other three during the commercial itself."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "ensemble",
+      "spontaneity",
+      "storytelling"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 16,
@@ -397,7 +502,14 @@ const GAMES = [
     "variations": [
       "The caller changes all three players' emotions simultaneously rather than one at a time — instant chaos, instant comedy.",
       "Players must cycle through five emotions in sequence without the caller — they change themselves whenever they feel a natural moment to shift."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "focus",
+      "listening"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 17,
@@ -422,7 +534,14 @@ const GAMES = [
     "variations": [
       "Instead of the caller choosing, the audience shouts out styles whenever they like — giving them direct control over the scene.",
       "Players must transition between styles mid-sentence, with no freeze — the style shifts while the words keep coming."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "ensemble",
+      "spontaneity"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 18,
@@ -445,7 +564,14 @@ const GAMES = [
     "variations": [
       "Instead of repeating a line to swap in, the copycat must repeat the line in a completely different emotional register — transforming its meaning before the scene continues.",
       "Both copycats can step in simultaneously, each repeating a different recent line — and the scene must somehow honour both."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "physicality",
+      "focus",
+      "listening"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 19,
@@ -470,7 +596,14 @@ const GAMES = [
     "variations": [
       "Give the detective a specific interrogation style — good cop, bad cop, overly emotional, completely distracted — to add another layer of comedy.",
       "The witness secretly wants the suspect to get away with it and gives deliberately misleading clues, making the detective's job harder."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "storytelling",
+      "focus"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 20,
@@ -495,7 +628,14 @@ const GAMES = [
     "variations": [
       "One player acts as the game show host, introducing the contestant, managing the questions, and keeping the energy up.",
       "The contestant is also given a secret quirk that the three players must figure out through the questions asked."
-    ]
+    ],
+    "energy": "low",
+    "skills": [
+      "character",
+      "listening",
+      "spontaneity"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 21,
@@ -520,7 +660,14 @@ const GAMES = [
     "variations": [
       "Play the same scene twice — once where the death happens early and once where it is saved for the final second, then discuss which was more satisfying.",
       "The timekeeper can call \"Slow motion!\" at any point, forcing the final moments of the scene to play out at half speed for maximum drama."
-    ]
+    ],
+    "energy": "high",
+    "skills": [
+      "physicality",
+      "storytelling",
+      "spontaneity"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 22,
@@ -544,7 +691,14 @@ const GAMES = [
     "variations": [
       "The audience can shout \"Cut!\" and give their own direction at any point, taking over from the director.",
       "Each player on stage secretly has a goal for the scene — the director must guess what each goal is before the scene ends."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "focus",
+      "spontaneity"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 23,
@@ -568,7 +722,14 @@ const GAMES = [
     "variations": [
       "Add the two informants as minor characters in the scene — they can drop clues but must also stay in character.",
       "Give each player three tasks instead of one, making the scene longer and increasingly chaotic as the tasks multiply."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "listening",
+      "focus"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 24,
@@ -584,7 +745,14 @@ const GAMES = [
     "variations": [
       "Switch pairs halfway through the scene — voice players become actors and actors become voice players, continuing the same story.",
       "One voice player provides all voices for both actors, shifting rapidly between characters — harder, funnier, and gloriously chaotic."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "physicality",
+      "listening",
+      "ensemble"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 25,
@@ -608,7 +776,14 @@ const GAMES = [
     "variations": [
       "The lift gets stuck between floors — players must improvise the wait, the panic, and the rescue.",
       "Players rotate out as their character reaches their floor, and new characters join — the scene becomes a parade of brief encounters with one recurring character who rides the whole way."
-    ]
+    ],
+    "energy": "low",
+    "skills": [
+      "character",
+      "physicality",
+      "ensemble"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 26,
@@ -633,7 +808,14 @@ const GAMES = [
     "variations": [
       "Give each player a different emotion for the same replay, so the four characters are each experiencing the scene through a completely different emotional lens simultaneously.",
       "Speed up each replay — the first is full length, the second at double speed, the third at triple speed — emotions escalating and the comedy intensifying."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "focus",
+      "ensemble"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 27,
@@ -658,7 +840,14 @@ const GAMES = [
     "variations": [
       "The caller can assign a different emotion to each player individually rather than shifting all three at once — creating scenes where every character is feeling something completely different at the same time.",
       "The audience takes over from the caller, shouting emotions whenever they feel like it — faster, more chaotic, and hugely entertaining."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "focus",
+      "listening"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 28,
@@ -683,7 +872,14 @@ const GAMES = [
     "variations": [
       "Players can strategically use another player's word to force them on or off stage at a dramatically useful moment.",
       "Increase the difficulty by giving each player two trigger words instead of one."
-    ]
+    ],
+    "energy": "high",
+    "skills": [
+      "focus",
+      "physicality",
+      "listening"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 29,
@@ -708,7 +904,14 @@ const GAMES = [
     "variations": [
       "Both evil twins are on stage at the same time, competing to cause more chaos — the scene descends gloriously.",
       "The evil twins must stay on stage but can only act when the other players are not looking at them directly."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "voice",
+      "spontaneity"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 30,
@@ -733,7 +936,14 @@ const GAMES = [
     "variations": [
       "The arm players are given a secret instruction — one set of arms must try to hug the other person, and the other set must resist — without either speaker acknowledging it.",
       "Encourage the seated players to stand up, move around, and demonstrate things — keeping the arm players attached and forcing all four to physically collaborate."
-    ]
+    ],
+    "energy": "high",
+    "skills": [
+      "physicality",
+      "ensemble",
+      "focus"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 31,
@@ -758,7 +968,14 @@ const GAMES = [
     "variations": [
       "After each portrait is frozen, one player steps forward and delivers a single line in character — then refreezes — before the group unfreezes and explains their characters.",
       "The teacher calls two suggestions in quick succession and players must morph from one portrait directly into the other without breaking — a \"portrait transition.\""
-    ]
+    ],
+    "energy": "low",
+    "skills": [
+      "physicality",
+      "character",
+      "storytelling"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 32,
@@ -783,7 +1000,14 @@ const GAMES = [
     "variations": [
       "Add a \"Mute!\" command — the players continue the scene in total silence, mouthing all dialogue while still acting fully.",
       "The caller can say \"Record and replay!\" — the players repeat their last twenty seconds of scene exactly as it happened, then continue forward."
-    ]
+    ],
+    "energy": "high",
+    "skills": [
+      "physicality",
+      "focus",
+      "ensemble"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 33,
@@ -808,7 +1032,14 @@ const GAMES = [
     "variations": [
       "Give the players only the last line — they must build a scene from scratch that arrives at that ending organically, without knowing it in advance.",
       "Use the same last line for multiple groups — then compare how differently each group got there."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "storytelling",
+      "focus",
+      "spontaneity"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 34,
@@ -833,7 +1064,14 @@ const GAMES = [
     "variations": [
       "Switch roles halfway through — the translators become the actors and vice versa, continuing the same story.",
       "Allow the translator to occasionally \"mistranslate\" deliberately, forcing the actor to physically justify a completely unexpected version of what they just said."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "physicality",
+      "ensemble",
+      "voice"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 35,
@@ -860,7 +1098,14 @@ const GAMES = [
       "Allow the teacher or a designated audience member to call out a new emotion for a specific quadrant on the fly, replacing whatever was there.",
       "Add a central fifth zone — any player standing in the middle of the space can choose any emotion they like.",
       "Run the same scenario twice with the emotions assigned to different quadrants — compare how the story and relationships change."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "physicality",
+      "spontaneity"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 36,
@@ -885,7 +1130,14 @@ const GAMES = [
     "variations": [
       "Any player can call \"Freeze!\" — not just the two waiting — turning it into a more spontaneous group game.",
       "After each freeze, the caller must shout a single word before stepping in — the new scene must somehow relate to that word."
-    ]
+    ],
+    "energy": "high",
+    "skills": [
+      "physicality",
+      "spontaneity",
+      "focus"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 37,
@@ -910,7 +1162,14 @@ const GAMES = [
     "variations": [
       "The audience takes over from the caller and shouts genres whenever they like — giving them direct control and accelerating the chaos.",
       "Players must transition between genres mid-sentence with no pause — the style shifts while the words keep coming."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "ensemble",
+      "spontaneity"
+    ],
+    "difficulty": "advanced"
   },
   {
     "id": 38,
@@ -935,7 +1194,14 @@ const GAMES = [
     "variations": [
       "The translator takes the expert's gibberish in a completely unexpected direction, and the expert must physically justify the \"wrong\" translation in real time.",
       "Swap the translator and questioner roles partway through — the new translator has a completely different interpretation style, shifting the expert's personality entirely."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "physicality",
+      "voice",
+      "ensemble"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 39,
@@ -960,7 +1226,14 @@ const GAMES = [
     "variations": [
       "Remove the interpreters entirely — the actors perform the whole scene in gibberish with no translation, relying purely on physical storytelling to communicate the story to the audience.",
       "The interpreters occasionally \"mistranslate\" — providing a version that contradicts the actor's physicality, forcing the actor to physically justify the wrong translation."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "physicality",
+      "ensemble",
+      "listening"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 40,
@@ -984,7 +1257,14 @@ const GAMES = [
     "variations": [
       "After the seven-second version, challenge the players to perform it backwards in seven seconds — the final beat first, working back to the opening.",
       "Play two separate groups' Half Life scenes simultaneously and have the audience vote on which group maintained the most story clarity at the fastest speed."
-    ]
+    ],
+    "energy": "high",
+    "skills": [
+      "physicality",
+      "focus",
+      "storytelling"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 41,
@@ -1009,7 +1289,14 @@ const GAMES = [
     "variations": [
       "Give the hijacker two minutes to achieve the goal — add a timekeeper who counts down, increasing the pressure.",
       "The hijacker can ask three direct yes/no questions during the scene to help narrow things down."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "focus",
+      "listening",
+      "storytelling"
+    ],
+    "difficulty": "advanced"
   },
   {
     "id": 42,
@@ -1034,7 +1321,14 @@ const GAMES = [
     "variations": [
       "Give the audience the job of calling out new hitchhiker characters on the spot rather than using the prompt list.",
       "The car breaks down mid-game — all four players must work together in character to fix it before the next hitchhiker arrives."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "ensemble",
+      "physicality"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 43,
@@ -1059,7 +1353,14 @@ const GAMES = [
     "variations": [
       "Swap roles halfway through — the actors become human props and the props become actors, continuing the same scene.",
       "The human props are also given a secret instruction — they must slowly, subtly make themselves increasingly inconvenient throughout the scene."
-    ]
+    ],
+    "energy": "high",
+    "skills": [
+      "physicality",
+      "ensemble",
+      "spontaneity"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 44,
@@ -1084,7 +1385,14 @@ const GAMES = [
     "variations": [
       "Partway through the scene, the caller shouts a completely different style and all four players must instantly shift the same story into the new genre without pausing.",
       "Each player is secretly assigned a different style — one plays it as a western, one as a romance, one as a thriller, one as a comedy — and the scene runs with all four styles colliding simultaneously."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "storytelling",
+      "ensemble"
+    ],
+    "difficulty": "advanced"
   },
   {
     "id": 45,
@@ -1109,7 +1417,14 @@ const GAMES = [
     "variations": [
       "Trigger an inner duet — two players step forward and sing their inner thoughts simultaneously, unaware of each other's song, revealing two private realities at once.",
       "The caller gives the player a specific emotion to sing in — overjoyed, devastated, furious — regardless of what their character was showing in the scene."
-    ]
+    ],
+    "energy": "high",
+    "skills": [
+      "voice",
+      "character",
+      "spontaneity"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 46,
@@ -1134,7 +1449,14 @@ const GAMES = [
     "variations": [
       "Give the interviewee a secret personality quirk as well — so they are simultaneously trying to guess the job and maintain a character the panel can see but cannot directly reference.",
       "The two panel members secretly have different jobs in mind — so the clues being given are subtly contradictory, making the interviewee's job even harder."
-    ]
+    ],
+    "energy": "low",
+    "skills": [
+      "listening",
+      "character",
+      "focus"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 47,
@@ -1159,7 +1481,14 @@ const GAMES = [
     "variations": [
       "All four players are on stage at once, rotating who speaks next in a circle — the game becomes faster and more chaotic.",
       "The last letter rule also applies to physical actions — if a player mimes an action ending with a particular shape, the next physical choice must begin from that same position."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "focus",
+      "listening",
+      "spontaneity"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 48,
@@ -1184,7 +1513,14 @@ const GAMES = [
     "variations": [
       "Give the players only thirty seconds to look at the last line before the scene begins — no planning, no discussion, just perform.",
       "Use the same last line for multiple groups back to back and let the audience compare how differently each group arrived at the same ending."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "storytelling",
+      "focus",
+      "spontaneity"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 49,
@@ -1209,7 +1545,14 @@ const GAMES = [
     "variations": [
       "Each player must establish one specific object that no one else knew was there — so the location accumulates four distinct new elements with each entrance, and the scene uses all of them.",
       "Play the scene twice in the same location — once in the morning and once in the evening of the same day — showing how the space and the people in it have changed."
-    ]
+    ],
+    "energy": "low",
+    "skills": [
+      "physicality",
+      "ensemble",
+      "focus"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 50,
@@ -1233,7 +1576,14 @@ const GAMES = [
     "variations": [
       "One player enters last and must identify every single object already established before they are allowed to add their own — testing the group's mime clarity.",
       "The scene is played entirely in silence — no dialogue, only mime and object work — making the environmental storytelling carry the whole scene."
-    ]
+    ],
+    "energy": "low",
+    "skills": [
+      "physicality",
+      "focus",
+      "ensemble"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 51,
@@ -1258,7 +1608,14 @@ const GAMES = [
     "variations": [
       "One player acts as a silent narrator, using gesture and movement to comment on the scene from the side without interfering in it.",
       "After the mime scene ends, replay it immediately with words — and compare how much the verbal version adds, or doesn't."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "physicality",
+      "focus",
+      "storytelling"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 52,
@@ -1282,7 +1639,14 @@ const GAMES = [
     "variations": [
       "Give each critic a secret agenda — one is trying to promote the film's director who is also their cousin; the other is working through a personal crisis that keeps interrupting the review.",
       "The critics can also cut to deleted scenes, alternate endings, or interviews with the cast — giving the actors different roles to play in each clip."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "storytelling",
+      "spontaneity"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 53,
@@ -1307,7 +1671,14 @@ const GAMES = [
     "variations": [
       "The caller can also shout \"New Choice!\" at physical actions — forcing the player to redo a gesture, entrance, or movement in a completely different way.",
       "Once the scene has reached a satisfying point, the caller shouts \"Best Choice!\" — and players must deliver the most definitive, committed version of whatever they last chose, bringing the scene to a clear ending."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "spontaneity",
+      "focus",
+      "listening"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 54,
@@ -1332,7 +1703,14 @@ const GAMES = [
     "variations": [
       "Play competitively — two teams take turns with the same object and the team that runs out of new ideas first loses.",
       "Two players must use the object in the same brief scene together, each treating it as a different thing simultaneously and justifying both versions at once."
-    ]
+    ],
+    "energy": "low",
+    "skills": [
+      "physicality",
+      "spontaneity",
+      "focus"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 55,
@@ -1357,7 +1735,14 @@ const GAMES = [
     "variations": [
       "One player acts as the conductor — standing to the side and using hand gestures to cue singers, raise or lower the tempo, and bring players in or cut them off.",
       "Midway through, the caller shouts a new style — the opera must immediately shift from tragic to comic, or from romantic to furious — without breaking the singing."
-    ]
+    ],
+    "energy": "high",
+    "skills": [
+      "voice",
+      "character",
+      "spontaneity"
+    ],
+    "difficulty": "advanced"
   },
   {
     "id": 56,
@@ -1376,7 +1761,14 @@ const GAMES = [
     "variations": [
       "Midway through the scene, a caller signals a switch — and every player's opposites reverse: what they were doing they must now say, and what they were saying they must now do.",
       "Play without giving the audience the opposites in advance — let the audience discover the contradiction through watching, and ask them at the end to identify what each character was hiding."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "focus",
+      "listening"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 57,
@@ -1400,7 +1792,14 @@ const GAMES = [
     "variations": [
       "Give the host a secret quirk too, which the guests must identify through the host's behaviour — turning it into a mutual guessing game.",
       "Allow the audience to ring an imaginary doorbell at any moment, signalling the next guest to arrive — giving the audience direct control over the pacing."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "physicality",
+      "listening"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 58,
@@ -1425,7 +1824,14 @@ const GAMES = [
     "variations": [
       "Add two additional players as secret coaches who stand behind their player and can whisper one suggestion per minute.",
       "Give each player three goals instead of one — the scene becomes longer and more complex as players juggle multiple agendas."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "storytelling",
+      "focus"
+    ],
+    "difficulty": "advanced"
   },
   {
     "id": 59,
@@ -1449,7 +1855,14 @@ const GAMES = [
     "variations": [
       "Instead of replaying the whole scene, each character simply steps forward and delivers a one-minute monologue describing their experience of the central event from their own perspective.",
       "The final replay combines all four points of view simultaneously — all four players perform their version of the scene at the same time, in their own bubbles, creating a layered, overlapping picture."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "storytelling",
+      "focus"
+    ],
+    "difficulty": "advanced"
   },
   {
     "id": 60,
@@ -1474,7 +1887,14 @@ const GAMES = [
     "variations": [
       "The narrator occasionally freezes the actors mid-action — \"And then, for one long moment, everyone stopped…\" — creating a tableau before the story continues.",
       "Rotate the narrator role every thirty seconds mid-story — each new narrator picks up exactly where the last one left off, bringing their own storytelling style."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "physicality",
+      "ensemble",
+      "listening"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 61,
@@ -1499,7 +1919,14 @@ const GAMES = [
     "variations": [
       "Give the guest of honour a second secret — not just who they are, but also a secret quirk or mannerism the journalists can observe and work into their questions.",
       "The journalists secretly disagree about who the guest is — each one believes it is a different person — creating conflicting and increasingly confusing clues."
-    ]
+    ],
+    "energy": "low",
+    "skills": [
+      "character",
+      "listening",
+      "spontaneity"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 62,
@@ -1524,7 +1951,14 @@ const GAMES = [
     "variations": [
       "One player uses the object as something, then passes it to their partner who must use it as something completely different in the same brief scene — creating a two-person prop sketch.",
       "Play without the competition format — all four players simply cycle through a single object as fast as possible, each use triggering the next, until the ideas run dry."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "physicality",
+      "spontaneity",
+      "focus"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 63,
@@ -1549,7 +1983,14 @@ const GAMES = [
     "variations": [
       "One puppeteer controls both puppets simultaneously — moving between them as needed, with each puppet waiting motionless until moved.",
       "Swap roles halfway through — the puppeteers become the speaking characters and the puppets become the puppeteers, continuing the same scene."
-    ]
+    ],
+    "energy": "high",
+    "skills": [
+      "physicality",
+      "ensemble",
+      "focus"
+    ],
+    "difficulty": "advanced"
   },
   {
     "id": 64,
@@ -1574,7 +2015,14 @@ const GAMES = [
     "variations": [
       "Play as a timed competition — two teams alternate, and the team that racks up the most eliminations loses.",
       "Allow players to ask rhetorical questions but not genuine ones — the opposite of the normal game, creating a scene of people who refuse to actually enquire about anything."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "focus",
+      "listening",
+      "spontaneity"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 65,
@@ -1599,7 +2047,14 @@ const GAMES = [
     "variations": [
       "The two reminiscing characters secretly remember the same key event differently — the actors play the same flashback twice, once from each character's version.",
       "One of the two reminiscing characters is unreliable — their flashbacks reveal something very different from what they claim to remember."
-    ]
+    ],
+    "energy": "low",
+    "skills": [
+      "storytelling",
+      "character",
+      "ensemble"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 66,
@@ -1624,7 +2079,14 @@ const GAMES = [
     "variations": [
       "Give the customer a second goal: they must also get the repair shop owner to agree to a completely unreasonable discount — adding a negotiation layer to the guessing game.",
       "Play with two customers simultaneously, each with different objects and faults — the repair shop owner must juggle both conversations at once."
-    ]
+    ],
+    "energy": "low",
+    "skills": [
+      "listening",
+      "character",
+      "focus"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 67,
@@ -1649,7 +2111,14 @@ const GAMES = [
     "variations": [
       "Play a third version immediately after — back in full words but at double speed — creating three increasingly compressed versions of the same scene.",
       "One player stays in words while the other three are in gibberish — forcing the words player to accept and respond to gibberish as if it were coherent language."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "physicality",
+      "voice",
+      "ensemble"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 68,
@@ -1672,7 +2141,14 @@ const GAMES = [
     "variations": [
       "Play in a specific style — each couplet must be in the manner of a specific poet or register: heroic, tragic, comic, pastoral — and the caller can switch styles mid-scene.",
       "One player acts as a narrator who delivers rhyming couplets to frame each new scene moment: \"And so the pair arrived at last / To face the consequence of what had passed…\" — the other three players then act out whatever the couplet announces."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "voice",
+      "focus",
+      "spontaneity"
+    ],
+    "difficulty": "advanced"
   },
   {
     "id": 69,
@@ -1695,7 +2171,14 @@ const GAMES = [
     "variations": [
       "The lights flicker back on for just five seconds at regular intervals — each flash reveals a frozen tableau that the audience must interpret — then darkness again.",
       "Give each player a specific physical object to find in the dark over the course of the scene — something established before the lights go out — so the scene has a physical goal the audience is tracking by sound."
-    ]
+    ],
+    "energy": "low",
+    "skills": [
+      "physicality",
+      "focus",
+      "listening"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 70,
@@ -1719,7 +2202,14 @@ const GAMES = [
     "variations": [
       "Two players who did not see the base scene are brought in to replay it — they reconstruct the scene entirely from starting positions and reactions, producing a wildly different version.",
       "Play the scene in progressively shorter time slots — two minutes, one minute, thirty seconds, fifteen seconds — treating it as a combination of Scene Replay and Half Life."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "ensemble",
+      "focus"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 71,
@@ -1744,7 +2234,14 @@ const GAMES = [
     "variations": [
       "Reveal all attitudes after the scene ends and replay the scene — now that everyone knows what everyone else was feeling, watch how different it becomes.",
       "Add a fourth attitude option: bored — you find this person completely and utterly uninteresting, to the point where you can barely stay awake in their presence."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "focus",
+      "listening"
+    ],
+    "difficulty": "advanced"
   },
   {
     "id": 72,
@@ -1767,7 +2264,14 @@ const GAMES = [
     "variations": [
       "One player acts as the Chorus — stepping forward between scenes to narrate what has just happened in deliberately overwrought Shakespearean verse.",
       "Midway through, the caller shouts a genre shift — the Shakespeare must suddenly become a comedy if it was a tragedy, or vice versa — without breaking the Elizabethan register."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "voice",
+      "character",
+      "storytelling"
+    ],
+    "difficulty": "advanced"
   },
   {
     "id": 73,
@@ -1792,7 +2296,14 @@ const GAMES = [
     "variations": [
       "Play the story twice — first as a narrated text, then as a physically acted-out scene using the exact same story, with the same four players now embodying the characters they just described.",
       "Introduce a caller who can tap a player mid-sentence to hand the story to the next player — creating shorter, more urgent handovers and keeping everyone alert at all times."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "storytelling",
+      "listening",
+      "focus"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 74,
@@ -1817,7 +2328,14 @@ const GAMES = [
     "variations": [
       "One player acts as a gravity-defying character who moves in the opposite direction to everyone else — walking on the actual ceiling, crouching on the actual floor — while the others play normally.",
       "Introduce genre shifts mid-scene — the caller announces a film style (western, horror, romance) and the sideways scene must immediately shift register while staying on the floor."
-    ]
+    ],
+    "energy": "low",
+    "skills": [
+      "physicality",
+      "focus",
+      "ensemble"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 75,
@@ -1842,7 +2360,14 @@ const GAMES = [
     "variations": [
       "Any player can call \"Sing about it!\" at any moment — including in response to another player's song — creating an increasingly musical scene.",
       "All four players must join in the song once it starts — harmonising, echoing, or adding countermelody — so every song becomes a group number."
-    ]
+    ],
+    "energy": "high",
+    "skills": [
+      "voice",
+      "character",
+      "spontaneity"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 76,
@@ -1867,7 +2392,14 @@ const GAMES = [
     "variations": [
       "The tableau players occasionally bring a frozen image to life for a few seconds — a \"video clip\" that briefly moves before freezing again — while the narrator keeps talking.",
       "Give the narrators conflicting memories — they are presenting the same slideshow but fundamentally disagree on what happened in each photograph."
-    ]
+    ],
+    "energy": "low",
+    "skills": [
+      "physicality",
+      "storytelling",
+      "ensemble"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 77,
@@ -1892,7 +2424,14 @@ const GAMES = [
     "variations": [
       "Halfway through, the commentators swap roles with the athletes — the former commentators must now perform the activity in slow motion while the athletes provide commentary on what is happening.",
       "Add a third commentator who provides post-match analysis after the activity concludes — interviewing the athletes, reviewing key decisions, speculating about what went wrong."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "physicality",
+      "voice",
+      "ensemble"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 78,
@@ -1916,7 +2455,14 @@ const GAMES = [
     "variations": [
       "One player acts as the director, stepping forward between scenes to announce \"Episode Three!\" or \"Six months later…\" and cue the next installment with a dramatic summary.",
       "Add a recurring theme song — players hum or sing a brief soap opera-style musical sting at the start and end of each episode."
-    ]
+    ],
+    "energy": "high",
+    "skills": [
+      "character",
+      "voice",
+      "storytelling"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 79,
@@ -1941,7 +2487,14 @@ const GAMES = [
     "variations": [
       "Replace the two offstage sound players with audience volunteers — giving the sound effects a wonderfully unpredictable quality that the scene players must work with regardless.",
       "Give the sound players a list of five specific sounds they must include somewhere during the scene, without telling the scene players what those sounds are."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "physicality",
+      "listening",
+      "ensemble"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 80,
@@ -1966,7 +2519,14 @@ const GAMES = [
     "variations": [
       "Instead of the caller deciding when to Space Jump, any player — including those already on stage — can call it at any moment, creating a faster and less predictable game.",
       "Play the reverse phase at double speed — each previous scene is performed in half the time of the original, creating increasingly compressed and chaotic returns."
-    ]
+    ],
+    "energy": "high",
+    "skills": [
+      "physicality",
+      "spontaneity",
+      "ensemble"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 81,
@@ -1991,7 +2551,14 @@ const GAMES = [
     "variations": [
       "All four players form the one voice — a chorus of a single character, questioned by the audience directly.",
       "Midway through the interview, the two one-voice players swap — new players take over the character, maintaining the same persona and voice without missing a beat."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "listening",
+      "ensemble",
+      "focus"
+    ],
+    "difficulty": "advanced"
   },
   {
     "id": 82,
@@ -2016,7 +2583,14 @@ const GAMES = [
     "variations": [
       "Run three simultaneous scenes instead of two — a third pair takes a centre strip of the stage, with focus triangulating across all three.",
       "Give each pair a secret word that, when spoken on either side, freezes both scenes for a beat — signalling a moment of resonance the audience can savour."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "storytelling",
+      "ensemble",
+      "focus"
+    ],
+    "difficulty": "advanced"
   },
   {
     "id": 83,
@@ -2040,7 +2614,14 @@ const GAMES = [
     "variations": [
       "Play the scene three times — the first with A high and B low, the second reversed, the third with both players trying to maintain high status simultaneously and neither willing to yield.",
       "Add a third character who arrives at the midpoint and inadvertently triggers the status shift simply by the way they address each of the other two characters."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "physicality",
+      "storytelling"
+    ],
+    "difficulty": "advanced"
   },
   {
     "id": 84,
@@ -2065,7 +2646,14 @@ const GAMES = [
     "variations": [
       "Give each player a different storytelling style before the game begins — one is dramatic, one is comic, one is clinical, one is breathless — so every handover also shifts the register of the narration.",
       "Play without eliminations — the conductor switches constantly and rapidly but nobody dies, making it purely a listening and flow exercise with a complete story as the goal."
-    ]
+    ],
+    "energy": "high",
+    "skills": [
+      "storytelling",
+      "spontaneity",
+      "focus"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 85,
@@ -2089,7 +2677,14 @@ const GAMES = [
     "variations": [
       "The stunt doubles become progressively more injured with each stunt — limping, clutching injuries, barely able to complete the next one — until by the final stunt they can barely move.",
       "The actors also call \"Stunt double!\" for emotional moments — the doubles must then perform the emotional reaction in extreme slow motion, treating grief or joy with the same grandiosity as a punch-up."
-    ]
+    ],
+    "energy": "high",
+    "skills": [
+      "physicality",
+      "ensemble",
+      "spontaneity"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 86,
@@ -2114,7 +2709,14 @@ const GAMES = [
     "variations": [
       "Give the audience the power to name the superheroes as each one arrives — instead of the onstage players naming them, the audience shouts suggestions.",
       "Play a villain version — one player is the villain whose evil plan escalates, and each new arrival is a superhero summoned to stop them; the game ends when the villain is finally defeated by the fourth hero's very specific power."
-    ]
+    ],
+    "energy": "high",
+    "skills": [
+      "character",
+      "physicality",
+      "spontaneity"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 87,
@@ -2139,7 +2741,14 @@ const GAMES = [
     "variations": [
       "Add a caller who controls the escalation — pointing at players to raise or lower the intensity in real time, including moments of sudden deflation followed by rapid re-escalation.",
       "Play two scenes simultaneously on opposite halves of the stage, both escalating independently — when one reaches supernova, the explosion triggers the other."
-    ]
+    ],
+    "energy": "high",
+    "skills": [
+      "storytelling",
+      "character",
+      "ensemble"
+    ],
+    "difficulty": "advanced"
   },
   {
     "id": 88,
@@ -2164,7 +2773,14 @@ const GAMES = [
     "variations": [
       "Invert the voting — the audience votes for their favourite player each round, and the most popular is the one eliminated, creating an increasingly absurd dynamic where brilliance is punished.",
       "Play with five players instead of four, extending the game by one additional round and giving the final survivor an even more demanding solo replay."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "spontaneity",
+      "storytelling"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 89,
@@ -2185,7 +2801,14 @@ const GAMES = [
     "variations": [
       "Give the host a secret identity too — they must host the party in character without revealing who they are, while also trying to guess the guests.",
       "Let the audience suggest identities in real time rather than assigning them beforehand — the host leaves the room, the audience shouts suggestions, and the players choose the best three on the spot."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "physicality",
+      "listening"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 90,
@@ -2210,7 +2833,14 @@ const GAMES = [
     "variations": [
       "The interviewer gradually makes the questions harder and more specific, until the expert is being asked to demonstrate their expertise with a practical example — which the three heads must physically act out together as one body.",
       "Replace the formal interview with a live press conference — the audience fires rapid questions at the three-headed expert and the expert must field them all without pause."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "listening",
+      "ensemble",
+      "focus"
+    ],
+    "difficulty": "advanced"
   },
   {
     "id": 91,
@@ -2235,7 +2865,14 @@ const GAMES = [
     "variations": [
       "Give the time director five specific time stamps written on cards — they must deploy all five in order during the scene, creating a fixed timeline the players must hit.",
       "Allow time jumps into the future beyond the scene's current endpoint — the characters can visit moments that haven't happened yet, then jump back and play toward them."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "storytelling",
+      "character",
+      "focus"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 92,
@@ -2260,7 +2897,14 @@ const GAMES = [
     "variations": [
       "The contact rule is inverted — players can only speak when they are NOT touching anyone, creating a scene where people speak from across the room and fall silent the moment someone approaches.",
       "Add a fifth rule: when three or more players are touching simultaneously, they must all speak at once — creating moments of shared chorus amid the usual scene."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "focus",
+      "physicality",
+      "listening"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 93,
@@ -2283,7 +2927,14 @@ const GAMES = [
     "variations": [
       "Halfway through the broadcast, a major breaking story interrupts all segments — the anchor must pivot, the field reporter rushes to a new location, and the weather presenter is suddenly irrelevant.",
       "Each presenter secretly has an unusual personal circumstance that is affecting their broadcast — the anchor has lost their glasses, the field reporter is on a very windy hillside, the co-anchor is extremely sleepy — creating a secondary layer of comic chaos beneath the professional surface."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "character",
+      "voice",
+      "storytelling"
+    ],
+    "difficulty": "beginner"
   },
   {
     "id": 94,
@@ -2308,7 +2959,14 @@ const GAMES = [
     "variations": [
       "Give the interviewer secret briefing notes with increasingly ridiculous follow-up questions — so the expert must address not just basic facts but highly specific claims the interviewer has apparently read about them.",
       "Two two-headed experts debate opposite positions on the same topic — each pair speaking simultaneously, creating a collision of two joined voices arguing with each other."
-    ]
+    ],
+    "energy": "low",
+    "skills": [
+      "listening",
+      "ensemble",
+      "focus"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 95,
@@ -2333,7 +2991,14 @@ const GAMES = [
     "variations": [
       "The typist can hit the backspace key at any moment — calling \"backspace!\" — at which point the actors must reverse their last action and the typist rewrites that moment of the story in a completely different direction.",
       "Two typists take turns at the typewriter, each taking over mid-sentence with a different tone, genre, or narrative direction — while the actors must follow whichever typist currently has the floor."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "physicality",
+      "listening",
+      "storytelling"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 96,
@@ -2357,7 +3022,14 @@ const GAMES = [
     "variations": [
       "Play without eliminations — the entire scene must be performed in continuous rhyming verse with no deaths, making it a sustained collective poem with a story inside it.",
       "Each player must also rhyme internally — not just the last word but somewhere in the middle of the line as well, adding a second layer of verbal architecture to the scene."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "voice",
+      "focus",
+      "spontaneity"
+    ],
+    "difficulty": "advanced"
   },
   {
     "id": 97,
@@ -2382,7 +3054,14 @@ const GAMES = [
     "variations": [
       "The two voice players swap partners midway through the scene — the actor's new voice player must pick up the character exactly where the previous one left off, maintaining continuity despite not knowing the scene's history.",
       "Play with one voice player providing all dialogue for both actors — switching between character voices rapidly, based entirely on which actor is moving their mouth."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "physicality",
+      "ensemble",
+      "listening"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 98,
@@ -2407,7 +3086,14 @@ const GAMES = [
     "variations": [
       "After the interview, the expert is asked to demonstrate their expertise with a practical example — the two players must now physically act out a demonstration, word-at-a-time narrating their own actions as they perform them.",
       "The interviewer secretly receives a list of increasingly personal and uncomfortable questions — so the expert must field not just professional enquiry but deeply intrusive scrutiny, all while continuing to speak one word at a time."
-    ]
+    ],
+    "energy": "low",
+    "skills": [
+      "listening",
+      "ensemble",
+      "focus"
+    ],
+    "difficulty": "intermediate"
   },
   {
     "id": 99,
@@ -2431,7 +3117,14 @@ const GAMES = [
     "variations": [
       "All four players contribute to the word-at-a-time voice — one word each in rotation — creating a four-headed single character who must also physicalize together as one body.",
       "Add a \"reverse\" call from the director — the players must go back through the last sentence one word at a time in reverse, then continue forward from where they reversed."
-    ]
+    ],
+    "energy": "low",
+    "skills": [
+      "listening",
+      "ensemble",
+      "focus"
+    ],
+    "difficulty": "advanced"
   },
   {
     "id": 100,
@@ -2456,6 +3149,13 @@ const GAMES = [
     "variations": [
       "Play with elimination — any player who hesitates, repeats a word, or says something that makes no grammatical sense is out, and the story continues with three, then two, then one player, who must bring it to an ending alone.",
       "Assign each player a different emotional register — one player's words are always dramatic, one's always comforting, one's always confused, one's always delighted — creating a story told through four contradictory temperaments at once."
-    ]
+    ],
+    "energy": "medium",
+    "skills": [
+      "listening",
+      "ensemble",
+      "storytelling"
+    ],
+    "difficulty": "intermediate"
   }
 ];
