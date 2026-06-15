@@ -126,33 +126,6 @@ const GAMES = [
   },
   {
     "id": 6,
-    "title": "Four Square Emotions",
-    "players": "4",
-    "setup": "Divide the playing area into four clearly marked quadrants — use tape on the floor, four chairs at the corners, or simply agree on the boundaries. Label each quadrant with a different strong emotion: Happy, Angry, Sad, and Afraid (or substitute audience suggestions). Each player begins in one quadrant, immediately inhabiting that emotion.",
-    "howToPlay": "Ask the audience for a simple scenario and a starting relationship between the four characters. The scene begins with all four players in their starting quadrants, each performing in their assigned emotion. As the scene develops, players move freely between quadrants — but the instant a player steps into a new quadrant, they must shift to that quadrant's emotion, even mid-sentence and regardless of what they were just saying or doing. Players can stay put to hold their current emotion, or deliberately cross into a different quadrant to drive the scene from a new emotional place. The scene ends when a natural story moment is reached.",
-    "purpose": "Players must simultaneously track the story, maintain their character, and shift emotion the instant they cross into a new zone. The comedy and drama come from the emotional whiplash — an argument that becomes overwhelmingly sad the moment a character steps sideways, or joy erupting in the middle of a tense standoff. The best moments happen when players start using their spatial awareness deliberately, choosing which quadrant to enter to reshape the scene.",
-    "prompts": [
-      "(Scenario + starting relationship between the four characters)",
-      "A surprise family reunion that nobody actually wanted",
-      "Four co-workers trapped in an office lift on the last day before a long holiday",
-      "A wedding rehearsal dinner where someone has just made an unexpected announcement",
-      "Four friends attempting to assemble flat-pack furniture together with one missing instruction sheet",
-      "A school staff room on the morning of a very important inspection",
-      "Four travellers stranded at an airport with only one seat left on the last flight home",
-      "A cooking competition where two of the four contestants already know who is going to win",
-      "A hospital waiting room where everyone is waiting for the same piece of news",
-      "Four members of a book club who have all clearly not read the book",
-      "A housemates' meeting called to discuss something nobody wants to admit they did"
-    ],
-    "variations": [
-      "Rotate the emotion labels to different quadrants mid-scene — all four players instantly recalibrate.",
-      "Allow the teacher or a designated audience member to call out a new emotion for a specific quadrant on the fly, replacing whatever was there.",
-      "Add a central fifth zone — any player standing in the middle of the space can choose any emotion they like.",
-      "Run the same scenario twice with the emotions assigned to different quadrants — compare how the story and relationships change."
-    ]
-  },
-  {
-    "id": 7,
     "title": "Backwards Scene",
     "players": "4",
     "setup": "Ask the audience for a location and a dramatic event that has just occurred. All four players take the stage in a strong, vivid freeze — the aftermath of the event already in progress.",
@@ -177,7 +150,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 8,
+    "id": 7,
     "title": "Beastie Boys",
     "players": "4 (split into 2 teams of 2)",
     "setup": "The two teams stand facing each other. Get a beat going — one player beatboxes, or use a simple rhythmic clap. Ask the audience for a topic or theme to rap about.",
@@ -202,7 +175,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 9,
+    "id": 8,
     "title": "Before Or After",
     "players": "4",
     "setup": "Ask the audience for a location and a simple scenario. All four players perform a short opening scene of around one to two minutes, then freeze.",
@@ -227,7 +200,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 10,
+    "id": 9,
     "title": "Broadway",
     "players": "4 (3 scene players + 1 director)",
     "setup": "Ask the audience for a location, a scenario, and a musical style or genre. Three players perform the scene while the fourth stands to the side as the director.",
@@ -252,7 +225,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 11,
+    "id": 10,
     "title": "Change Game",
     "players": "4 (3 scene players + 1 caller)",
     "setup": "Ask the audience for a location and a scenario. Three players begin the scene while the fourth stands to the side as the caller.",
@@ -277,7 +250,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 12,
+    "id": 11,
     "title": "Changing Channels",
     "players": "4",
     "setup": "Ask the audience for four different TV genres — for example, cooking show, nature documentary, soap opera, game show. Assign one genre to each player. All four agree on a simple shared scenario that will run through all the channels.",
@@ -302,7 +275,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 13,
+    "id": 12,
     "title": "Character Offer",
     "players": "4",
     "setup": "Ask the audience for a location and a scenario. Before the scene begins, each player is secretly given a strong character offer — a specific personality trait or attitude that will drive everything they do on stage.",
@@ -327,7 +300,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 14,
+    "id": 13,
     "title": "Character Swap",
     "players": "4 (2 scene players + 1 caller + 1 reserve)",
     "setup": "Ask the audience for a location and a scenario with a clear relationship between two very different characters. Two players take the stage and establish their characters with strong, distinct physical and vocal choices. The caller stands to the side; the fourth player waits in reserve.",
@@ -352,7 +325,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 15,
+    "id": 14,
     "title": "Cliché",
     "players": "4",
     "setup": "Ask the audience for a genre — horror, romance, western, soap opera, action — and a location. All four players perform a scene in that genre with one strict rule.",
@@ -377,7 +350,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 16,
+    "id": 15,
     "title": "Commercial",
     "players": "4",
     "setup": "Ask the audience for a product — real or completely made up. All four players will improvise a television commercial for that product, with one minute to make the sale.",
@@ -402,7 +375,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 17,
+    "id": 16,
     "title": "Continuing Emotions",
     "players": "4 (3 scene players + 1 caller)",
     "setup": "Ask the audience for a location and a scenario. Three players begin a neutral, naturalistic scene. The fourth player stands to the side as the caller with a list of emotions ready — either prepared in advance or called out by the audience on the spot.",
@@ -427,7 +400,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 18,
+    "id": 17,
     "title": "Continuing Styles",
     "players": "4 (3 scene players + 1 caller)",
     "setup": "Ask the audience for a location and a scenario. Three players begin a neutral scene with no particular style — just clear characters and a situation. The fourth player stands to the side as the caller with a list of genres or styles ready.",
@@ -452,7 +425,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 19,
+    "id": 18,
     "title": "Copycat",
     "players": "4",
     "setup": "Ask the audience for a location and a scenario. All four players take the stage and begin a normal improvised scene. Two players stand to the side as copycats, watching and waiting.",
@@ -475,7 +448,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 20,
+    "id": 19,
     "title": "Crime Scene",
     "players": "4 (1 detective + 1 suspect + 1 assistant + 1 witness)",
     "setup": "The suspect leaves the room or covers their ears. The audience suggests a ridiculous crime — what it was, where it happened, and with what unlikely object or method. The detective, assistant, and witness are told the details. The suspect returns knowing nothing.",
@@ -500,7 +473,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 21,
+    "id": 20,
     "title": "Dating Game",
     "players": "4 (1 contestant + 3 bachelors/bachelorettes + optional host)",
     "setup": "One player is the contestant — they leave the room or cover their ears. The audience secretly assigns a quirk, character trait, or unusual personality to each of the three remaining players. The quirks are known to the audience but not to the contestant. The contestant returns and the game begins.",
@@ -525,7 +498,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 22,
+    "id": 21,
     "title": "Death in a Minute",
     "players": "4",
     "setup": "Ask the audience for an ordinary location and a mundane object or occupation — nothing that already suggests death or danger. All four players take the stage. One player acts as the timekeeper, counting down from sixty seconds out loud or on a phone.",
@@ -550,7 +523,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 23,
+    "id": 22,
     "title": "Director's Cut",
     "players": "4 (3 scene players + 1 director)",
     "setup": "Ask the audience for a location and a scenario. Three players take the stage and begin the scene. The fourth player stands to the side as the director.",
@@ -574,7 +547,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 24,
+    "id": 23,
     "title": "Double Endowment",
     "players": "4 (2 scene players + 2 as audience informants)",
     "setup": "Both scene players leave the room or cover their ears. The audience secretly assigns each of them a specific task or behaviour — something they must get the other player to do during the scene without telling them directly. Player A knows Player B's task but not their own, and Player B knows Player A's task but not their own. The two informants hold this information and confirm when a task has been successfully completed.",
@@ -598,7 +571,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 25,
+    "id": 24,
     "title": "Dubbed Movie",
     "players": "4 (2 actors on stage + 2 voice players off stage or to the side)",
     "setup": "Ask the audience for a movie genre and a location. Two players take the stage as the actors — they perform the scene entirely in silence, miming all speech by opening and closing their mouths as if talking but making no sound. The other two players stand to the side or just off stage as the voice players, each paired with one actor.",
@@ -614,7 +587,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 26,
+    "id": 25,
     "title": "Elevator",
     "players": "4",
     "setup": "Ask the audience for a building type — an office tower, a hospital, a department store — and four distinct character types, one per player. The stage is set as a lift, with a clearly mimed set of buttons on one wall and doors that open and close at each floor.",
@@ -638,7 +611,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 27,
+    "id": 26,
     "title": "Emotion Replay",
     "players": "4",
     "setup": "Ask the audience for a location and a simple scenario. All four players perform a short, naturalistic scene — around sixty to ninety seconds — with neutral, everyday emotional choices. This is the base scene. Then the replays begin.",
@@ -663,7 +636,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 28,
+    "id": 27,
     "title": "Emotional Rollercoaster",
     "players": "4 (3 scene players + 1 caller)",
     "setup": "Ask the audience for a location and a scenario. Collect a list of six to eight strong, contrasting emotions from the audience before the scene begins. Three players take the stage; the fourth stands to the side as the caller with the emotion list.",
@@ -688,7 +661,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 29,
+    "id": 28,
     "title": "Entrances and Exits",
     "players": "4",
     "setup": "Ask the audience for a location and a scenario. Each player is secretly assigned a trigger word — a simple, common word likely to come up naturally in the scene. The scene begins with one player already on stage.",
@@ -713,7 +686,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 30,
+    "id": 29,
     "title": "Evil Twin",
     "players": "4 (2 scene players + 2 evil twins, one for each scene player)",
     "setup": "Ask the audience for a location and a high-stakes social scenario — first dates, meeting the in-laws, and job interviews work particularly well. Two players take the stage as the main characters. The other two stand to the side — each paired with one of the scene players as their evil twin.",
@@ -738,7 +711,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 31,
+    "id": 30,
     "title": "Expert Double Figures",
     "players": "4 (1 interviewer + 1 expert + 2 arm players)",
     "setup": "Ask the audience for an unusual area of expertise. Two players sit side by side on chairs as the interviewer and the expert, placing their own arms behind their backs. The other two players kneel directly behind them and thread their arms through — one pair of arms belonging to the interviewer, one pair belonging to the expert. From the front, it looks like the seated players have arms — but those arms belong to someone else entirely.",
@@ -763,7 +736,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 32,
+    "id": 31,
     "title": "Family Portraits",
     "players": "4",
     "setup": "Ask the audience for a type of family — defined by their occupation, personality, genre, situation, or something they all have in common. The teacher calls out the suggestion and counts down from five. All four players must arrange themselves into a frozen tableau — a still \"family portrait\" — before the count reaches zero.",
@@ -788,7 +761,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 33,
+    "id": 32,
     "title": "Fast Forward",
     "players": "4 (3 scene players + 1 remote control caller)",
     "setup": "Ask the audience for a location and a scenario with a clear arc — something that will naturally have a beginning, a middle, and an end. Three players take the stage. The fourth stands to the side as the remote control caller, armed with a set of commands.",
@@ -813,7 +786,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 34,
+    "id": 33,
     "title": "First Line Last Line",
     "players": "4",
     "setup": "Before the scene begins, ask the audience for two completely unrelated lines of dialogue — the first line that will open the scene, and the last line that must close it. Write them down or remember them clearly. They should be as unconnected as possible. All four players take the stage.",
@@ -838,7 +811,7 @@ const GAMES = [
     ]
   },
   {
-    "id": 35,
+    "id": 34,
     "title": "Foreign Film",
     "players": "4 (2 actors on stage + 2 translators off stage or to the side)",
     "setup": "Ask the audience for the title of a foreign film that has never been made, and a country or language it comes from. Two players take the stage as the actors. The other two stand to the side as the translators, each paired with one actor.",
@@ -860,6 +833,33 @@ const GAMES = [
     "variations": [
       "Switch roles halfway through — the translators become the actors and vice versa, continuing the same story.",
       "Allow the translator to occasionally \"mistranslate\" deliberately, forcing the actor to physically justify a completely unexpected version of what they just said."
+    ]
+  },
+  {
+    "id": 35,
+    "title": "Four Square Emotions",
+    "players": "4",
+    "setup": "Divide the playing area into four clearly marked quadrants — use tape on the floor, four chairs at the corners, or simply agree on the boundaries. Label each quadrant with a different strong emotion: Happy, Angry, Sad, and Afraid (or substitute audience suggestions). Each player begins in one quadrant, immediately inhabiting that emotion.",
+    "howToPlay": "Ask the audience for a simple scenario and a starting relationship between the four characters. The scene begins with all four players in their starting quadrants, each performing in their assigned emotion. As the scene develops, players move freely between quadrants — but the instant a player steps into a new quadrant, they must shift to that quadrant's emotion, even mid-sentence and regardless of what they were just saying or doing. Players can stay put to hold their current emotion, or deliberately cross into a different quadrant to drive the scene from a new emotional place. The scene ends when a natural story moment is reached.",
+    "purpose": "Players must simultaneously track the story, maintain their character, and shift emotion the instant they cross into a new zone. The comedy and drama come from the emotional whiplash — an argument that becomes overwhelmingly sad the moment a character steps sideways, or joy erupting in the middle of a tense standoff. The best moments happen when players start using their spatial awareness deliberately, choosing which quadrant to enter to reshape the scene.",
+    "prompts": [
+      "(Scenario + starting relationship between the four characters)",
+      "A surprise family reunion that nobody actually wanted",
+      "Four co-workers trapped in an office lift on the last day before a long holiday",
+      "A wedding rehearsal dinner where someone has just made an unexpected announcement",
+      "Four friends attempting to assemble flat-pack furniture together with one missing instruction sheet",
+      "A school staff room on the morning of a very important inspection",
+      "Four travellers stranded at an airport with only one seat left on the last flight home",
+      "A cooking competition where two of the four contestants already know who is going to win",
+      "A hospital waiting room where everyone is waiting for the same piece of news",
+      "Four members of a book club who have all clearly not read the book",
+      "A housemates' meeting called to discuss something nobody wants to admit they did"
+    ],
+    "variations": [
+      "Rotate the emotion labels to different quadrants mid-scene — all four players instantly recalibrate.",
+      "Allow the teacher or a designated audience member to call out a new emotion for a specific quadrant on the fly, replacing whatever was there.",
+      "Add a central fifth zone — any player standing in the middle of the space can choose any emotion they like.",
+      "Run the same scenario twice with the emotions assigned to different quadrants — compare how the story and relationships change."
     ]
   },
   {
