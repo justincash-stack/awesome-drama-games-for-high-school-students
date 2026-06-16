@@ -1,4 +1,4 @@
-const CACHE = 'drama-games-v3';
+const CACHE = 'drama-games-v4';
 const ASSETS = [
   '/',
   '/index.html',
