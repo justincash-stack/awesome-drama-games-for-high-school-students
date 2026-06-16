@@ -21,12 +21,11 @@ const backBtn     = document.getElementById('back-btn');
 const sortedGames = [...GAMES].sort((a, b) => a.title.localeCompare(b.title));
 
 /* ── FILTER STATE ── */
-const activeFilters = { energy: null, difficulty: null, skills: new Set() };
+const activeFilters = { energy: null, skills: new Set() };
 
 function applyFilters(games) {
   return games.filter(g => {
     if (activeFilters.energy && g.energy !== activeFilters.energy) return false;
-    if (activeFilters.difficulty && g.difficulty !== activeFilters.difficulty) return false;
     if (activeFilters.skills.size > 0) {
       const gSkills = g.skills || [];
       for (const s of activeFilters.skills) {
@@ -38,7 +37,7 @@ function applyFilters(games) {
 }
 
 function hasActiveFilters() {
-  return activeFilters.energy || activeFilters.difficulty || activeFilters.skills.size > 0;
+  return activeFilters.energy || activeFilters.skills.size > 0;
 }
 
 function syncFilterUI() {
@@ -46,9 +45,8 @@ function syncFilterUI() {
     const f = btn.dataset.filter;
     const v = btn.dataset.val;
     let on = false;
-    if (f === 'energy')     on = activeFilters.energy === v;
-    if (f === 'difficulty') on = activeFilters.difficulty === v;
-    if (f === 'skill')      on = activeFilters.skills.has(v);
+    if (f === 'energy') on = activeFilters.energy === v;
+    if (f === 'skill')  on = activeFilters.skills.has(v);
     btn.classList.toggle('active', on);
   });
   const clearBtn = document.getElementById('filter-clear-all');
@@ -118,13 +116,11 @@ function renderHome(query = '') {
 }
 
 function gameCard(g) {
-  const fav = getFavs().has(g.id);
+  const fav    = getFavs().has(g.id);
   const energy = g.energy || '';
-  const diff   = g.difficulty || '';
-  const metaHtml = (energy || diff) ? `
+  const metaHtml = energy ? `
     <div class="card-meta">
-      ${energy ? `<span class="energy-pip ${energy}" title="Energy: ${energy}"></span>` : ''}
-      ${diff   ? `<span class="diff-badge ${diff}">${diff}</span>` : ''}
+      <span class="energy-pip ${energy}" title="Energy: ${energy}"></span>
     </div>` : '';
 
   return `
@@ -145,7 +141,7 @@ function renderGame(id) {
   if (!g) { location.hash = ''; return; }
 
   const fav = getFavs().has(g.id);
-  const promptsHtml = buildPrompts(g.prompts);
+  const promptsHtml = buildPrompts(g.prompts, g.id);
   const variationsHtml = g.variations && g.variations.length ? `
     <div class="game-section">
       <div class="section-label">Variations</div>
@@ -155,12 +151,10 @@ function renderGame(id) {
     </div>` : '';
 
   const energy = g.energy || '';
-  const diff   = g.difficulty || '';
   const skills = g.skills || [];
-  const metaTagsHtml = (energy || diff || skills.length) ? `
+  const metaTagsHtml = (energy || skills.length) ? `
     <div class="detail-meta">
       ${energy ? `<span class="detail-energy-badge ${energy}">&#9889; ${energy} energy</span>` : ''}
-      ${diff   ? `<span class="detail-diff-badge ${diff}">${diff}</span>` : ''}
       ${skills.map(s => `<span class="skill-tag">${escHtml(s)}</span>`).join('')}
     </div>` : '';
 
@@ -182,7 +176,7 @@ function renderGame(id) {
         ${g.setup ? `
         <div class="game-section">
           <div class="section-label">Set-up</div>
-          <p class="section-text">${escHtml(g.setup)}${g.prompts && g.prompts.length ? ' Or use the prompts suggested below.' : ''}</p>
+          <p class="section-text">${escHtml(g.setup)}${hasPrompts(g.prompts) ? ' Or use the prompts suggested below.' : ''}</p>
         </div>` : ''}
         ${g.howToPlay ? `
         <div class="game-section">
@@ -194,7 +188,7 @@ function renderGame(id) {
           <div class="section-label">Purpose</div>
           <div class="purpose-box">${escHtml(g.purpose)}</div>
         </div>` : ''}
-        ${g.prompts && g.prompts.length ? `
+        ${promptsHtml ? `
         <div class="game-section">
           <div class="section-label">Prompts</div>
           ${promptsHtml}
@@ -206,8 +200,27 @@ function renderGame(id) {
   document.title = `${g.title} — 100 Awesome Drama Games`;
 }
 
-function buildPrompts(prompts) {
-  if (!prompts || !prompts.length) return '';
+function buildPrompts(prompts, gameId) {
+  if (!prompts) return '';
+
+  /* Tiered format (object with beginner/intermediate/advanced arrays) */
+  if (!Array.isArray(prompts) && prompts.beginner) {
+    const levels = ['beginner', 'intermediate', 'advanced'];
+    const labels = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'Advanced' };
+    const descHtml = prompts.desc ? `<p class="prompts-intro">${escHtml(prompts.desc)}</p>` : '';
+    const tabsHtml = levels.map((lvl, i) => `
+      <button class="prompt-tab${i === 0 ? ' active' : ''}" data-level="${lvl}" data-game="${gameId}">${labels[lvl]}</button>
+    `).join('');
+    const panelsHtml = levels.map((lvl, i) => `
+      <div class="prompt-panel${i === 0 ? ' active' : ''}" data-panel="${lvl}" data-game="${gameId}">
+        <ul class="prompt-list">${(prompts[lvl] || []).map(p => `<li>${escHtml(p)}</li>`).join('')}</ul>
+      </div>
+    `).join('');
+    return `${descHtml}<div class="prompt-tabs">${tabsHtml}</div>${panelsHtml}`;
+  }
+
+  /* Legacy flat array format (games 11–100) */
+  if (!prompts.length) return '';
   const [first, ...rest] = prompts;
   const isDesc = first.startsWith('(');
   const items = isDesc ? rest : prompts;
@@ -413,8 +426,6 @@ filterBar.addEventListener('click', e => {
   const v = btn.dataset.val;
   if (f === 'energy') {
     activeFilters.energy = activeFilters.energy === v ? null : v;
-  } else if (f === 'difficulty') {
-    activeFilters.difficulty = activeFilters.difficulty === v ? null : v;
   } else if (f === 'skill') {
     if (activeFilters.skills.has(v)) activeFilters.skills.delete(v);
     else activeFilters.skills.add(v);
@@ -427,7 +438,6 @@ const clearAllBtn = document.getElementById('filter-clear-all');
 if (clearAllBtn) {
   clearAllBtn.addEventListener('click', () => {
     activeFilters.energy = null;
-    activeFilters.difficulty = null;
     activeFilters.skills.clear();
     syncFilterUI();
     renderHome(searchEl.value);
@@ -444,7 +454,7 @@ container.addEventListener('click', e => {
   renderHome(searchEl.value);
 });
 
-/* ── FAV BUTTON + PROJECTOR BUTTON: detail view (event delegation) ── */
+/* ── FAV BUTTON + PROJECTOR BUTTON + PROMPT TABS: detail view (event delegation) ── */
 detailEl.addEventListener('click', e => {
   const favBtn = e.target.closest('.fav-detail-btn');
   if (favBtn) {
@@ -459,6 +469,14 @@ detailEl.addEventListener('click', e => {
   if (projBtn) {
     const id = parseInt(projBtn.dataset.id, 10);
     openProjector(id);
+    return;
+  }
+  const tab = e.target.closest('.prompt-tab');
+  if (tab) {
+    const level   = tab.dataset.level;
+    const gameId  = tab.dataset.game;
+    detailEl.querySelectorAll(`.prompt-tab[data-game="${gameId}"]`).forEach(t => t.classList.toggle('active', t === tab));
+    detailEl.querySelectorAll(`.prompt-panel[data-game="${gameId}"]`).forEach(p => p.classList.toggle('active', p.dataset.panel === level));
   }
 });
 
@@ -500,6 +518,12 @@ if ('serviceWorker' in navigator) {
 }
 
 /* ── UTIL ── */
+function hasPrompts(p) {
+  if (!p) return false;
+  if (Array.isArray(p)) return p.length > 0;
+  return !!(p.beginner && p.beginner.length);
+}
+
 function escHtml(str) {
   return String(str)
     .replace(/&/g, '&amp;')

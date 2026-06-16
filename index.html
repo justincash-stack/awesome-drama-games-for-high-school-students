@@ -699,6 +699,37 @@
       border-radius: 2px;
     }
 
+    /* ── TIERED PROMPTS TABS ── */
+    .prompt-tabs {
+      display: flex;
+      gap: 0;
+      margin-bottom: 0;
+      border-bottom: 2px solid #e2e2e2;
+    }
+    .prompt-tab {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border: none;
+      background: none;
+      color: #888;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      transition: color 0.12s, border-color 0.12s;
+    }
+    .prompt-tab:hover { color: #333; }
+    .prompt-tab.active { color: var(--black); border-bottom-color: var(--black); }
+    .prompt-tab[data-level="beginner"].active  { color: #166534; border-bottom-color: #16a34a; }
+    .prompt-tab[data-level="intermediate"].active { color: #854d0e; border-bottom-color: #d97706; }
+    .prompt-tab[data-level="advanced"].active  { color: #991b1b; border-bottom-color: #dc2626; }
+    .prompt-panel { display: none; padding-top: 4px; }
+    .prompt-panel.active { display: block; }
+    .prompt-panel .prompt-list { margin: 0; }
+
     /* ── PROJECTOR LAUNCH BUTTON (on detail page) ── */
     .proj-launch-btn {
       display: inline-flex;
@@ -999,13 +1030,6 @@
         <button class="flt" data-filter="energy" data-val="high">High</button>
         <button class="flt" data-filter="energy" data-val="medium">Medium</button>
         <button class="flt" data-filter="energy" data-val="low">Low</button>
-      </div>
-      <div class="filter-sep"></div>
-      <div class="filter-group">
-        <span class="filter-lbl">Difficulty</span>
-        <button class="flt" data-filter="difficulty" data-val="beginner">Beginner</button>
-        <button class="flt" data-filter="difficulty" data-val="intermediate">Intermediate</button>
-        <button class="flt" data-filter="difficulty" data-val="advanced">Advanced</button>
       </div>
       <div class="filter-sep"></div>
       <div class="filter-group">
