@@ -2328,19 +2328,45 @@ const GAMES = [
     "setup": "The hijacker leaves the room or covers their ears. The audience secretly decides on three things: a mode of transport, an object the hijacker must use, and a goal the hijacker must achieve. The three remaining players are told all three elements. The hijacker returns knowing nothing.",
     "howToPlay": "The three players begin a scene set inside or around the mode of transport. The hijacker enters the scene as a passenger or bystander and must, through observation and instinct, figure out what mode of transport they are on, find the secret object, and use it to achieve the secret goal — all without being told directly. The three other players give hints through their behaviour, dialogue, and physical actions, but cannot state any of the three elements outright. The scene ends when the hijacker has successfully identified everything and achieved the goal.",
     "purpose": "This game rewards close observation and bold choices. The hijacker should not just stand around waiting for clues — they should act on their best guesses and let the reactions of the other players confirm or redirect them. The other players must be generous with clues while staying in character.",
-    "prompts": [
-      "(Mode of transport + object + goal)",
-      "A hot air balloon / a rubber duck / convince everyone to jump out",
-      "A double-decker bus / an umbrella / get everyone to move to the top deck",
-      "A submarine / a tin of biscuits / get the crew to surface immediately",
-      "A cruise ship / a life ring / organise an emergency evacuation drill",
-      "A space shuttle / a cheese sandwich / convince the crew to turn around",
-      "A sleeper train / a pillow / get all passengers to swap sleeping compartments",
-      "A cable car / a pair of sunglasses / convince everyone the cable car is going the wrong way",
-      "A ferry / a lifejacket / get everyone to stand on one side of the boat",
-      "A gondola / a map / navigate to a completely different destination",
-      "A chairlift / a thermos / convince everyone to get off at the next stop"
-    ],
+    "prompts": {
+      "desc": "Mode of transport + object + goal",
+      "beginner": [
+        "A school bus / a lunchbox / convince everyone to swap seats",
+        "A paddle boat in a lake / a life jacket / get everyone to paddle in a circle",
+        "A rowboat / a fishing rod / convince everyone to get out and push",
+        "A go-kart / a helmet / convince everyone to stop at the next corner",
+        "A canoe / a paddle / convince everyone the waterfall ahead is safe",
+        "A zip line / a backpack / convince everyone to go back to the start",
+        "A horse and cart / a hat / convince everyone the horse knows the way",
+        "A shopping trolley / a shopping bag / convince the person pushing to go faster",
+        "A dodgem car / a coin / convince everyone the ride is already over",
+        "A rickshaw / an umbrella / get the driver to take a completely different route"
+      ],
+      "intermediate": [
+        "A hot air balloon / a rubber duck / convince everyone to jump out",
+        "A double-decker bus / an umbrella / get everyone to move to the top deck",
+        "A submarine / a tin of biscuits / get the crew to surface immediately",
+        "A cruise ship / a life ring / organise an emergency evacuation drill",
+        "A space shuttle / a cheese sandwich / convince the crew to turn around",
+        "A sleeper train / a pillow / get all passengers to swap sleeping compartments",
+        "A cable car / a pair of sunglasses / convince everyone the cable car is going the wrong way",
+        "A ferry / a lifejacket / get everyone to stand on one side of the boat",
+        "A gondola / a map / navigate to a completely different destination",
+        "A chairlift / a thermos / convince everyone to get off at the next stop"
+      ],
+      "advanced": [
+        "A private jet / a briefcase / convince everyone the destination needs to change",
+        "A helicopter / a radio headset / convince the pilot to land somewhere unscheduled",
+        "A luxury train carriage / a sealed envelope / get someone to leave the compartment before the next station",
+        "A diplomatic motorcade vehicle / a phone / convince the driver to stop before reaching the embassy",
+        "A research vessel at sea / a logbook / convince the crew to turn back before reaching the coordinates",
+        "A press charter flight / a press pass / convince all journalists the story has moved to a different city",
+        "An armoured van / a document / convince the guards to take a detour before the delivery",
+        "A presidential limousine / a folder / convince the security team to change the route",
+        "A submarine during a classified mission / a frequency transmitter / convince the crew to surface early",
+        "A medical evacuation helicopter / a patient file / convince the medics they have the wrong person"
+      ]
+    },
     "variations": [
       "Give the hijacker two minutes to achieve the goal — add a timekeeper who counts down, increasing the pressure.",
       "The hijacker can ask three direct yes/no questions during the scene to help narrow things down."
@@ -2360,19 +2386,45 @@ const GAMES = [
     "setup": "Arrange four chairs in the shape of a car — two in front, two behind. Three players start in the car: one driver, two passengers. The fourth player waits to the side as the first hitchhiker. Ask the audience for a destination and a reason for the journey to get things started.",
     "howToPlay": "The three players in the car drive along and chat, establishing their characters through movement, attitude, and voice. After a short while, they spot the hitchhiker and pull over to pick them up. The hitchhiker enters with a strong, clear character — a specific quirk, emotion, or personality trait. As soon as the hitchhiker is in the car, everyone already in the car gradually takes on the same character. When all four players are fully inhabiting the same character, the driver finds a reason to leave — their stop, a phone call, anything — and steps out of the scene. Everyone shifts one seat forward. The hitchhiker becomes the new driver. A new hitchhiker enters with a completely different character, and the whole cycle repeats.",
     "purpose": "This game is all about observation and physical imitation. Players must watch the hitchhiker closely and mirror their choices — walk, vocal rhythm, attitude — until the whole car is infected with the same character. The shift should feel gradual and earned, not sudden.",
-    "prompts": [
-      "(Character for each hitchhiker — one per round)",
-      "Desperately, urgently in love with everything they see",
-      "Convinced they are being followed by someone just out of sight",
-      "So exhausted they can barely keep their eyes open",
-      "Furiously offended by something nobody else can identify",
-      "Completely certain today is the best day of their entire life",
-      "Moving in extremely slow motion for reasons they find perfectly normal",
-      "Speaking exclusively in questions, even when making statements",
-      "Treating every small moment as if it is historically significant",
-      "Pretending everything is completely fine when it very obviously is not",
-      "Narrating everything that happens out loud, including their own thoughts"
-    ],
+    "prompts": {
+      "desc": "Character for each hitchhiker — one per round",
+      "beginner": [
+        "Completely convinced they can speak to animals and that animals agree with everything they say",
+        "Treats every statement as a question and every question as a surprising personal insult",
+        "Has been awake for forty-three hours and will not admit this to anyone",
+        "Extremely competitive about absolutely everything, including things that cannot be competed at",
+        "Convinced they are invisible and somewhat surprised that people keep talking to them",
+        "Moving through life at precisely double the normal speed — everything they do is twice as fast as it needs to be",
+        "Treating the entire journey as a nature documentary and narrating it out loud",
+        "Deeply suspicious of all doors and requires a lengthy explanation before entering or leaving through one",
+        "Inexplicably delighted by words with the letter Q in them",
+        "Performing every single action for an imaginary camera that they believe is filming their life"
+      ],
+      "intermediate": [
+        "Desperately, urgently in love with everything they see",
+        "Convinced they are being followed by someone just out of sight",
+        "So exhausted they can barely keep their eyes open",
+        "Furiously offended by something nobody else can identify",
+        "Completely certain today is the best day of their entire life",
+        "Moving in extremely slow motion for reasons they find perfectly normal",
+        "Speaking exclusively in questions, even when making statements",
+        "Treating every small moment as if it is historically significant",
+        "Pretending everything is completely fine when it very obviously is not",
+        "Narrating everything that happens out loud, including their own thoughts"
+      ],
+      "advanced": [
+        "Carrying a profound personal loss they have clearly decided to keep entirely private — except that it keeps showing",
+        "Running on pure professional competence while quietly falling apart underneath",
+        "In the middle of making a decision they cannot discuss — and it is clearly enormous",
+        "Performing a version of themselves they have constructed specifically for strangers",
+        "Trying to remember something important that they cannot quite reach — and growing more worried with each passing moment",
+        "Dealing with an adrenaline comedown after something happened that they cannot mention",
+        "In the first stages of an emotion they have not yet named and are trying to act as if it is not happening",
+        "Carrying a piece of news they are not yet allowed to share and containing it with visible effort",
+        "Someone who has recently realised something about themselves and is not yet sure what to do with it",
+        "Performing complete calm in a situation that requires complete calm — and not quite succeeding"
+      ]
+    },
     "variations": [
       "Give the audience the job of calling out new hitchhiker characters on the spot rather than using the prompt list.",
       "The car breaks down mid-game — all four players must work together in character to fix it before the next hitchhiker arrives."
@@ -2392,19 +2444,45 @@ const GAMES = [
     "setup": "Ask the audience for a location and a scenario. Two players take the stage as the actors. The other two become human props — their bodies, arms, legs, and shapes can be used as any object, piece of furniture, or scenery the scene requires. Human props do not speak and do not play characters. They simply make themselves available to be used, physically, in whatever way the scene needs.",
     "howToPlay": "The two actors perform the scene and use the human props freely and imaginatively throughout — sitting on them as chairs, using their outstretched arms as a steering wheel, treating them as a door, a wall, a table, a telephone, a tree, or anything else the scene calls for. The human props must respond quickly to how they are being used and hold their shape clearly so the audience can read what they are meant to be. The actors should actively look for ways to use the human props — a scene where the props stand unused at the back is a missed opportunity.",
     "purpose": "The more creative and varied the use of the human props, the better. The best scenes find unexpected uses for the human body — a prop used as a photocopier, a revolving door, a collapsing ceiling, or a dog on a lead. Props should hold their positions with commitment so every use reads clearly to the audience.",
-    "prompts": [
-      "(Location + scenario — props especially useful here)",
-      "A car wash — a vehicle goes through and things keep going wrong",
-      "A hospital — an operation requires several pieces of very specific equipment",
-      "A fancy restaurant — a waiter serves an increasingly complex meal",
-      "An airport — passengers navigate check-in, security, and the gate",
-      "A hair salon — a stylist works on a very demanding client",
-      "A gym — a personal trainer demonstrates equipment to a very reluctant new member",
-      "A space station — astronauts deal with a zero-gravity malfunction",
-      "A furniture store — two customers test out everything on the showroom floor",
-      "A theme park — riders experience a rollercoaster with a series of technical problems",
-      "A kitchen — a chef prepares a complex dish with an assistant who is not helping"
-    ],
+    "prompts": {
+      "desc": "Location + scenario — props especially useful here",
+      "beginner": [
+        "A school bus — a student is trying to pass a very large object to a friend at the back",
+        "A playground — four students building the biggest cubby house ever attempted",
+        "A camping trip — four campers setting up the most elaborate camp ever attempted",
+        "A school canteen — a student needs to balance a tray, open a door, pay, and not spill anything",
+        "A school science project — a student demonstrates their working model to the class",
+        "A birthday party — a group tries to set up a surprise before the birthday person arrives",
+        "A school corridor — students attempt to move an enormous, inexplicably shaped object between classrooms",
+        "A school sports day — four students constructing a human obstacle course",
+        "A school gymnasium — four students attempting a very ambitious gymnastic display",
+        "A school art room — a student sets up an enormous installation that requires everyone's help"
+      ],
+      "intermediate": [
+        "A car wash — a vehicle goes through and things keep going wrong",
+        "A hospital — an operation requires several pieces of very specific equipment",
+        "A fancy restaurant — a waiter serves an increasingly complex meal",
+        "An airport — passengers navigate check-in, security, and the gate",
+        "A hair salon — a stylist works on a very demanding client",
+        "A gym — a personal trainer demonstrates equipment to a very reluctant new member",
+        "A space station — astronauts deal with a zero-gravity malfunction",
+        "A furniture store — two customers test out everything on the showroom floor",
+        "A theme park — riders experience a rollercoaster with a series of technical problems",
+        "A kitchen — a chef prepares a complex dish with an assistant who is not helping"
+      ],
+      "advanced": [
+        "A film set — a director demonstrates an elaborate stunt scene involving multiple moving parts",
+        "A courtroom — a barrister reconstructs a chain of events using everything in the room as evidence",
+        "A hospital operating theatre — a surgical team completes a complex procedure requiring multiple instruments",
+        "A newsroom during a breaking story — journalists, cameras, screens, phones, and a live broadcast",
+        "A design studio — an architect presents a structural model that requires physical demonstration",
+        "A military operations room — a briefing requiring maps, equipment, and physical demonstration of a plan",
+        "A high-end fashion house — a designer presents their collection with very exacting staging requirements",
+        "A television broadcast truck — four technicians manage a live outside broadcast during a major event",
+        "A space agency mission control — the team manages a live landing procedure in real time",
+        "A luxury hotel kitchen — a head chef leads their team through the final preparation of an eight-course dinner"
+      ]
+    },
     "variations": [
       "Swap roles halfway through — the actors become human props and the props become actors, continuing the same scene.",
       "The human props are also given a secret instruction — they must slowly, subtly make themselves increasingly inconvenient throughout the scene."
@@ -2424,19 +2502,45 @@ const GAMES = [
     "setup": "Ask the audience for a simple scenario and a location. Then ask for a film genre, theatrical style, or performance tradition to perform it in. All four players perform the scene entirely within that style from the first moment to the last.",
     "howToPlay": "The scene plays out as a complete story — beginning, middle, and end — but every choice the players make is filtered through the given style. The setting, characters, and story remain those suggested by the audience, but the way they speak, move, relate to each other, and structure the scene is shaped entirely by the genre. A cooking argument performed as a silent film looks completely different from the same argument performed as a Shakespeare play or a daytime soap opera.",
     "purpose": "This game is most satisfying when players commit fully to the conventions of the style rather than just nodding at them. A western should feel like a western. A Bollywood musical should feel like a Bollywood musical. The scene is the vehicle; the style is the destination.",
-    "prompts": [
-      "(Scenario + location + performance style)",
-      "Two people arguing over a borrowed item / a lounge room / 1940s film noir",
-      "A job interview for a completely ordinary position / an office / Shakespearean tragedy",
-      "Two friends discover they both like the same person / a café / telenovela soap opera",
-      "A parent and teenager disagree about something minor / a kitchen / silent film",
-      "A doctor delivers a mundane diagnosis / a surgery / Bollywood musical",
-      "Two people stuck in a lift / an office building / horror film",
-      "A customer makes a complaint / a shop / Wild West showdown",
-      "Two strangers share an awkward meal / a restaurant / nature documentary",
-      "A couple argues over which way to go / a car / action movie car chase",
-      "Three people plan a surprise party / a living room / Greek tragedy"
-    ],
+    "prompts": {
+      "desc": "Scenario + location + performance style",
+      "beginner": [
+        "Two students argue about a homework assignment / a classroom / Saturday morning cartoon",
+        "A kid tries to explain a broken window to their parent / a lounge room / cowboy movie",
+        "Two friends debate what game to play at recess / a playground / cooking competition show",
+        "A student asks the teacher for a bathroom pass during an exam / a classroom / nature documentary",
+        "Two students argue about whose turn it is to clean up / an art room / Shakespearean tragedy",
+        "A child tries to convince a parent to extend their curfew / a kitchen / courtroom drama",
+        "Four students present a group project only one of them did / a classroom / awards ceremony",
+        "Two kids discover they have the same packed lunch / a school canteen / romantic drama",
+        "A student asks for a permission slip to be signed / a family kitchen / spy thriller",
+        "Four friends try to agree on a movie to watch / a living room / political debate"
+      ],
+      "intermediate": [
+        "Two people arguing over a borrowed item / a lounge room / 1940s film noir",
+        "A job interview for a completely ordinary position / an office / Shakespearean tragedy",
+        "Two friends discover they both like the same person / a café / telenovela soap opera",
+        "A parent and teenager disagree about something minor / a kitchen / silent film",
+        "A doctor delivers a mundane diagnosis / a surgery / Bollywood musical",
+        "Two people stuck in a lift / an office building / horror film",
+        "A customer makes a complaint / a shop / Wild West showdown",
+        "Two strangers share an awkward meal / a restaurant / nature documentary",
+        "A couple argues over which way to go / a car / action movie car chase",
+        "Three people plan a surprise party / a living room / Greek tragedy"
+      ],
+      "advanced": [
+        "Two colleagues argue over the last parking space / an office building / Greek tragedy",
+        "A doctor tells a patient their results are completely normal / a surgery / existential art house film",
+        "Two strangers argue over a taxi / a city street / Victorian melodrama",
+        "A lawyer reads a client their very small will / a law office / Chekhov play",
+        "Two diplomats negotiate over a trivial procedural detail / a conference room / Shakespearean history play",
+        "A financial advisor delivers bad news to a wealthy client / a boardroom / Italian neorealist film",
+        "Two professors disagree about a footnote in an academic paper / a university office / Homeric epic",
+        "A government minister gives a press briefing about something minor / a press conference / classical Japanese theatre",
+        "A social worker delivers routine paperwork / a community centre / French New Wave film",
+        "Two colleagues share a lift in silence after an argument / an elevator / Brechtian theatre"
+      ]
+    },
     "variations": [
       "Partway through the scene, the caller shouts a completely different style and all four players must instantly shift the same story into the new genre without pausing.",
       "Each player is secretly assigned a different style — one plays it as a western, one as a romance, one as a thriller, one as a comedy — and the scene runs with all four styles colliding simultaneously."
@@ -2456,19 +2560,45 @@ const GAMES = [
     "setup": "Ask the audience for a location and a scenario. Three players begin the scene. The fourth player stands to the side as the caller. No musical accompaniment is needed — all songs are performed a cappella.",
     "howToPlay": "The scene plays out normally. At any point, the caller shouts \"Freeze!\" and names one of the players, then gives them a subject for their inner song — what their character is secretly thinking or feeling at that exact moment. The scene freezes completely. The named player steps forward and sings a short, improvised song expressing their character's private thoughts. The other characters cannot hear the song — only the audience can. When the song ends, the player steps back into their position and the scene continues exactly where it left off. The caller can trigger inner songs for any player at any point in the scene.",
     "purpose": "Inner Song reveals the gap between what characters say and what they actually feel — the same tension that drives great musical theatre. The best inner songs are honest, specific, and surprising. Players should resist the urge to be self-consciously funny and instead commit to what the character genuinely wants, fears, or knows that nobody else in the scene does.",
-    "prompts": [
-      "(Location + scenario — the caller uses the inner song topics below as a guide)",
-      "A job interview — the interviewer is about to offer the job to the wrong person",
-      "A first date — one person is having a wonderful time and the other is not",
-      "A family dinner — someone at the table is keeping a significant secret",
-      "A school staffroom — a teacher has just received news they cannot share yet",
-      "A hospital — a patient has just been told something they are trying to process",
-      "A wedding reception — the best man is not sure the couple should be getting married",
-      "A real estate inspection — the seller knows something about the house the buyer does not",
-      "A courtroom — a witness is about to say something they know is not entirely true",
-      "A café — two old friends are catching up but one of them wants the conversation to go somewhere different",
-      "A farewell party — one of the guests does not want the person to leave"
-    ],
+    "prompts": {
+      "desc": "Location + scenario — the caller uses the inner song topics as a guide",
+      "beginner": [
+        "A school canteen — two students arguing about something while one is keeping a secret",
+        "A classroom — a group project presentation where one person did all the work and one did none",
+        "A birthday party — the birthday person has been given exactly what they asked for but isn't sure they wanted it",
+        "A school corridor — a student is being told off but knows they didn't do it",
+        "A camping trip — a student is claiming to be fine when they are very clearly not fine",
+        "A school bus — a student is pretending not to care about something they care about enormously",
+        "A sports day — a player has just let the team down and everyone is being very kind about it",
+        "A school library — a student is pretending to study while waiting for someone to notice them",
+        "A school play rehearsal — a student secretly loves their role but keeps acting embarrassed about it",
+        "A science class — a student has just had a brilliant idea they are too shy to say out loud"
+      ],
+      "intermediate": [
+        "A job interview — the interviewer is about to offer the job to the wrong person",
+        "A first date — one person is having a wonderful time and the other is not",
+        "A family dinner — someone at the table is keeping a significant secret",
+        "A school staffroom — a teacher has just received news they cannot share yet",
+        "A hospital — a patient has just been told something they are trying to process",
+        "A wedding reception — the best man is not sure the couple should be getting married",
+        "A real estate inspection — the seller knows something about the house the buyer does not",
+        "A courtroom — a witness is about to say something they know is not entirely true",
+        "A café — two old friends are catching up but one wants the conversation to go somewhere different",
+        "A farewell party — one of the guests does not want the person to leave"
+      ],
+      "advanced": [
+        "A boardroom — a CEO is presenting a strategy they privately no longer believe in",
+        "A hospital — a surgeon is preparing for a procedure they have performed a hundred times, but this one is different",
+        "A law court — a barrister is making their closing argument while privately knowing it isn't enough",
+        "A book launch — an author is answering audience questions while privately wondering if they should have published",
+        "A government press conference — a minister is reading a statement they did not write and do not agree with",
+        "A theatre — an actor is performing a role they have played for years and finally understanding what it means",
+        "A farewell speech at a retirement — the speaker is saying all the right things and none of what they actually feel",
+        "A mediation — one party is agreeing to a settlement they privately consider unjust",
+        "A graduation ceremony — a teacher watches a student who changed their life receive their diploma",
+        "A late-night radio studio — a presenter signs off their final broadcast after twenty years"
+      ]
+    },
     "variations": [
       "Trigger an inner duet — two players step forward and sing their inner thoughts simultaneously, unaware of each other's song, revealing two private realities at once.",
       "The caller gives the player a specific emotion to sing in — overjoyed, devastated, furious — regardless of what their character was showing in the scene."
@@ -2488,19 +2618,45 @@ const GAMES = [
     "setup": "The interviewee leaves the room. The audience secretly decides on the job being interviewed for — something unusual, specific, or absurd. The three remaining players are told the job and discuss the kinds of questions they might ask. The interviewee returns and the interview begins.",
     "howToPlay": "The lead interviewer welcomes the interviewee and the panel begins asking questions relevant to the job — without ever naming it outright. Every question should give a clue about the role while staying plausible as an interview question. The interviewee must answer every question in character, using the clues they pick up to build a clearer picture of what the job might be. They may only make statements — no direct questions like \"What is the job?\" are allowed. The game ends when the interviewee correctly identifies the job, or when the panel decides the interview is over.",
     "purpose": "The three interviewers must be generous with clues while resisting the urge to give the game away too easily. The best questions are ones that would only make sense for that specific job — but only after you know what the job is. The interviewee must think on their feet and commit confidently to answers even when they are guessing.",
-    "prompts": [
-      "(The secret job being interviewed for)",
-      "Professional bridesmaid for hire",
-      "Penguin wrangler at a theme park",
-      "Competitive eating contest referee",
-      "Official royal wave coach for a minor European monarch",
-      "Somebody whose job it is to untangle Christmas lights",
-      "A professional queuer — paid to stand in line on behalf of other people",
-      "Velvet rope unclippler at exclusive nightclubs",
-      "A person who names paint colours for a hardware chain",
-      "Golf ball diver — retrieves balls from water hazards at golf courses",
-      "An official apology writer for a large corporation"
-    ],
+    "prompts": {
+      "desc": "The secret job being interviewed for",
+      "beginner": [
+        "School lunch monitor at the world's pickiest primary school",
+        "Professional tooth fairy (responsible for the entire eastern suburbs)",
+        "Head of the Department of Waiting Rooms",
+        "Official imaginary friend for adults",
+        "Chief of Sock Sorting at a very disorganised sock company",
+        "Director of Saying Goodbye at Airports",
+        "Professional winner of arguments with no real importance",
+        "Head nod consultant — teaches people when to nod and for how long",
+        "Official cloud-namer for the Bureau of Meteorology",
+        "Chief supervisor of people who walk too slowly on escalators"
+      ],
+      "intermediate": [
+        "Professional bridesmaid for hire",
+        "Penguin wrangler at a theme park",
+        "Competitive eating contest referee",
+        "Official royal wave coach for a minor European monarch",
+        "Somebody whose job it is to untangle Christmas lights",
+        "A professional queuer — paid to stand in line on behalf of other people",
+        "Velvet rope unclippler at exclusive nightclubs",
+        "A person who names paint colours for a hardware chain",
+        "Golf ball diver — retrieves balls from water hazards at golf courses",
+        "An official apology writer for a large corporation"
+      ],
+      "advanced": [
+        "Head of the government's department for managing outcomes that cannot be communicated to the public",
+        "Senior consultant for institutions undergoing reputational recovery",
+        "Lead negotiator for a situation that cannot be described in the job advertisement",
+        "Chief strategist for a political party that cannot yet be named",
+        "Director of outcomes at a think tank whose area of focus has never been publicly confirmed",
+        "Principal advisor on matters that fall between existing policy frameworks",
+        "Senior liaison for projects involving stakeholders who are not officially involved",
+        "Executive lead for an initiative operating under a working title that cannot yet be disclosed",
+        "Head of a unit dedicated to problems that do not officially exist",
+        "Senior specialist in ensuring that certain conversations are never recorded"
+      ]
+    },
     "variations": [
       "Give the interviewee a secret personality quirk as well — so they are simultaneously trying to guess the job and maintain a character the panel can see but cannot directly reference.",
       "The two panel members secretly have different jobs in mind — so the clues being given are subtly contradictory, making the interviewee's job even harder."
@@ -2520,19 +2676,45 @@ const GAMES = [
     "setup": "Ask the audience for a location and a scenario. Two players take the stage; the other two wait in reserve. The rule is established before the scene begins: every line of dialogue must begin with the last letter of the final word of the previous line.",
     "howToPlay": "The two players perform a scene where each new line picks up the last letter of the previous line's final word. If Player A ends their line with the word \"strange,\" Player B must begin their next line with the letter S. Players who hesitate too long, use the wrong letter, or clearly cannot find a word are replaced by one of the reserve players, who takes over the same character and carries on from the next letter. The scene must also tell a story — this is not just a word game, it is a scene with characters, relationships, and stakes.",
     "purpose": "This game is harder than the Alphabet Game because the starting letter is unpredictable — it depends entirely on how the previous player chose to end their line. Players can strategically end on an easy letter to be kind to their partner, or on a difficult one to put them under pressure. Both choices are valid.",
-    "prompts": [
-      "(Location + scenario)",
-      "A hospital — a doctor and a patient reach very different conclusions about the same test results",
-      "A car — two people discover too late they are driving to completely different destinations",
-      "A courtroom — a lawyer gradually realises their client has been lying to them all along",
-      "A café — two strangers slowly work out they have met before, somewhere neither wants to admit",
-      "A kitchen — two flatmates reach a crisis point about something that has been building for weeks",
-      "A job interview — the interviewer and interviewee slowly swap roles without either acknowledging it",
-      "A school corridor — two students outside the principal's office piece together what actually happened",
-      "A rooftop — two people who barely know each other end up having the most honest conversation of their lives",
-      "A supermarket — a misunderstanding at the checkout gradually becomes a philosophical debate",
-      "A theatre dressing room — two performers in the same show who have never actually met have ten minutes before curtain"
-    ],
+    "prompts": {
+      "desc": "Location + scenario",
+      "beginner": [
+        "A school canteen — two students try to explain to each other why neither of them has their homework",
+        "A classroom — a substitute teacher and a student are both pretending to know what is happening",
+        "A playground — two friends argue about who won a game they both remember differently",
+        "A school library — a student tries to convince the librarian a very overdue book was never borrowed",
+        "A birthday party — two guests both claim the same seat and refuse to admit there is a spare",
+        "A camping trip — two students try to work out who forgot the tent pegs without admitting they packed the tent",
+        "A school corridor — two students outside the principal's office each constructing a completely different explanation",
+        "A school bus — two students discover they have swapped lunches and neither wants to admit the swap was intentional",
+        "A sports day — two students both claim to have won a race where no-one was watching the finish",
+        "A science class — a student and a teacher piece together what happened to the experiment that morning"
+      ],
+      "intermediate": [
+        "A hospital — a doctor and a patient reach very different conclusions about the same test results",
+        "A car — two people discover too late they are driving to completely different destinations",
+        "A courtroom — a lawyer gradually realises their client has been lying to them all along",
+        "A café — two strangers slowly work out they have met before, somewhere neither wants to admit",
+        "A kitchen — two flatmates reach a crisis point about something that has been building for weeks",
+        "A job interview — the interviewer and interviewee slowly swap roles without either acknowledging it",
+        "A school corridor — two students outside the principal's office piece together what actually happened",
+        "A rooftop — two people who barely know each other end up having the most honest conversation of their lives",
+        "A supermarket — a misunderstanding at the checkout gradually becomes a philosophical debate",
+        "A theatre dressing room — two performers in the same show who have never actually met have ten minutes before curtain"
+      ],
+      "advanced": [
+        "A late-night café — two people who have known each other for twenty years have a conversation one of them planned and the other didn't",
+        "A gallery — an artist and a critic meet after a review that ended a friendship, to see if either has changed their mind",
+        "A rooftop — a public figure and someone from their past attempt to resolve something privately before it becomes public",
+        "A hospital room — two people who love each other try to be honest without causing the exact harm they are trying to prevent",
+        "A boardroom — two colleagues who built something together discuss whether to end it",
+        "A law office — a lawyer and a former client meet outside their professional relationship for the first time",
+        "A park — two people attempt to end a relationship that neither of them started and neither can clearly name",
+        "A train — two strangers piece together that they are each the person the other was warned about",
+        "A theatre foyer — a playwright and the actor who made their reputation, after the final performance",
+        "A late-night bar — two journalists compare notes and realise they have been given contradictory versions of the same event by the same source"
+      ]
+    },
     "variations": [
       "All four players are on stage at once, rotating who speaks next in a circle — the game becomes faster and more chaotic.",
       "The last letter rule also applies to physical actions — if a player mimes an action ending with a particular shape, the next physical choice must begin from that same position."
@@ -2552,19 +2734,45 @@ const GAMES = [
     "setup": "Before the scene begins, ask the audience for a single line of dialogue — any line, the stranger the better — that will be the very last words spoken in the scene. Write it down or repeat it clearly so everyone knows it. All four players take the stage.",
     "howToPlay": "The players perform a complete improvised scene with a clear beginning, middle, and end — building naturally towards the moment when the last line can be spoken and genuinely land. The last line must be the final words of the scene — nothing comes after it. Players must steer the story towards a place where that line makes complete dramatic or comic sense as an ending, without forcing it or rushing it. The audience knows the last line and watches to see how the players get there.",
     "purpose": "This is a pure justification game. The more bizarre or out-of-context the last line seems at the start, the more satisfying it is when it arrives naturally at the end. Players should resist the urge to arrive at the last line too quickly — build the scene, earn the ending, and trust that the right moment will reveal itself.",
-    "prompts": [
-      "(The last line — to be the final words spoken in the scene)",
-      "\"I think we can all agree that the penguin was the least of our problems.\"",
-      "\"Well. I suppose that explains the accordion.\"",
-      "\"In hindsight, naming it after myself was probably the mistake.\"",
-      "\"From now on, we just tell everyone it was the wind.\"",
-      "\"Right. Who wants to call the insurance company?\"",
-      "\"I'm not saying it was aliens. I'm just saying nobody else is saying it wasn't.\"",
-      "\"Technically, the building is still standing.\"",
-      "\"And that is why I no longer celebrate birthdays.\"",
-      "\"I feel like there's a lesson here, but I'm too tired to find it.\"",
-      "\"We never speak of the Tuesday.\""
-    ],
+    "prompts": {
+      "desc": "The last line — to be the final words spoken in the scene",
+      "beginner": [
+        "\"Right. Nobody panic. But I think the hamster has been in here the whole time.\"",
+        "\"Next time we're using a grown-up's recipe.\"",
+        "\"I told you it wasn't a fire drill.\"",
+        "\"From now on, that is a wall and we do not discuss what's behind it.\"",
+        "\"I would just like to officially say — it was already like that when I got here.\"",
+        "\"Good news: the ceiling is fine. The floor is where I'd be worried.\"",
+        "\"We put it back. And we never, ever come back to this room.\"",
+        "\"Honestly, the glitter was the worst part.\"",
+        "\"That is the last time any of us experiments on a Tuesday.\"",
+        "\"Does anyone know how to get this smell out of a school bus?\""
+      ],
+      "intermediate": [
+        "\"I think we can all agree that the penguin was the least of our problems.\"",
+        "\"Well. I suppose that explains the accordion.\"",
+        "\"In hindsight, naming it after myself was probably the mistake.\"",
+        "\"From now on, we just tell everyone it was the wind.\"",
+        "\"Right. Who wants to call the insurance company?\"",
+        "\"I'm not saying it was aliens. I'm just saying nobody else is saying it wasn't.\"",
+        "\"Technically, the building is still standing.\"",
+        "\"And that is why I no longer celebrate birthdays.\"",
+        "\"I feel like there's a lesson here, but I'm too tired to find it.\"",
+        "\"We never speak of the Tuesday.\""
+      ],
+      "advanced": [
+        "\"I spent a long time waiting for that to feel different. It still doesn't.\"",
+        "\"You were right. I just couldn't say so at the time.\"",
+        "\"I think the honest answer is that neither of us comes out of this well.\"",
+        "\"Call it whatever you want. I know what it was.\"",
+        "\"The version I'm going to tell is the one where it all made sense.\"",
+        "\"Some things are better decided than understood.\"",
+        "\"I don't regret it. I just wish it had cost someone else something instead.\"",
+        "\"If we're being completely accurate — and I think we should be — it was never really about that.\"",
+        "\"Let's say we handled it. That's probably the kindest reading.\"",
+        "\"I don't know what I expected. But not that.\""
+      ]
+    },
     "variations": [
       "Give the players only thirty seconds to look at the last line before the scene begins — no planning, no discussion, just perform.",
       "Use the same last line for multiple groups back to back and let the audience compare how differently each group arrived at the same ending."
@@ -2584,19 +2792,45 @@ const GAMES = [
     "setup": "Ask the audience for a specific location — the more precise the better: not just \"a hospital\" but \"the oncology waiting room on a Tuesday afternoon.\" One player enters the space and begins to inhabit it — not yet speaking, just establishing the physical world of the location through mime, movement, and behaviour. The other three players wait at the side.",
     "howToPlay": "The first player enters and makes the location real through their body — using imaginary objects, responding to the environment, establishing what kind of person would be here and why. After a moment, the second player enters and adds to the location — finding their own objects, their own relationship to the space, interacting with the environment and with the first player. The third and fourth players enter in turn, each bringing something new to the physical world. Once all four are present, the scene plays out naturally. The location itself — built from the combined physical work of all four players — is the foundation everything grows from.",
     "purpose": "This game teaches one of the most important habits in improv: establishing where you are before worrying about what you are doing. A richly physical location creates a scene without anyone having to construct a plot — the objects and the space do the work. Players should resist the urge to speak until the location genuinely exists.",
-    "prompts": [
-      "(Specific, detailed locations — the more particular the better)",
-      "A GP's waiting room in a rural town — Thursday morning — chairs that are slightly too close together",
-      "A school library the day before exams",
-      "The kitchen of a restaurant one hour before dinner service",
-      "A laundrette on a Sunday night",
-      "A barbershop in a quiet street — late afternoon — only one chair occupied",
-      "The backstage area of a community theatre production — twenty minutes before curtain",
-      "A fish and chip shop just before closing time",
-      "A veterinary clinic waiting room — two dogs, one cat, one anxious owner",
-      "A hardware store on a Saturday morning — it's very busy and there is only one person working",
-      "An all-night petrol station at 3am"
-    ],
+    "prompts": {
+      "desc": "Specific, detailed locations — the more particular the better",
+      "beginner": [
+        "A school canteen at 8:15am — the queue hasn't moved and service doesn't start until 8:30",
+        "A school gymnasium between periods — the last class left something behind",
+        "A classroom the morning everyone forgot about the test",
+        "A school oval at lunchtime — four different groups all need the same patch of grass",
+        "A school locker bay on the last day of term",
+        "A school art room at 3pm on a Friday — everything is still wet",
+        "A sports store on the day of the school sports carnival — everyone needs something they forgot",
+        "A school bus stop at 7:45am in the rain — two buses have already gone past without stopping",
+        "A school library on the day the assignment is due — all the computers are taken",
+        "A school corridor at 8:58am — three students each running late for a different class"
+      ],
+      "intermediate": [
+        "A GP's waiting room in a rural town — Thursday morning — chairs that are slightly too close together",
+        "A school library the day before exams",
+        "The kitchen of a restaurant one hour before dinner service",
+        "A laundrette on a Sunday night",
+        "A barbershop in a quiet street — late afternoon — only one chair occupied",
+        "The backstage area of a community theatre production — twenty minutes before curtain",
+        "A fish and chip shop just before closing time",
+        "A veterinary clinic waiting room — two dogs, one cat, one anxious owner",
+        "A hardware store on a Saturday morning — it's very busy and there is only one person working",
+        "An all-night petrol station at 3am"
+      ],
+      "advanced": [
+        "A hospital chapel at 6am — the only available quiet room",
+        "The green room at a television studio, thirty minutes before a live broadcast",
+        "The corridor outside a courtroom during a long adjournment",
+        "The loading dock of a theatre during the final performance run",
+        "A government archive room on a Tuesday afternoon — reading material that cannot leave the building",
+        "The bar of a hotel during a political conference — the night before the vote",
+        "A newsroom at 11pm on election night — the projection just changed",
+        "A military base mess hall on the morning of a significant deployment",
+        "A train station's lost property office, one week before items are destroyed",
+        "The top-floor office of a building that has just been sold — the outgoing occupant is still there"
+      ]
+    },
     "variations": [
       "Each player must establish one specific object that no one else knew was there — so the location accumulates four distinct new elements with each entrance, and the scene uses all of them.",
       "Play the scene twice in the same location — once in the morning and once in the evening of the same day — showing how the space and the people in it have changed."
@@ -2616,18 +2850,45 @@ const GAMES = [
     "setup": "Ask the audience for a location — a specific place with a clear set of objects that would naturally be found there. All four players take the stage. The playing area is empty — no physical props are used. All objects must be created through mime.",
     "howToPlay": "The first player enters the location and immediately mimes using an object that would be found there — without naming it. They establish it clearly through physicality. The second player enters and must use the first object before adding their own new object. The third and fourth players each enter in turn, using all previously established objects and adding one new one. Once all four players are on stage, the scene begins in earnest — all four players are free to use all the mimed objects that have been established, in whatever order serves the scene. Players must remember and honour every object that has been set up, even the ones they did not create.",
     "purpose": "This game builds strong environmental awareness and mime precision. The more specifically a player establishes an object — its size, weight, texture, and function — the easier it is for the other players to use it. A half-hearted mime creates a vague prop nobody can work with; a committed mime creates a shared reality the whole group can inhabit.",
-    "prompts": [
-      "(Location — rich with distinctive objects)",
-      "A science lab — full of beakers, microscopes, centrifuges, safety equipment, and things bubbling on benches",
-      "A bakery — ovens, trays, rolling pins, display cabinets, bags of flour, and a very complicated till",
-      "A hospital emergency room — gurneys, monitors, IV stands, defibrillators, clipboards, and curtains on rails",
-      "A hairdresser — chairs, mirrors, basins, scissors, dryers, product shelves, and a very loud radio",
-      "A mechanic's workshop — cars on hoists, tool chests, oil drums, spanners, rags, and a grumpy calendar",
-      "A kitchen on a busy service — stoves, pots, pass, ticket rail, knives, boards, and a very temperamental oven",
-      "A school art room — easels, canvases, paint jars, brushes, palettes, drying racks, and a sink perpetually full",
-      "A dentist's surgery — the chair, the drill, the light, the suction tube, the tray of tools, and the very tense patient bib",
-      "A gym — barbells, benches, treadmills, cables, mirrors, water fountains, and one machine nobody uses correctly"
-    ],
+    "prompts": {
+      "desc": "Location — rich with distinctive objects",
+      "beginner": [
+        "A school art room — easels, paint jars, brushes, water containers, clay, and drying racks",
+        "A school kitchen — ovens, measuring cups, mixing bowls, trays, rolling pins, and timers",
+        "A school science lab — beakers, microscopes, test tubes, safety goggles, Bunsen burners, and lab coats",
+        "A school music room — instruments on stands, sheet music, a piano, chairs in rows, and a broken metronome",
+        "A school library — trolleys, shelves, a date stamp, a computer, a returns box, and a very full lost property shelf",
+        "A school canteen — a bain-marie, tongs, a till, trays, portion cups, and a very large pot of something",
+        "A school PE store room — balls of every kind, cones, bibs, a scoreboard, ropes, and a broken net",
+        "A school drama room — chairs in a circle, costumes on a rack, a prop box, a lighting rig, and an uneven stage",
+        "A school reception area — a sign-in book, a phone, a sliding glass window, a waiting bench, and an intercom",
+        "A school garden — a wheelbarrow, trowels, hoses, seed packets, stakes, compost bins, and muddy boots"
+      ],
+      "intermediate": [
+        "A science lab — full of beakers, microscopes, centrifuges, safety equipment, and things bubbling on benches",
+        "A bakery — ovens, trays, rolling pins, display cabinets, bags of flour, and a very complicated till",
+        "A hospital emergency room — gurneys, monitors, IV stands, defibrillators, clipboards, and curtains on rails",
+        "A hairdresser — chairs, mirrors, basins, scissors, dryers, product shelves, and a very loud radio",
+        "A mechanic's workshop — cars on hoists, tool chests, oil drums, spanners, rags, and a grumpy calendar",
+        "A kitchen on a busy service — stoves, pots, pass, ticket rail, knives, boards, and a very temperamental oven",
+        "A school art room — easels, canvases, paint jars, brushes, palettes, drying racks, and a sink perpetually full",
+        "A dentist's surgery — the chair, the drill, the light, the suction tube, the tray of tools, and the very tense patient bib",
+        "A gym — barbells, benches, treadmills, cables, mirrors, water fountains, and one machine nobody uses correctly",
+        "A film production set — cameras, lights on stands, boom poles, a clapper board, monitor stations, cables, and a director's chair"
+      ],
+      "advanced": [
+        "A courtroom — the dock, the witness box, the bench, the exhibit table, the jury rail, robes on hooks, and a full evidence ledger",
+        "A television newsroom — anchor desk, camera rigs, teleprompters, production monitors, wire feeds, earpieces, and a live chyron that cannot be removed",
+        "A surgical theatre — the operating table, overhead lights, instrument trays, monitors, anaesthetic equipment, and a whiteboard with a procedure time",
+        "A film production company — editing suites, production boards, pitch decks, a director's chair, reels on shelves, and a PA system",
+        "A nuclear plant control room — panels, switches, monitors, binders, phones, key slots, and warning indicators",
+        "A military operations briefing room — maps, satellite images pinned to boards, radios, a projected timeline, a pointer, and a locked cabinet",
+        "A research archive — catalogue drawers, acid-free folders, reading stands, white gloves, a magnifying lamp, and crates of unsorted material",
+        "A high court — the bench, the bar table, the witness stand, the jury box, exhibits on a trolley, and a ceremonial mace",
+        "An auction house on the day of a major sale — lot cards, display plinths, a podium, a gavel, preview catalogues, and a telephone bidding desk",
+        "A diplomatic reception room — a long table, nameplates, microphones, flag stands, translation booths, and a sealed envelope at one seat"
+      ]
+    },
     "variations": [
       "One player enters last and must identify every single object already established before they are allowed to add their own — testing the group's mime clarity.",
       "The scene is played entirely in silence — no dialogue, only mime and object work — making the environmental storytelling carry the whole scene."
