@@ -1166,19 +1166,45 @@ const GAMES = [
     "setup": "Ask the audience for an ordinary location and a mundane object or occupation — nothing that already suggests death or danger. All four players take the stage. One player acts as the timekeeper, counting down from sixty seconds out loud or on a phone.",
     "howToPlay": "The four players have exactly sixty seconds to perform a complete scene in which at least one character meets an untimely end. The scene must begin with a clear situation and end with a death that makes dramatic sense — however absurd that sense may be. The death cannot simply be announced or faked — it must grow from what is happening in the scene. Players must work fast to establish who the characters are, what is at stake, and how it all ends.",
     "purpose": "The one-minute limit forces the group to make immediate, bold choices and accept everything that is offered — there is simply no time to stall or second-guess. The scene must have a real story arc within sixty seconds. Resist the temptation to open with someone dying straight away — an earned death is far funnier and more satisfying than a cheap one.",
-    "prompts": [
-      "(Ordinary location + mundane object or occupation — nothing that already suggests danger)",
-      "A library — a bookmark",
-      "A post office — a rubber stamp",
-      "A hairdresser — a hair clip",
-      "A laundromat — a missing sock",
-      "A garden centre — a watering can",
-      "A knitting circle — a ball of wool",
-      "A cheese shop — a cheese grater",
-      "A stationery shop — a staple remover",
-      "A bakery — a bread roll",
-      "A neighbourhood council meeting — a microphone"
-    ],
+    "prompts": {
+      "desc": "Ordinary location + mundane object or occupation — nothing that suggests danger",
+      "beginner": [
+        "A classroom — a pencil case",
+        "A school canteen — a plastic tray",
+        "A playground — a handball",
+        "A school locker — a combination lock",
+        "A school library — a library card",
+        "A birthday party — a paper plate",
+        "A camping trip — a sleeping bag",
+        "A school bus — a bus pass",
+        "A school excursion — a name tag",
+        "A sports day — a participation ribbon"
+      ],
+      "intermediate": [
+        "A library — a bookmark",
+        "A post office — a rubber stamp",
+        "A hairdresser — a hair clip",
+        "A laundromat — a missing sock",
+        "A garden centre — a watering can",
+        "A knitting circle — a ball of wool",
+        "A cheese shop — a cheese grater",
+        "A stationery shop — a staple remover",
+        "A bakery — a bread roll",
+        "A neighbourhood council meeting — a microphone"
+      ],
+      "advanced": [
+        "A boardroom — a presentation clicker",
+        "A job interview — a business card",
+        "A theatre — a programme",
+        "A hospital ward — a clipboard",
+        "A law firm — a printed contract",
+        "A gallery opening — a glass of sparkling water",
+        "A university lecture — a laser pointer",
+        "A fashion show — a seating chart",
+        "A political fundraiser — a name badge",
+        "A five-star restaurant — a menu"
+      ]
+    },
     "variations": [
       "Play the same scene twice — once where the death happens early and once where it is saved for the final second, then discuss which was more satisfying.",
       "The timekeeper can call \"Slow motion!\" at any point, forcing the final moments of the scene to play out at half speed for maximum drama."
@@ -1198,18 +1224,45 @@ const GAMES = [
     "setup": "Ask the audience for a location and a scenario. Three players take the stage and begin the scene. The fourth player stands to the side as the director.",
     "howToPlay": "The scene plays out normally until the director calls \"Cut!\" — then gives an instruction that changes something about how the scene is being performed. The director might change an emotion, reassign a character to a different player, alter the relationship between characters, demand a different performance style, or tell a player to redo their last moment in a completely different way. The players immediately take the note and restart from that point. The director can cut and redirect as many times as they like, shaping the scene as it goes.",
     "purpose": "This game is as much about the director as the performers. A good director watches closely for the most interesting moment to cut and gives clear, specific notes that push the scene somewhere unexpected. Players must be flexible enough to take direction instantly and without resistance.",
-    "prompts": [
-      "(Location + scenario — director uses list below as inspiration for redirections)",
-      "A restaurant — a couple's anniversary dinner is not going well — redirect ideas: swap who is upset, play it as a silent film, make one character a robot",
-      "A hospital — a doctor has unusual news — redirect ideas: change the genre to western, make the patient overjoyed, replay the last line in slow motion",
-      "A job interview — something on the CV is suspicious — redirect ideas: swap the power dynamic, play it as a soap opera, make both characters fall in love",
-      "A school — a student is in trouble — redirect ideas: replay as a nature documentary, swap the characters' attitudes, add a third character as a narrator",
-      "A supermarket — two strangers argue over the last item on the shelf — redirect ideas: make them old friends, play it as an action movie, one character is hiding something",
-      "A camping trip — the tent has collapsed — redirect ideas: play as a musical, swap who is calm, make it a period drama",
-      "A courtroom — an unlikely verdict is about to be announced — redirect ideas: replay in slow motion, swap the lawyers and the judge, make one character a ghost",
-      "A family car — a long journey with too many opinions — redirect ideas: play as a horror film, make the driver a stranger, replay the last exchange twice as fast",
-      "A gym — a personal trainer has very unconventional methods — redirect ideas: swap who is training whom, play as a soap opera, make one character terrified"
-    ],
+    "prompts": {
+      "desc": "Location + scenario — director uses the redirect ideas below as inspiration",
+      "beginner": [
+        "A classroom — a student gives a very confident wrong answer — redirect ideas: make the teacher swap with the student, replay as a cooking show, add a narrator who also gets it wrong",
+        "A school canteen — someone accidentally takes the wrong lunch — redirect ideas: swap who is upset, play it as a heist, make one character a royal",
+        "A birthday party — the birthday person forgot it was their birthday — redirect ideas: play as a nature documentary, give one character an accent, replay in reverse order",
+        "A playground — two friends both want to be the leader of a new game — redirect ideas: make them robots, play as a soap opera, add one character who explains everything to camera",
+        "A school library — someone has returned a book with something left inside — redirect ideas: replay as a mystery, swap the characters' ages, make the librarian a spy",
+        "A sports day — a player trips and no-one knows whether to laugh or help — redirect ideas: play as a news broadcast, swap who is embarrassed, replay in slow motion",
+        "A camping trip — the tent has been put up inside out — redirect ideas: make one character an expert, play as a documentary, replay as a horror film",
+        "A school corridor — two students pass a note that gets intercepted — redirect ideas: make it a silent film, swap who the note is about, add an exaggerated villain",
+        "A school bus — the driver has taken a wrong turn — redirect ideas: play as an action film, make one character overly dramatic, swap the driver and a passenger",
+        "A classroom — a substitute teacher arrives with no plan — redirect ideas: play as a Western, swap who is nervous, replay with one character completely calm"
+      ],
+      "intermediate": [
+        "A restaurant — a couple's anniversary dinner is not going well — redirect ideas: swap who is upset, play it as a silent film, make one character a robot",
+        "A hospital — a doctor has unusual news — redirect ideas: change the genre to western, make the patient overjoyed, replay the last line in slow motion",
+        "A job interview — something on the CV is suspicious — redirect ideas: swap the power dynamic, play it as a soap opera, make both characters fall in love",
+        "A school — a student is in trouble — redirect ideas: replay as a nature documentary, swap the characters' attitudes, add a third character as a narrator",
+        "A supermarket — two strangers argue over the last item on the shelf — redirect ideas: make them old friends, play it as an action movie, one character is hiding something",
+        "A camping trip — the tent has collapsed — redirect ideas: play as a musical, swap who is calm, make it a period drama",
+        "A courtroom — an unlikely verdict is about to be announced — redirect ideas: replay in slow motion, swap the lawyers and the judge, make one character a ghost",
+        "A family car — a long journey with too many opinions — redirect ideas: play as a horror film, make the driver a stranger, replay the last exchange twice as fast",
+        "A gym — a personal trainer has very unconventional methods — redirect ideas: swap who is training whom, play as a soap opera, make one character terrified",
+        "A party — someone is accused of eating the last of something — redirect ideas: replay as a courtroom drama, make one character a detective, swap the emotions mid-scene"
+      ],
+      "advanced": [
+        "A boardroom — a senior employee resigns without warning — redirect ideas: slow the final moment to silence, reassign who has the power, replay as a Shakespearean tragedy",
+        "A hospital corridor — a doctor delivers news to the wrong family — redirect ideas: swap who is professional, play as a 1940s film, replay with no dialogue",
+        "A law firm — a junior lawyer finds evidence that changes everything — redirect ideas: make it a silent film, swap the power dynamic, replay the key line as a whisper",
+        "A family home — two adult siblings argue over a parent's estate — redirect ideas: play as a period drama, replay with both furious, make one character speak only in questions",
+        "A theatre — an actor refuses to go on stage — redirect ideas: replay as a documentary, swap who persuades whom, make it the final night of the run",
+        "A late-night café — a stranger recognises someone who doesn't want to be recognised — redirect ideas: give both characters secrets, replay without any names, play as a spy thriller",
+        "A government office — a civil servant discovers a massive error just before a decision is finalised — redirect ideas: swap who made the error, play as absurdist comedy, replay at double speed",
+        "A university campus — a student confronts a lecturer about a failed grade — redirect ideas: make the lecturer afraid, play as a musical, replay with both characters resigned",
+        "A press conference — a speaker loses their prepared remarks — redirect ideas: swap who panics, play it completely straight, replay with the other character sabotaging",
+        "A courtroom — a witness says something that changes the whole case — redirect ideas: freeze and replay from the defendant's perspective, play as a soap opera, make the judge lose composure"
+      ]
+    },
     "variations": [
       "The audience can shout \"Cut!\" and give their own direction at any point, taking over from the director.",
       "Each player on stage secretly has a goal for the scene — the director must guess what each goal is before the scene ends."
@@ -1229,18 +1282,45 @@ const GAMES = [
     "setup": "Both scene players leave the room or cover their ears. The audience secretly assigns each of them a specific task or behaviour — something they must get the other player to do during the scene without telling them directly. Player A knows Player B's task but not their own, and Player B knows Player A's task but not their own. The two informants hold this information and confirm when a task has been successfully completed.",
     "howToPlay": "Both players perform a scene in the given location. Each player subtly tries to manoeuvre the other into performing their secret task, while simultaneously trying to figure out — from the other player's behaviour — what their own secret task is. Players cannot simply tell each other what to do. The scene ends when both tasks have been completed, or when the informants confirm that one player has correctly identified their own task.",
     "purpose": "This game rewards close listening and genuine responsiveness — both players are giving clues and reading clues at the same time. The more both players commit to the scene rather than chasing the task, the funnier and more satisfying the game becomes.",
-    "prompts": [
-      "(Location + two secret tasks — one per player)",
-      "A kitchen — Player A must get Player B to taste something disgusting / Player B must get Player A to stand on a chair",
-      "A doctor's surgery — Player A must get Player B to take their shoes off / Player B must get Player A to lie on the floor",
-      "A car journey — Player A must get Player B to sing / Player B must get Player A to open the window and shout",
-      "An office — Player A must get Player B to hide under the desk / Player B must get Player A to make a phone call",
-      "A park — Player A must get Player B to run on the spot / Player B must get Player A to lie in the grass",
-      "A shop — Player A must get Player B to try on a hat / Player B must get Player A to carry three things at once",
-      "A gym — Player A must get Player B to do ten push-ups / Player B must get Player A to jump over something",
-      "A café — Player A must get Player B to spill their drink / Player B must get Player A to wave at a stranger",
-      "A library — Player A must get Player B to whisper a secret / Player B must get Player A to stack books into a tower"
-    ],
+    "prompts": {
+      "desc": "Location + two secret tasks — one per player",
+      "beginner": [
+        "A classroom — Player A must get Player B to raise their hand / Player B must get Player A to stand up",
+        "A playground — Player A must get Player B to jump / Player B must get Player A to spin around",
+        "A school library — Player A must get Player B to put a book on their head / Player B must get Player A to sit on the floor",
+        "A birthday party — Player A must get Player B to clap / Player B must get Player A to close their eyes",
+        "A school canteen — Player A must get Player B to swap seats / Player B must get Player A to smell the food",
+        "A camping trip — Player A must get Player B to pretend to sleep / Player B must get Player A to howl like a wolf",
+        "A school bus — Player A must get Player B to move seats / Player B must get Player A to look out the window and point",
+        "A school corridor — Player A must get Player B to drop something / Player B must get Player A to knock on a door",
+        "A science classroom — Player A must get Player B to put on goggles / Player B must get Player A to write something on the whiteboard",
+        "A sports day — Player A must get Player B to blow a pretend whistle / Player B must get Player A to do a victory lap on the spot"
+      ],
+      "intermediate": [
+        "A kitchen — Player A must get Player B to taste something disgusting / Player B must get Player A to stand on a chair",
+        "A doctor's surgery — Player A must get Player B to take their shoes off / Player B must get Player A to lie on the floor",
+        "A car journey — Player A must get Player B to sing / Player B must get Player A to open the window and shout",
+        "An office — Player A must get Player B to hide under the desk / Player B must get Player A to make a phone call",
+        "A park — Player A must get Player B to run on the spot / Player B must get Player A to lie in the grass",
+        "A shop — Player A must get Player B to try on a hat / Player B must get Player A to carry three things at once",
+        "A gym — Player A must get Player B to do ten push-ups / Player B must get Player A to jump over something",
+        "A café — Player A must get Player B to spill their drink / Player B must get Player A to wave at a stranger",
+        "A library — Player A must get Player B to whisper a secret / Player B must get Player A to stack books into a tower",
+        "A swimming pool — Player A must get Player B to test the water temperature / Player B must get Player A to put on a swim cap"
+      ],
+      "advanced": [
+        "A job interview — Player A must get Player B to confess something embarrassing / Player B must get Player A to stand and shake hands",
+        "A hospital ward — Player A must get Player B to step outside / Player B must get Player A to sit on the bed",
+        "A late-night bar — Player A must get Player B to pour a drink out / Player B must get Player A to pay for something",
+        "A boardroom — Player A must get Player B to leave the table / Player B must get Player A to delete something on screen",
+        "A theatre rehearsal — Player A must get Player B to say a line out loud / Player B must get Player A to demonstrate a physical action",
+        "A law office — Player A must get Player B to sign something / Player B must get Player A to open a drawer",
+        "A hotel room — Player A must get Player B to look out the window / Player B must get Player A to make a call",
+        "A courtroom — Player A must get Player B to object / Player B must get Player A to sit down without being told",
+        "A kitchen during a dinner party — Player A must get Player B to taste something they are hesitant about / Player B must get Player A to open a bottle",
+        "A museum — Player A must get Player B to touch an exhibit (mimed) / Player B must get Player A to take a photograph"
+      ]
+    },
     "variations": [
       "Add the two informants as minor characters in the scene — they can drop clues but must also stay in character.",
       "Give each player three tasks instead of one, making the scene longer and increasingly chaotic as the tasks multiply."
@@ -1260,10 +1340,45 @@ const GAMES = [
     "setup": "Ask the audience for a movie genre and a location. Two players take the stage as the actors — they perform the scene entirely in silence, miming all speech by opening and closing their mouths as if talking but making no sound. The other two players stand to the side or just off stage as the voice players, each paired with one actor.",
     "howToPlay": "Whenever an actor opens their mouth, their paired voice player immediately provides the words. Whenever the actor stops moving their mouth, the voice player stops speaking. Neither player leads — the actors drive the physicality and emotion, the voice players provide the words, and both must watch each other closely to stay in sync. The scene plays out as a complete story in the chosen genre.",
     "purpose": "Neither pair should try to lead. The magic happens when actors and voice players genuinely share control — the body suggesting what the voice might say, and the voice inspiring what the body might do next. The funnier and more physical the actors are, the richer the material the voice players have to work with.",
-    "prompts": [
-      "(Movie genre + location)",
-      "1. Action thriller — a rooftop in a city at night 2. Romantic drama — a candlelit restaurant 3. Horror — an old house during a storm 4. Science fiction — a space station under alert 5. Western — a saloon at sundown 6. Crime noir — a detective's office in the rain 7. Romantic comedy — an airport arrivals terminal 8. Disaster movie — a submarine taking on water 9. Period drama — a grand ballroom in the 1800s 10. Spy thriller — a museum after closing time"
-    ],
+    "prompts": {
+      "desc": "Movie genre + location",
+      "beginner": [
+        "Animated adventure — a school playground",
+        "Superhero comedy — a school canteen",
+        "Kids' cooking show turned action movie — a school kitchen",
+        "Nature documentary adventure — a camping ground",
+        "Time travel comedy — a corner shop",
+        "Musical — a shopping centre food court",
+        "Buddy cop comedy — a school corridor",
+        "Fantasy quest — a suburban backyard",
+        "Disaster movie (rated G) — a birthday party",
+        "Sports movie climax — a gym hall"
+      ],
+      "intermediate": [
+        "Action thriller — a rooftop in a city at night",
+        "Romantic drama — a candlelit restaurant",
+        "Horror — an old house during a storm",
+        "Science fiction — a space station under alert",
+        "Western — a saloon at sundown",
+        "Crime noir — a detective's office in the rain",
+        "Romantic comedy — an airport arrivals terminal",
+        "Disaster movie — a submarine taking on water",
+        "Period drama — a grand ballroom in the 1800s",
+        "Spy thriller — a museum after closing time"
+      ],
+      "advanced": [
+        "European art house film — an empty apartment after a breakup",
+        "Political thriller — a government minister's office during a crisis",
+        "Psychological drama — a psychiatric ward common room",
+        "Literary adaptation — a manor house library on a stormy night",
+        "War film — a field hospital during a ceasefire",
+        "Legal drama — a courtroom during a recess",
+        "Slow-burn romance — a train carriage crossing a border at night",
+        "Medical drama — an operating theatre during an emergency",
+        "Crime drama — a police interrogation room at 2am",
+        "Epic historical — a palace throne room the night before an invasion"
+      ]
+    },
     "variations": [
       "Switch pairs halfway through the scene — voice players become actors and actors become voice players, continuing the same story.",
       "One voice player provides all voices for both actors, shifting rapidly between characters — harder, funnier, and gloriously chaotic."
@@ -1283,18 +1398,45 @@ const GAMES = [
     "setup": "Ask the audience for a building type — an office tower, a hospital, a department store — and four distinct character types, one per player. The stage is set as a lift, with a clearly mimed set of buttons on one wall and doors that open and close at each floor.",
     "howToPlay": "The scene begins with one player already in the lift. One by one, the other players enter at different floors, each bringing their character fully into the confined space. Players interact naturally — or uncomfortably — as characters who happen to share a small moving box. Some characters get off at their floor; others stay. The lift might get stuck. Someone might press the wrong button. The scene ends when the last character exits or when a natural button is reached.",
     "purpose": "The lift is a brilliant theatrical device — it forces characters with nothing in common into an unavoidable shared space. The best scenes happen when players commit to strong, distinct characters and let the friction of the space do the work. Encourage players to use the physical environment consistently — the same door, the same buttons, the same cramped dimensions — every time.",
-    "prompts": [
-      "(Building type + four character types)",
-      "A hospital — an anxious surgeon, a cheerful patient in a gown, a lost visitor, and a maintenance worker with a mop",
-      "An office tower — a CEO on a phone call, an intern on their first day, a disgruntled employee carrying a box of belongings, and a delivery driver",
-      "A department store — an overworked floor manager, a very indecisive shopper, a security guard, and a window dresser carrying a mannequin arm",
-      "A hotel — a VIP guest, a frantic concierge, a honeymooning couple, and a cleaner with a cart full of supplies",
-      "A school building — a nervous student, a teacher with a stack of marking, the principal, and a very lost parent",
-      "A government building — a flustered politician, a journalist with a microphone, a bored security guard, and a citizen with a complaint",
-      "A research facility — a distracted scientist, a new lab assistant, a journalist who snuck in, and a robot that somehow pressed the button",
-      "An apartment building — a couple mid-argument, a neighbour pretending not to listen, and a food delivery driver holding a very fragrant order",
-      "A TV studio — a nervous celebrity, their frantic publicist, a starstruck intern, and a camera operator who has accidentally followed them in"
-    ],
+    "prompts": {
+      "desc": "Building type + four character types",
+      "beginner": [
+        "A school building — a nervous new student, an overconfident prefect, a teacher carrying a birthday cake, and a lost parent",
+        "A shopping centre — an excited kid on a birthday outing, a tired parent, a shop assistant in full costume, and a confused elderly person",
+        "A zoo — a zookeeper carrying a bucket, a very excited child, a photographer, and someone clearly afraid of animals",
+        "A community centre — a drama student in full stage make-up, a grumpy council worker, an enthusiastic sports coach, and someone who has just won a raffle",
+        "A library — a student with a towering stack of books, a very quiet librarian, a child carrying a goldfish in a bag, and a man who cannot find his card",
+        "A sports stadium — an athlete in full gear, a very nervous commentator, a food vendor carrying nachos, and a lost mascot in costume",
+        "A cinema — a couple on a first date, an usher with a torch, a film critic with a notebook, and a very tall person who sits in front of everyone",
+        "A hospital — a patient in a gown pushing a drip stand, a cheerful orderly, a frantic nurse, and a confused visitor holding flowers",
+        "A museum — a very bored security guard, an overenthusiastic tour guide, a child determined to touch everything, and a visiting artist",
+        "An aquarium — a marine biologist, a hyperactive student, a school teacher, and a tour guide who is completely lost"
+      ],
+      "intermediate": [
+        "A hospital — an anxious surgeon, a cheerful patient in a gown, a lost visitor, and a maintenance worker with a mop",
+        "An office tower — a CEO on a phone call, an intern on their first day, a disgruntled employee carrying a box of belongings, and a delivery driver",
+        "A department store — an overworked floor manager, a very indecisive shopper, a security guard, and a window dresser carrying a mannequin arm",
+        "A hotel — a VIP guest, a frantic concierge, a honeymooning couple, and a cleaner with a cart full of supplies",
+        "A school building — a nervous student, a teacher with a stack of marking, the principal, and a very lost parent",
+        "A government building — a flustered politician, a journalist with a microphone, a bored security guard, and a citizen with a complaint",
+        "A research facility — a distracted scientist, a new lab assistant, a journalist who snuck in, and a robot that somehow pressed the button",
+        "An apartment building — a couple mid-argument, a neighbour pretending not to listen, and a food delivery driver holding a very fragrant order",
+        "A TV studio — a nervous celebrity, their frantic publicist, a starstruck intern, and a camera operator who has accidentally followed them in",
+        "A film studio — a director mid-creative-breakdown, a lead actor in a complicated costume, a continuity supervisor, and a very new runner who has pressed the wrong button"
+      ],
+      "advanced": [
+        "A high court building — a barrister adjusting their wig, a nervous defendant, a journalist chasing a quote, and a judge in full robes returning from lunch",
+        "A corporate headquarters — a CEO about to announce redundancies, a union rep who has just found out, a communications manager in crisis mode, and a new graduate on their first day",
+        "A television news building — an anchor mid-breakdown, a producer with breaking news on their phone, a junior researcher, and a politician waiting to be interviewed",
+        "A financial institution — a senior trader during a market crash, a compliance officer with a report, a whistleblower who just pressed send, and a security guard who isn't sure what to do",
+        "A government building — a minister about to resign, their chief of staff, a journalist who has the story, and a security officer who has been told to stop that journalist",
+        "A luxury hotel — a disgraced celebrity trying to check in quietly, a concierge who recognises them, a guest who has no idea, and a photographer who has somehow got inside",
+        "A hospital — a surgeon who has just had a difficult outcome, the family in the wrong lift, a hospital chaplain, and a new registrar who doesn't know what to say",
+        "A publishing house — an author whose book has just been pulped, a publicist trying to spin it, a loyal editor, and the junior who caused the error",
+        "A law firm — a partner who has just lost a major case, their associate, the opposing counsel who is also in the lift, and a cleaner who heard everything",
+        "A theatre — the director who just cut a major actor from the cast, that actor, the actor's understudy, and a stage manager trying very hard not to react"
+      ]
+    },
     "variations": [
       "The lift gets stuck between floors — players must improvise the wait, the panic, and the rescue.",
       "Players rotate out as their character reaches their floor, and new characters join — the scene becomes a parade of brief encounters with one recurring character who rides the whole way."
@@ -1314,19 +1456,45 @@ const GAMES = [
     "setup": "Ask the audience for a location and a simple scenario. All four players perform a short, naturalistic scene — around sixty to ninety seconds — with neutral, everyday emotional choices. This is the base scene. Then the replays begin.",
     "howToPlay": "After the base scene ends, the audience suggests a strong emotion. All four players replay the exact same scene — the same lines, the same actions, the same sequence — but now filtered entirely through that emotion. Every line is said the same way, but felt completely differently. After each replay, the audience suggests a new emotion and the scene is replayed again. Aim for three to four replays using contrasting emotions — for example, furious, then lovesick, then terrified.",
     "purpose": "The replay must follow the same basic structure and dialogue as the original — the emotion is the only thing that changes. This makes the effect of emotion visible and concrete. The audience sees the same moment transformed by joy, rage, grief, or hysteria, and understands immediately how much emotion shapes the meaning of everything we say and do.",
-    "prompts": [
-      "(Location + scenario + three suggested emotions for the replays)",
-      "A kitchen — two flatmates discover the third has eaten all the food — furious, hysterically lovesick, terrified",
-      "A waiting room — someone finds out their appointment has been cancelled — devastated, overjoyed, deeply suspicious",
-      "A school staffroom — a teacher finds their mug has gone missing — furious, heartbroken, bizarrely serene",
-      "A car park — two drivers both want the same space — outraged, flirtatious, exhausted beyond caring",
-      "A supermarket — a customer is one item short at the self-checkout — panicked, philosophical, smugly superior",
-      "A café — one friend is very late and has no good excuse — furious, utterly lovesick, terrified",
-      "A gym — a personal trainer gives feedback nobody asked for — smug, heartbroken, frantically competitive",
-      "A hallway — two neighbours discover they have the same doormat — confused, furious, inexplicably emotional",
-      "An office — someone takes credit for another's idea in a meeting — devastated, overjoyed, cold and murderous",
-      "A bus stop — the bus is cancelled — despairing, blissful, wildly conspiratorial"
-    ],
+    "prompts": {
+      "desc": "Location + scenario + three suggested emotions for the replays",
+      "beginner": [
+        "A classroom — the teacher has forgotten it is someone's birthday — surprised, overjoyed, deeply suspicious",
+        "A school canteen — the last dessert has been given to someone else — furious, bizarrely philosophical, secretly thrilled",
+        "A birthday party — the birthday cake has toppled off the table — devastated, hysterically amused, strangely calm",
+        "A playground — a four-square ball has gone over the fence — outraged, overjoyed, determinedly optimistic",
+        "A school corridor — two students are both late to the same class — panicked, blissfully unconcerned, furiously competitive",
+        "A camping trip — someone's tent has been set up on an ant hill — horrified, weirdly impressed, smugly told-you-so",
+        "A school locker — the combination is suddenly wrong — determined, furious, completely at peace",
+        "A sports day — a race ends in a tie no-one expected — thrilled, cheated, bizarrely moved to tears",
+        "A school bus — someone is in the wrong seat and won't move — furious, strangely philosophical, heartbroken",
+        "A library — a borrowed book has a very embarrassing note inside it — mortified, delighted, deeply suspicious"
+      ],
+      "intermediate": [
+        "A kitchen — two flatmates discover the third has eaten all the food — furious, hysterically lovesick, terrified",
+        "A waiting room — someone finds out their appointment has been cancelled — devastated, overjoyed, deeply suspicious",
+        "A school staffroom — a teacher finds their mug has gone missing — furious, heartbroken, bizarrely serene",
+        "A car park — two drivers both want the same space — outraged, flirtatious, exhausted beyond caring",
+        "A supermarket — a customer is one item short at the self-checkout — panicked, philosophical, smugly superior",
+        "A café — one friend is very late and has no good excuse — furious, utterly lovesick, terrified",
+        "A gym — a personal trainer gives feedback nobody asked for — smug, heartbroken, frantically competitive",
+        "A hallway — two neighbours discover they have the same doormat — confused, furious, inexplicably emotional",
+        "An office — someone takes credit for another's idea in a meeting — devastated, overjoyed, cold and murderous",
+        "A bus stop — the bus is cancelled — despairing, blissful, wildly conspiratorial"
+      ],
+      "advanced": [
+        "A hospital corridor — a doctor delivers unexpectedly good news — overwhelmed, professionally composed, bizarrely guilty",
+        "A boardroom — the vote doesn't go the way anyone expected — devastated, furiously calm, strangely relieved",
+        "A late-night diner — an ex arrives unexpectedly and sits down — furious, achingly glad, completely hollow",
+        "A family home — one sibling announces a secret the other already knew — cold with certainty, overwhelmed, devastated",
+        "A law office — the client has changed their mind at the last possible moment — furious, genuinely understanding, bleak",
+        "A theatre — the lead actor has quit two hours before opening — controlled panic, bizarrely serene, cold and determined",
+        "A funeral reception — a long-kept secret is accidentally revealed — stunned, furious, strangely at peace",
+        "A park — someone receives a message that changes everything — hollow, overwhelmed, forcing a smile",
+        "A press conference — the wrong name is announced — stunned, coldly furious, already planning",
+        "A train — someone realises they have taken the wrong one and cannot go back today — resigned, surprisingly amused, achingly sad"
+      ]
+    },
     "variations": [
       "Give each player a different emotion for the same replay, so the four characters are each experiencing the scene through a completely different emotional lens simultaneously.",
       "Speed up each replay — the first is full length, the second at double speed, the third at triple speed — emotions escalating and the comedy intensifying."
@@ -1346,19 +1514,45 @@ const GAMES = [
     "setup": "Ask the audience for a location and a scenario. Collect a list of six to eight strong, contrasting emotions from the audience before the scene begins. Three players take the stage; the fourth stands to the side as the caller with the emotion list.",
     "howToPlay": "The three players perform a normal scene. At any point, the caller shouts an emotion from the list — and all three players must instantly shift into that emotion and find a way to justify it within the scene. The story keeps moving forward. The caller switches emotions as often as they like — every thirty seconds or so — keeping the players constantly off-balance. Unlike Continuing Emotions, where one player changes at a time, here all three players shift simultaneously.",
     "purpose": "The scene must keep making story sense even as the emotions careen wildly from one extreme to another. Players should find reasons for each shift within the world of the scene rather than just performing the emotion in isolation. The more committed and physical each shift is, the more the audience enjoys the ride.",
-    "prompts": [
-      "(Location + scenario + suggested emotion pool)",
-      "A kitchen — preparing a meal that keeps going wrong — furious, overjoyed, terrified, lovesick, smug, devastated",
-      "A job interview — the candidate seems perfect until they aren't — nervous, smug, terrified, overjoyed, suspicious, heartbroken",
-      "A camping trip — something is out there in the dark — brave, terrified, competitive, lovesick, furious, hysterical",
-      "A hospital waiting room — news is expected at any moment — hopeful, devastated, furious, blissful, paranoid, resigned",
-      "A school corridor — exam results have just gone up — overjoyed, devastated, furious, suspiciously calm, competitive, weeping",
-      "A car journey — the GPS has taken them somewhere very wrong — confident, terrified, furious, philosophical, lovesick, hysterical",
-      "A restaurant — the wrong order keeps arriving — amused, furious, lovesick, suspicious, devastated, bizarrely content",
-      "A gym — mid-workout when the power goes out — motivated, terrified, furious, overjoyed, competitive, resigned",
-      "A rooftop — a surprise announcement is being made — hopeful, devastated, furious, overjoyed, suspicious, tearful",
-      "A wedding reception — the speeches have begun — moved to tears, furious, blissfully in love, suspicious, mortified, overjoyed"
-    ],
+    "prompts": {
+      "desc": "Location + scenario + suggested emotion pool",
+      "beginner": [
+        "A school canteen — the last pizza slice keeps getting closer to someone who isn't allowed it — excited, terrified, furious, devastated, smug, confused",
+        "A classroom — a student accidentally answers correctly for once — shocked, thrilled, suspicious, smug, terrified, overjoyed",
+        "A birthday party — the presents turn out to be all socks — hopeful, devastated, furious, philosophical, competitive, overjoyed",
+        "A playground — the rules of a game keep changing — excited, furious, terrified, smug, heartbroken, hysterical",
+        "A school bus — someone finds a very strange lost item — curious, terrified, smug, furious, overjoyed, heartbroken",
+        "A camping trip — the food bag has been raided by something in the night — furious, terrified, philosophical, devastated, overjoyed, competitive",
+        "A sports day — a team that never wins is suddenly winning — thrilled, suspicious, smug, terrified, devastated, hysterical",
+        "A school library — someone finds a note in a borrowed book — curious, overjoyed, furious, terrified, smug, devastated",
+        "A science class — an experiment does something nobody expected — excited, terrified, smug, devastated, overjoyed, furious",
+        "A school corridor — a rumour turns out to be true — shocked, furious, overjoyed, terrified, smug, heartbroken"
+      ],
+      "intermediate": [
+        "A kitchen — preparing a meal that keeps going wrong — furious, overjoyed, terrified, lovesick, smug, devastated",
+        "A job interview — the candidate seems perfect until they aren't — nervous, smug, terrified, overjoyed, suspicious, heartbroken",
+        "A camping trip — something is out there in the dark — brave, terrified, competitive, lovesick, furious, hysterical",
+        "A hospital waiting room — news is expected at any moment — hopeful, devastated, furious, blissful, paranoid, resigned",
+        "A school corridor — exam results have just gone up — overjoyed, devastated, furious, suspiciously calm, competitive, weeping",
+        "A car journey — the GPS has taken them somewhere very wrong — confident, terrified, furious, philosophical, lovesick, hysterical",
+        "A restaurant — the wrong order keeps arriving — amused, furious, lovesick, suspicious, devastated, bizarrely content",
+        "A gym — mid-workout when the power goes out — motivated, terrified, furious, overjoyed, competitive, resigned",
+        "A rooftop — a surprise announcement is being made — hopeful, devastated, furious, overjoyed, suspicious, tearful",
+        "A wedding reception — the speeches have begun — moved to tears, furious, blissfully in love, suspicious, mortified, overjoyed"
+      ],
+      "advanced": [
+        "A boardroom — a vote that will end someone's career begins — confident, terrified, furious, eerily calm, devastated, grimly determined",
+        "A hospital — a procedure is delayed with no explanation — hopeful, furious, resigned, panicked, hollow, performing calm",
+        "A late-night bar — two people who haven't spoken in years find themselves at the same table — curious, furious, achingly nostalgic, cold, overwhelmed, performing indifference",
+        "A law court — the jury returns after two minutes — certain, terrified, furious, blankly resigned, overwhelmed, already planning",
+        "A rooftop — a resignation letter is about to be delivered in person — determined, terrified, furious, strangely serene, heartbroken, resolved",
+        "A theatre dressing room — a sold-out show has just been cancelled mid-performance — furious, devastated, grimly professional, overwhelmed, sardonically amused, hollow",
+        "A government office — a classified file has just been leaked — panicked, furious, coldly calculating, devastated, performing calm, resigned",
+        "A family kitchen — someone is about to tell a secret that will change everyone's understanding of the past — terrified, furious, hollow, overwhelmed, performing confidence, resolved",
+        "A press conference — the prepared statement has just been contradicted by a live broadcast — furious, panicked, coldly professional, devastated, grimly determined, strangely serene",
+        "A hotel room — two people who thought they had made a decision find out it has been made for them — shocked, furious, hollow, resigned, overwhelmed, bitterly amused"
+      ]
+    },
     "variations": [
       "The caller can assign a different emotion to each player individually rather than shifting all three at once — creating scenes where every character is feeling something completely different at the same time.",
       "The audience takes over from the caller, shouting emotions whenever they feel like it — faster, more chaotic, and hugely entertaining."
@@ -1378,19 +1572,45 @@ const GAMES = [
     "setup": "Ask the audience for a location and a scenario. Each player is secretly assigned a trigger word — a simple, common word likely to come up naturally in the scene. The scene begins with one player already on stage.",
     "howToPlay": "There are two rules that never change: there must always be exactly two players on stage, and there can never be more than two. Whenever a player's trigger word is spoken aloud in the scene, they must immediately enter if they are offstage, or exit if they are on stage. Every entrance must push someone else off, and every exit must pull someone else back on. All entrances and exits must be justified within the world of the scene — characters need believable reasons to arrive and leave.",
     "purpose": "This game rewards close listening and quick justification. Players must track the entire scene at all times, not just their own lines — because anyone might say your word at any moment. The best scenes are ones where the constant traffic of characters feels like it is serving the story, not interrupting it.",
-    "prompts": [
-      "(Location + scenario + four trigger words — one per player)",
-      "A café — a regular customer causes a scene — words: coffee, chair, outside, sorry",
-      "A hospital — a mix-up with patient files — words: doctor, name, room, fine",
-      "A school office — a misunderstanding about an assignment — words: late, work, class, right",
-      "A family home — unexpected guests arrive — words: door, ready, dinner, home",
-      "A hotel lobby — a booking that does not exist — words: reservation, night, card, problem",
-      "A police station — a very confused witness — words: time, think, sure, know",
-      "A supermarket — a price dispute at the checkout — words: price, item, card, wait",
-      "A theatre dressing room — opening night chaos — words: ready, costume, stage, now",
-      "A train carriage — the wrong person keeps sitting in the reserved seat — words: seat, ticket, move, here",
-      "A courtroom — a witness who keeps changing their story — words: truth, honour, remember, clearly"
-    ],
+    "prompts": {
+      "desc": "Location + scenario + four trigger words — one per player",
+      "beginner": [
+        "A classroom — a student gives a very wrong answer — words: teacher, wrong, again, class",
+        "A school canteen — the last dessert goes to the wrong person — words: food, wait, mine, now",
+        "A birthday party — the birthday cake falls over — words: cake, help, no, ready",
+        "A playground — someone breaks the rules of a game — words: out, rules, fair, again",
+        "A school library — a very overdue book is returned — words: book, fine, sorry, late",
+        "A school bus — someone is sitting in the wrong seat — words: seat, here, sorry, move",
+        "A camping trip — the fire won't start — words: fire, try, wood, ready",
+        "A sports day — someone trips in the relay race — words: run, fall, go, out",
+        "A school corridor — two students both get sent to the office — words: office, right, this, know",
+        "A science class — an experiment gets out of control — words: stop, now, fine, careful"
+      ],
+      "intermediate": [
+        "A café — a regular customer causes a scene — words: coffee, chair, outside, sorry",
+        "A hospital — a mix-up with patient files — words: doctor, name, room, fine",
+        "A school office — a misunderstanding about an assignment — words: late, work, class, right",
+        "A family home — unexpected guests arrive — words: door, ready, dinner, home",
+        "A hotel lobby — a booking that does not exist — words: reservation, night, card, problem",
+        "A police station — a very confused witness — words: time, think, sure, know",
+        "A supermarket — a price dispute at the checkout — words: price, item, card, wait",
+        "A theatre dressing room — opening night chaos — words: ready, costume, stage, now",
+        "A train carriage — the wrong person keeps sitting in the reserved seat — words: seat, ticket, move, here",
+        "A courtroom — a witness who keeps changing their story — words: truth, honour, remember, clearly"
+      ],
+      "advanced": [
+        "A boardroom — a casting vote is about to be announced — words: vote, ready, record, final",
+        "A late-night bar — someone is meeting an ex for the first time since — words: last, here, long, know",
+        "A hospital — a patient has refused treatment — words: decision, stay, leave, right",
+        "A law office — a document has gone missing before a deadline — words: found, time, matter, sorry",
+        "A theatre — an actor refuses to go on for the second act — words: stage, ready, out, stay",
+        "A government building — a resignation has been leaked before it is official — words: confirmed, statement, leave, done",
+        "A family home — a will is being read and someone was left out — words: family, fair, left, sorry",
+        "A press conference — the speaker goes off script — words: question, this, stop, clear",
+        "A hotel corridor — a fire alarm goes off at 2am — words: everyone, out, fine, now",
+        "A courtroom — a witness is being recalled — words: recall, truth, remember, clear"
+      ]
+    },
     "variations": [
       "Players can strategically use another player's word to force them on or off stage at a dramatically useful moment.",
       "Increase the difficulty by giving each player two trigger words instead of one."
@@ -1410,19 +1630,45 @@ const GAMES = [
     "setup": "Ask the audience for a location and a high-stakes social scenario — first dates, meeting the in-laws, and job interviews work particularly well. Two players take the stage as the main characters. The other two stand to the side — each paired with one of the scene players as their evil twin.",
     "howToPlay": "The two main players perform the scene as normal, aiming to be polite, appropriate, and socially functional. At any point, an evil twin can shout \"Freeze!\" — their scene partner freezes instantly, and the evil twin steps in to replace them. The evil twin then does something inappropriate, chaotic, or downright wicked before stepping back out. The original player unfreezes, takes stock of the damage their twin has caused, and must immediately justify and repair it — continuing the scene as if the evil twin's action was somehow explainable. Either twin can step in at any moment.",
     "purpose": "The comedy comes from the gap between the respectable main character and their unhinged alter ego. The greater the contrast between the two players' choices, the better. The main player's job — justifying the unjustifiable — is often the funniest part of all.",
-    "prompts": [
-      "(Location + high-stakes social scenario)",
-      "A restaurant — a first date going suspiciously well",
-      "A living room — meeting a partner's parents for the first time",
-      "A job interview — final round for a highly competitive position",
-      "A wedding — the best man meets the bride's family for the first time",
-      "A school — a parent meeting the teacher of their very difficult child",
-      "A formal dinner — a junior employee seated next to the CEO",
-      "A doctor's surgery — a patient trying to make a good impression on a specialist",
-      "A real estate open house — a buyer trying to seem casual about a property they desperately want",
-      "A university interview — an applicant trying to appear more qualified than they are",
-      "A cooking class — a beginner trying to impress a very famous chef"
-    ],
+    "prompts": {
+      "desc": "Location + social scenario — the main character is trying to make a good impression",
+      "beginner": [
+        "A classroom — a student presents their work in front of the class for the first time",
+        "A school canteen — a new student is trying to make friends at lunch",
+        "A birthday party — a kid is trying to seem grateful for a present they hate",
+        "A playground — two students are trying to resolve an argument before the teacher notices",
+        "A school office — a student is trying to explain why their homework is late without sounding dishonest",
+        "A sports day — a student is giving a speech as captain and really doesn't want to",
+        "A camping trip — a student tries to convince the group they are fine after spilling everyone's dinner",
+        "A science fair — a student is presenting their project to a judge they really want to impress",
+        "A school library — a student tries to quietly return a very overdue book without the librarian noticing",
+        "A school corridor — a student tries to seem completely normal after accidentally setting off the fire alarm"
+      ],
+      "intermediate": [
+        "A restaurant — a first date going suspiciously well",
+        "A living room — meeting a partner's parents for the first time",
+        "A job interview — final round for a highly competitive position",
+        "A wedding — the best man meets the bride's family for the first time",
+        "A school — a parent meeting the teacher of their very difficult child",
+        "A formal dinner — a junior employee seated next to the CEO",
+        "A doctor's surgery — a patient trying to make a good impression on a specialist",
+        "A real estate open house — a buyer trying to seem casual about a property they desperately want",
+        "A university interview — an applicant trying to appear more qualified than they are",
+        "A cooking class — a beginner trying to impress a very famous chef"
+      ],
+      "advanced": [
+        "A charity gala — a donor trying to seem humble while being awarded something",
+        "A mediation — two former business partners trying to appear cooperative in front of a mediator",
+        "A political launch event — a candidate meeting their biggest critic in public for the first time",
+        "A gallery opening — an artist listening to a reviewer critique their work to their face",
+        "A board meeting — a CEO presenting a failed quarter while appearing confident",
+        "A book launch — an author meeting the person they based a character on, who has just recognised themselves",
+        "A law firm — a lawyer having dinner with a client while concealing devastating news until after the meal",
+        "A memorial service — two people trying to be civil when both feel the other shouldn't be there",
+        "A government function — a minister speaking publicly about a policy while privately planning to reverse it",
+        "A hospital waiting room — a person trying to seem calm while receiving news that is not calm at all"
+      ]
+    },
     "variations": [
       "Both evil twins are on stage at the same time, competing to cause more chaos — the scene descends gloriously.",
       "The evil twins must stay on stage but can only act when the other players are not looking at them directly."
@@ -1442,19 +1688,45 @@ const GAMES = [
     "setup": "Ask the audience for an unusual area of expertise. Two players sit side by side on chairs as the interviewer and the expert, placing their own arms behind their backs. The other two players kneel directly behind them and thread their arms through — one pair of arms belonging to the interviewer, one pair belonging to the expert. From the front, it looks like the seated players have arms — but those arms belong to someone else entirely.",
     "howToPlay": "The interviewer welcomes the audience to the show and introduces the expert. The expert discusses their unusual area of knowledge and answers the interviewer's questions. Meanwhile, the arm players must respond to everything being said with appropriate — or spectacularly inappropriate — gestures, actions, and physical reactions. The arm players and their paired characters must work together: the arms should reflect the dialogue, but they have their own ideas, and the speakers must justify whatever their arms do.",
     "purpose": "The comedy comes from the arms acting independently of the words — picking things up, pointing at the wrong thing, waving at entirely the wrong moment. The best performances happen when the speakers treat their arms as genuinely their own and justify every unexpected gesture with a straight face.",
-    "prompts": [
-      "(Unusual area of expertise for the expert)",
-      "The world's leading authority on the correct way to eat a Tim Tam",
-      "An expert in the psychology of people who name their houseplants",
-      "A scientist who has spent twelve years studying why people say \"you too\" when told to enjoy their meal",
-      "A historian specialising in the worst haircuts in recorded history",
-      "A professional advisor on the best excuses for not replying to text messages",
-      "An expert on why people slow down to look at other people's car accidents",
-      "A researcher who has dedicated their career to understanding why socks disappear in the wash",
-      "A specialist in the body language of people pretending to be busy on their phones",
-      "An academic who has written three books on the correct pronunciation of \"gif\"",
-      "A world authority on the etiquette of using speakerphone in public places"
-    ],
+    "prompts": {
+      "desc": "Unusual area of expertise for the expert",
+      "beginner": [
+        "The world authority on the correct way to eat a meat pie without it exploding",
+        "A leading researcher into the psychology of people who talk to their pets in a special voice",
+        "A scientist who has spent seven years studying why people spell their own name wrong when nervous",
+        "An expert in why people say \"I'll start Monday\" when they mean never",
+        "A specialist in why people look at their phone immediately after putting it down",
+        "An academic devoted to why people close the fridge and immediately open it again",
+        "A researcher who studies why people wave back at strangers who weren't waving at them",
+        "The foremost expert on the etiquette of accepting food you don't want at someone else's house",
+        "A specialist in the body language of people who say \"I'm fine\" but are clearly not fine",
+        "A leading authority on why people apologise to furniture they walk into"
+      ],
+      "intermediate": [
+        "The world's leading authority on the correct way to eat a Tim Tam",
+        "An expert in the psychology of people who name their houseplants",
+        "A scientist who has spent twelve years studying why people say \"you too\" when told to enjoy their meal",
+        "A historian specialising in the worst haircuts in recorded history",
+        "A professional advisor on the best excuses for not replying to text messages",
+        "An expert on why people slow down to look at other people's car accidents",
+        "A researcher who has dedicated their career to understanding why socks disappear in the wash",
+        "A specialist in the body language of people pretending to be busy on their phones",
+        "An academic who has written three books on the correct pronunciation of \"gif\"",
+        "A world authority on the etiquette of using speakerphone in public places"
+      ],
+      "advanced": [
+        "A philosopher who has written four books on why people apologise before disagreeing — and what it says about power",
+        "A linguist who has mapped how quickly \"we need to talk\" became the most feared phrase in three languages",
+        "A sociologist specialising in why people announce they are going to bed, then don't go to bed, three times",
+        "A neuroscientist studying the phenomenon of remembering an urgent task the moment you become too busy to do it",
+        "A cultural theorist who has spent a decade studying why people re-read their own messages immediately after sending them",
+        "A psychologist specialising in the precise social cost of mispronouncing someone's name after knowing them for six months",
+        "An anthropologist studying how quickly a group establishes dominance by choosing a restaurant",
+        "A researcher who has formally categorised all nineteen varieties of the phrase \"I thought you were handling that\"",
+        "A semiotician who studies why people nod slowly when they have no idea what they have just agreed to",
+        "An expert in the specific social contract of \"we should catch up soon\" and why it never leads to catching up"
+      ]
+    },
     "variations": [
       "The arm players are given a secret instruction — one set of arms must try to hug the other person, and the other set must resist — without either speaker acknowledging it.",
       "Encourage the seated players to stand up, move around, and demonstrate things — keeping the arm players attached and forcing all four to physically collaborate."
