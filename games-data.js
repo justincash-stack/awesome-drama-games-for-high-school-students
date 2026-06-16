@@ -586,19 +586,45 @@ const GAMES = [
     "setup": "Ask the audience for four different TV genres — for example, cooking show, nature documentary, soap opera, game show. Assign one genre to each player. All four agree on a simple shared scenario that will run through all the channels.",
     "howToPlay": "The teacher or a designated audience member acts as the remote control caller, leaving all four players free to inhabit their TV genres. The scene begins with one player presenting the shared scenario in their assigned TV genre. When the caller shouts \"Change channel!\", the scene instantly switches to the next player, who picks up exactly where the story left off — but filtered entirely through their different genre. The same story beat, a completely different television style. Channels can switch at any moment, even mid-sentence.",
     "purpose": "Players must hold two things in mind at once — the shared story running through all channels, and the specific conventions of their own genre. The story should actually continue across channels, not reset each time. If a character confessed something on the soap opera channel, that confession still exists when the cooking show host picks it up.",
-    "prompts": [
-      "(Shared scenario + four TV genres)",
-      "A missing pet — nature documentary, game show, home renovation show, telenovela",
-      "Someone locked out of their house — thriller, cooking show, children's TV, reality show",
-      "A surprise party gone wrong — soap opera, sports commentary, true crime documentary, shopping channel",
-      "A job interview — courtroom drama, cooking competition, wildlife documentary, infomercial",
-      "A car breakdown on a highway — action movie, lifestyle TV, quiz show, weather report",
-      "Someone discovers their neighbour's secret — soap opera, nature documentary, news broadcast, home shopping channel",
-      "A first date at a restaurant — romantic drama, cooking show, sports commentary, true crime",
-      "A bank robbery — action movie, children's TV, lifestyle program, game show",
-      "A medical emergency at a dinner party — medical drama, cooking show, reality TV, nature documentary",
-      "The last day of school — soap opera, sports commentary, documentary, infomercial"
-    ],
+    "prompts": {
+      "desc": "Shared scenario + four TV genres",
+      "beginner": [
+        "A lost puppy — children's TV, nature documentary, sports commentary, weather report",
+        "A broken vending machine — cooking show, game show, nature documentary, infomercial",
+        "Someone locked out of their house — children's TV, action movie, cooking show, reality show",
+        "A missing birthday cake — soap opera, cooking show, nature documentary, children's TV",
+        "A school excursion goes wrong — children's TV, nature documentary, sports commentary, action movie",
+        "A pet has escaped — nature documentary, game show, children's TV, weather report",
+        "A class project nobody did — children's TV, cooking show, game show, reality TV",
+        "Someone is stuck in a tree — action movie, nature documentary, cooking show, children's TV",
+        "A fire drill during an exam — sports commentary, children's TV, cooking show, news report",
+        "A sleepover where nobody can sleep — children's TV, nature documentary, game show, reality TV"
+      ],
+      "intermediate": [
+        "A missing pet — nature documentary, game show, home renovation show, telenovela",
+        "Someone locked out of their house — thriller, cooking show, children's TV, reality show",
+        "A surprise party gone wrong — soap opera, sports commentary, true crime documentary, shopping channel",
+        "A job interview — courtroom drama, cooking competition, wildlife documentary, infomercial",
+        "A car breakdown on a highway — action movie, lifestyle TV, quiz show, weather report",
+        "A first date at a restaurant — romantic drama, cooking show, sports commentary, true crime",
+        "A bank robbery — action movie, children's TV, lifestyle program, game show",
+        "A medical emergency at a dinner party — medical drama, cooking show, reality TV, nature documentary",
+        "The last day of school — soap opera, sports commentary, documentary, infomercial",
+        "Someone discovers their neighbour's secret — soap opera, nature documentary, news broadcast, home shopping channel"
+      ],
+      "advanced": [
+        "A couple having their first argument — film noir, kitchen-sink drama, nature documentary, cooking competition",
+        "An unexpected inheritance is announced — courtroom drama, soap opera, true crime documentary, lifestyle show",
+        "A reunion between two people who haven't spoken in years — romantic drama, nature documentary, crime reconstruction, cooking show",
+        "A character receives devastating news — medical drama, sports commentary, true crime documentary, cooking competition",
+        "A business deal about to collapse — political drama, lifestyle TV, true crime, nature documentary",
+        "Someone discovers a long-kept family secret — soap opera, documentary, crime reconstruction, infomercial",
+        "A farewell that might be permanent — period drama, reality TV, true crime, cooking show",
+        "A public figure's reputation is being destroyed — news broadcast, soap opera, nature documentary, lifestyle show",
+        "Two strangers discover they share a remarkable connection — romantic drama, true crime, nature documentary, game show",
+        "A character is about to make an irreversible choice — thriller, soap opera, cooking competition, nature documentary"
+      ]
+    },
     "variations": [
       "Switch channels back and forth rapidly, forcing players to pick up mid-sentence from wherever the story was when that channel was last on.",
       "Add a fifth channel — the audience — who can call out a genre of their own at any time and nominate a player to perform it."
@@ -618,19 +644,45 @@ const GAMES = [
     "setup": "Ask the audience for a location and a scenario. Before the scene begins, each player is secretly given a strong character offer — a specific personality trait or attitude that will drive everything they do on stage.",
     "howToPlay": "All four players perform the scene fully embodying their character offer from the first moment they step on stage. The offer is never announced — it must be shown entirely through action, physicality, and dialogue. Look for moments where your offer creates friction or comedy when it collides with another player's contrasting offer.",
     "purpose": "Strong characters drive strong scenes. A specific, committed character offer gives a player something concrete to play and makes every moment more interesting. Vague characters produce vague scenes — bold, specific characters produce memorable ones.",
-    "prompts": [
-      "(Location + scenario + four character offers)",
-      "A doctor's surgery — routine check-up — hypochondriac, completely indifferent, secretly terrified, overly cheerful",
-      "A restaurant — a meal goes wrong — furious perfectionist, desperately apologetic, completely oblivious, finding everything hilarious",
-      "A school corridor — waiting for exam results — overconfident, quietly panicking, pretending not to care, convinced it's a conspiracy",
-      "A camping trip — something has gone missing — natural leader, complete pessimist, easily distracted, blaming everyone else",
-      "A job interview — multiple candidates, one position — desperately eager, aggressively competitive, utterly unprepared, inexplicably calm",
-      "A supermarket — a price dispute at the checkout — outraged, mortified, lost in their own world, trying to mediate everything",
-      "A wedding — something has gone wrong backstage — holding it together, falling apart dramatically, making it worse by helping, quietly delighted",
-      "A train — delayed for unknown reasons — immediately suspicious, resigned and philosophical, furiously impatient, trying to befriend everyone",
-      "A gym — equipment keeps malfunctioning — relentlessly positive, catastrophising every setback, highly competitive, convinced they can fix everything",
-      "A science lab — an experiment produces an unexpected result — thrilled by chaos, desperate to cover it up, blaming the equipment, taking clinical notes"
-    ],
+    "prompts": {
+      "desc": "Location + scenario + four character offers",
+      "beginner": [
+        "A school canteen — lunchtime rush — drama queen, secretly terrified, desperately hungry, convinced they're being watched",
+        "A birthday party — cake cutting time — completely overexcited, trying to be serious, only interested in presents, certain the cake will be bad",
+        "A camping trip — setting up tents — natural leader who is actually lost, complaints about everything, finding it all magical, needs to be first at everything",
+        "A classroom — group project day — knows every answer, completely clueless but confident, secretly copying, waiting for others to do the work",
+        "A sports day — team warm-up — ridiculously competitive, convinced they'll be injured, treating it like the Olympics, can't stop laughing",
+        "A school excursion — at the museum — bored out of their mind, terrified of the exhibits, secretly fascinated, trying to impress everyone",
+        "A slumber party — lights-out time — desperately wants to sleep, starting every conversation, certain something is in the house, unaffected by everything",
+        "A pet shop — looking for a pet — overwhelmed with love for every animal, allergic to literally everything, only interested in the most expensive animal, determined to get a fish",
+        "A school library — study time — cannot focus on anything, on the verge of a breakthrough, cataloguing every minor distraction, inexplicably cheerful",
+        "A canteen queue — the food is about to run out — in desperate need of that meal, coolly indifferent, furious about the wait, convinced they deserve to go first"
+      ],
+      "intermediate": [
+        "A doctor's surgery — routine check-up — hypochondriac, completely indifferent, secretly terrified, overly cheerful",
+        "A restaurant — a meal goes wrong — furious perfectionist, desperately apologetic, completely oblivious, finding everything hilarious",
+        "A school corridor — waiting for exam results — overconfident, quietly panicking, pretending not to care, convinced it's a conspiracy",
+        "A camping trip — something has gone missing — natural leader, complete pessimist, easily distracted, blaming everyone else",
+        "A job interview — multiple candidates, one position — desperately eager, aggressively competitive, utterly unprepared, inexplicably calm",
+        "A supermarket — a price dispute at the checkout — outraged, mortified, lost in their own world, trying to mediate everything",
+        "A wedding — something has gone wrong backstage — holding it together, falling apart dramatically, making it worse by helping, quietly delighted",
+        "A train — delayed for unknown reasons — immediately suspicious, resigned and philosophical, furiously impatient, trying to befriend everyone",
+        "A gym — equipment keeps malfunctioning — relentlessly positive, catastrophising every setback, highly competitive, convinced they can fix everything",
+        "A science lab — an experiment produces an unexpected result — thrilled by chaos, desperate to cover it up, blaming the equipment, taking clinical notes"
+      ],
+      "advanced": [
+        "A high-stakes business meeting — a deal is falling apart — sabotaging it deliberately, desperately trying to save it, completely unaware of the tension, amused by the whole thing",
+        "A hospital — waiting for test results — convinced of the worst, performing denial, professionally detached despite personal stakes, making dark jokes",
+        "A court hallway — before a verdict — quietly guilty, performing innocence, genuinely unaware of the seriousness, thinking only about lunch",
+        "A farewell party — the person leaving doesn't want to go — engineering their return, celebrating their own role in the exit, oblivious, making it about themselves",
+        "A rehearsal dinner — day before a wedding — hoping it doesn't happen, certain it will fail but saying nothing, completely overwhelmed, running the logistics",
+        "A therapist's waiting room — all four are patients — coping by oversharing, coping by control, refusing to admit they need help, making everyone else's problems worse",
+        "A job termination meeting — HR present — doing it as painlessly as possible, doing it as painfully as possible, not understanding what is happening, already planning next steps",
+        "A crisis meeting — a company's reputation at stake — focused on optics over substance, genuinely trying to fix the problem, leaking information in real time, pretending they knew all along",
+        "A diplomatic summit — a deal nearly done — representing one interest while serving another, naively principled, watching only for personal advantage, taking minutes and getting everything wrong",
+        "A family gathering after a long estrangement — nobody will address why — ready to confront it, determined to avoid it, unaware there was ever a problem, feeding information to both sides"
+      ]
+    },
     "variations": [
       "Players swap character offers halfway through without stopping — immediately adopt another player's character and continue.",
       "Tell the audience each player's offer before the scene begins so they can watch the offers collide."
@@ -650,19 +702,45 @@ const GAMES = [
     "setup": "Ask the audience for a location and a scenario with a clear relationship between two very different characters. Two players take the stage and establish their characters with strong, distinct physical and vocal choices. The caller stands to the side; the fourth player waits in reserve.",
     "howToPlay": "The two players perform the scene in character. When the caller shouts \"Swap!\", both players instantly switch — each now plays the other's character, crossing the stage to take each other's position and immediately adopting the other's walk, voice, and attitude. The scene continues exactly where it left off. The caller can swap as many times as they like.",
     "purpose": "Players must watch each other intently throughout — they could be asked to become the other person at any moment. The more distinct and physically committed the two characters are from the start, the better the swaps will land.",
-    "prompts": [
-      "(Location + scenario + two contrasting characters)",
-      "A doctor's surgery — a tense consultation — a nervous patient and a disturbingly cheerful doctor",
-      "A job interview — a wildly overqualified candidate and a very inexperienced interviewer",
-      "A courtroom — a passionate defence lawyer and a judge who has completely lost interest",
-      "A restaurant — an outraged customer and an utterly unruffled waiter",
-      "A school — parent-teacher interview — an anxious parent and a brutally honest teacher",
-      "A gym — a relentlessly enthusiastic trainer and a completely unenthusiastic client",
-      "An airport check-in — a frantic passenger running late and a serene check-in agent",
-      "A haunted house tour — a terrified tourist and a bored, seen-it-all guide",
-      "A road trip — an obsessive planner and a completely spontaneous free spirit",
-      "A pet shop — an overly attached owner surrendering an animal and a deadpan shop assistant"
-    ],
+    "prompts": {
+      "desc": "Location + scenario + two contrasting characters",
+      "beginner": [
+        "A school canteen — lunchtime — a student who eats everything enthusiastically and a student who won't touch anything",
+        "A classroom — group project — a student who has done all the work and one who has done absolutely none",
+        "A playground — break time — a kid who wants to play every game and a kid who just wants to sit quietly",
+        "A sports day — before a race — a fiercely competitive student and one who would rather be anywhere else",
+        "A birthday party — party games — a kid who follows every rule exactly and one who is making up new rules",
+        "A school bus — the journey home — a student who talks nonstop and one who hasn't spoken all day",
+        "A library — quiet study time — a student who cannot sit still and one who cannot move from their spot",
+        "A camping trip — first night — an enthusiastic outdoor lover and a student who hates being outside",
+        "A school corridor — waiting for the teacher — a student terrified of getting in trouble and one who is completely unbothered",
+        "A PE change room — before sport — a student who is wildly overconfident and one convinced they are terrible at everything"
+      ],
+      "intermediate": [
+        "A doctor's surgery — a tense consultation — a nervous patient and a disturbingly cheerful doctor",
+        "A job interview — a wildly overqualified candidate and a very inexperienced interviewer",
+        "A courtroom — a passionate defence lawyer and a judge who has completely lost interest",
+        "A restaurant — an outraged customer and an utterly unruffled waiter",
+        "A school — parent-teacher interview — an anxious parent and a brutally honest teacher",
+        "A gym — a relentlessly enthusiastic trainer and a completely unenthusiastic client",
+        "An airport check-in — a frantic passenger running late and a serene check-in agent",
+        "A haunted house tour — a terrified tourist and a bored, seen-it-all guide",
+        "A road trip — an obsessive planner and a completely spontaneous free spirit",
+        "A pet shop — an overly attached owner surrendering an animal and a deadpan shop assistant"
+      ],
+      "advanced": [
+        "A boardroom — a negotiation going badly — a lawyer who knows their client is guilty and a client who genuinely believes they did nothing wrong",
+        "A hospital room — a consultant with difficult news and a patient who refuses to hear it",
+        "A therapy session — a therapist barely keeping it together and a patient who has everything figured out",
+        "A late-night diner — a cop who is done with the job and a criminal who is done with everything",
+        "A wedding venue — a planner who knows the marriage won't last and a bride who is absolutely certain it will",
+        "A newsroom — a journalist sitting on a story and an editor who wants it published tonight",
+        "A diplomatic meeting — a representative who has been lying and a counterpart who knows it",
+        "A prison visiting room — a parole officer who wants to believe a parolee and a parolee who is barely trying",
+        "A farewell dinner — the person leaving who doesn't want to go and the person staying who needs them to",
+        "A late-night conversation — someone confessing something serious and someone who already knew"
+      ]
+    },
     "variations": [
       "Add the reserve player as a third character — the caller can now swap between any two of the three.",
       "Any player can call \"Swap!\" themselves, turning it into a strategic tool rather than an external interruption."
@@ -682,19 +760,45 @@ const GAMES = [
     "setup": "Ask the audience for a genre — horror, romance, western, soap opera, action — and a location. All four players perform a scene in that genre with one strict rule.",
     "howToPlay": "Every line of dialogue must be a cliché — a worn-out phrase or stock expression so familiar it has lost all meaning. Nothing original may be said. Players must tell a complete story with a beginning, middle, and end entirely through the most predictable language they can find. The rule: never wink at the audience. Play every cliché as if it is the most meaningful thing anyone has ever said.",
     "purpose": "This game is funnier than it sounds and harder than it looks. Players quickly discover how much of everyday language — and especially genre fiction — is built on clichés, and how much comic mileage comes from delivering them with complete sincerity.",
-    "prompts": [
-      "(Genre + location)",
-      "Romance — a candlelit restaurant on Valentine's Day",
-      "Horror — a dark and stormy night in an old mansion",
-      "Action — a rooftop chase through a city at night",
-      "Soap opera — a hospital waiting room",
-      "Western — a dusty saloon at high noon",
-      "Crime thriller — a detective's office in the rain",
-      "Science fiction — a spaceship on a critical mission",
-      "Sports drama — the locker room before the championship game",
-      "War movie — a bunker on the eve of a big battle",
-      "Courtroom drama — the moment before the verdict is delivered"
-    ],
+    "prompts": {
+      "desc": "Genre + location",
+      "beginner": [
+        "Superhero movie — a city under attack",
+        "Fairy tale — a princess in a tower with a knight approaching",
+        "Children's adventure — a gang of kids discovers a hidden map",
+        "Sports movie — the team is losing at half time and the coach gives a speech",
+        "Cartoon villain — a secret underground lair",
+        "High school movie — the morning before the big dance",
+        "Animal adventure — the talking animals of a forest must save their home",
+        "Pirate adventure — a ship at sea with treasure nearby",
+        "Space adventure — a crew of kids discovers a new planet",
+        "Christmas movie — a family Christmas that was almost ruined"
+      ],
+      "intermediate": [
+        "Romance — a candlelit restaurant on Valentine's Day",
+        "Horror — a dark and stormy night in an old mansion",
+        "Action — a rooftop chase through a city at night",
+        "Soap opera — a hospital waiting room",
+        "Western — a dusty saloon at high noon",
+        "Crime thriller — a detective's office in the rain",
+        "Science fiction — a spaceship on a critical mission",
+        "Sports drama — the locker room before the championship game",
+        "War movie — a bunker on the eve of a big battle",
+        "Courtroom drama — the moment before the verdict is delivered"
+      ],
+      "advanced": [
+        "Political thriller — a party leader's office on election night",
+        "Literary drama — a deathbed scene where long-buried secrets are finally spoken",
+        "Heist movie — the briefing before the impossible job",
+        "Film noir — a private detective receives a mysterious client at midnight",
+        "War correspondent drama — a journalist in a conflict zone facing a difficult decision",
+        "Prestige TV drama — two characters finally having the conversation the whole season has been building to",
+        "Art house film — two strangers share a meal and say almost nothing",
+        "Classic tragedy — a hero realises their fatal flaw too late to change anything",
+        "Celebrity biopic — a defining moment from the subject's most difficult year",
+        "Legal drama — a barrister cross-examines a witness who is not telling the whole truth"
+      ]
+    },
     "variations": [
       "The caller shouts \"Original!\" at any point — the player must instantly replace their cliché with something genuinely fresh, then return to clichés on the next line.",
       "Assign each player a specific type of cliché: sports metaphors, old proverbs, movie quotes, therapy-speak."
@@ -714,19 +818,45 @@ const GAMES = [
     "setup": "Ask the audience for a product — real or completely made up. All four players will improvise a television commercial for that product, with one minute to make the sale.",
     "howToPlay": "The group has exactly one minute to perform a complete TV commercial for the given product. Think of it as a small drama — a problem is established, the product solves it, and someone is convinced. Players can divide roles however they like: actors in the scenario, a voiceover announcer, a spokesperson, satisfied customers, or a jingle singer. Every choice should serve the commercial — establish the problem fast, introduce the product, and land the pitch.",
     "purpose": "This game demands ruthless efficiency. There is no time to waste — every moment must build toward the sell. Strong listening and quick acceptance of each other's choices are essential. The best commercials feel like tiny, complete stories.",
-    "prompts": [
-      "(Product to advertise — real or invented)",
-      "A spray that makes people immediately agree with everything you say",
-      "Socks that predict the weather",
-      "A pillow that remembers your dreams and plays them back in the morning",
-      "An app that automatically replies to your parents' texts in your voice",
-      "A shampoo that makes you 40% more confident in meetings",
-      "Glasses that make every meal taste like your favourite food",
-      "A pen that only writes correct answers",
-      "A chair that argues back when you try to get up",
-      "A breakfast cereal that gives you the ability to parallel park perfectly",
-      "A jacket that makes people think you are slightly more interesting than you are"
-    ],
+    "prompts": {
+      "desc": "Product to advertise — real or invented",
+      "beginner": [
+        "A spray that makes your teachers forget what they were about to say",
+        "Socks that turn invisible so you never have to match them",
+        "A backpack that does your homework while you sleep",
+        "Shoes that make you run 40% faster and smell like birthday cake",
+        "A pencil case that holds exactly one more thing than seems physically possible",
+        "Headphones that block out only the boring parts of school",
+        "A water bottle that makes whatever's inside taste like your favourite drink",
+        "A pillow that sets your alarm and then argues with you when it goes off",
+        "A lunchbox that keeps food warm and silently judges you if you eat too fast",
+        "An eraser that removes the memory of the mistake from everyone in the room"
+      ],
+      "intermediate": [
+        "A spray that makes people immediately agree with everything you say",
+        "Socks that predict the weather",
+        "A pillow that remembers your dreams and plays them back in the morning",
+        "An app that automatically replies to your parents' texts in your voice",
+        "A shampoo that makes you 40% more confident in meetings",
+        "Glasses that make every meal taste like your favourite food",
+        "A pen that only writes correct answers",
+        "A chair that argues back when you try to get up",
+        "A breakfast cereal that gives you the ability to parallel park perfectly",
+        "A jacket that makes people think you are slightly more interesting than you are"
+      ],
+      "advanced": [
+        "An app that tells you exactly what to say in any difficult conversation and guarantees nobody will cry",
+        "A supplement that makes you feel exactly the same regardless of sleep, food, or how important the meeting is",
+        "A service that retroactively improves every decision you made in your twenties",
+        "A device that detects when someone is about to give you unsolicited feedback and plays calming music",
+        "Insurance for moments when you were right but nobody believed you at the time",
+        "A subscription that emails your future self what you needed to hear today, delivered three years from now",
+        "A mirror that shows you what you'll look like if you just make this one small change to your daily routine",
+        "An algorithm that selects the exact version of your personality most useful in each meeting",
+        "A therapy app that agrees with everything you say and then very gently reveals you were the problem",
+        "A career counsellor who tells you the complete truth but does it very, very slowly"
+      ]
+    },
     "variations": [
       "After the first commercial, the caller shouts a completely different genre — horror, romance, nature documentary — and the group must re-pitch the same product in that style.",
       "One player is a dissatisfied customer who must be won over by the other three during the commercial itself."
@@ -746,19 +876,45 @@ const GAMES = [
     "setup": "Ask the audience for a location and a scenario. Three players begin a neutral, naturalistic scene. The fourth player stands to the side as the caller with a list of emotions ready — either prepared in advance or called out by the audience on the spot.",
     "howToPlay": "The scene plays out normally until the caller shouts \"Freeze!\" — then calls out a new emotion and the name of one player. That player must instantly shift into the new emotion and justify the change within the reality of the scene. The other players react to this shift as their characters would. The caller freezes and reassigns emotions one player at a time, keeping the scene moving and the emotions changing. No player should stay in the same emotion for too long.",
     "purpose": "The scene's story must keep going — emotional changes are not resets, they are reactions. Players should find a reason within the scene for the shift, however quick and instinctive that reason may be. The more committed and physical the emotional change, the more the audience will respond.",
-    "prompts": [
-      "(Location + scenario + suggested emotion pool for the caller)",
-      "A kitchen — preparing a family dinner — furious, overjoyed, devastated, terrified, smug",
-      "A job interview — final round, high stakes — nervous, bored, suspicious, elated, disgusted",
-      "A camping trip — something has gone wrong — panicked, blissful, furious, resigned, hysterical",
-      "A hospital waiting room — news is coming — hopeful, terrified, relieved, devastated, bizarrely calm",
-      "A school staffroom — end of term — exhausted, overjoyed, paranoid, furious, nostalgic",
-      "A supermarket — a price dispute — outraged, apologetic, lovesick, confused, triumphant",
-      "A car journey — running very late — frantic, serene, suspicious, furious, weirdly philosophical",
-      "A restaurant — something in the food — disgusted, delighted, terrified, smug, heartbroken",
-      "A gym — mid-workout — exhausted, competitive, lovesick, furious, inexplicably overjoyed",
-      "A wedding reception — speeches underway — emotional, bored, horrified, ecstatic, deeply suspicious"
-    ],
+    "prompts": {
+      "desc": "Location + scenario + suggested emotion pool for the caller",
+      "beginner": [
+        "A school canteen — it's the last pizza slice — happy, furious, terrified, desperate, smug",
+        "A classroom — the teacher has left the room — excited, nervous, suspicious, bored, overjoyed",
+        "A birthday party — the cake is late — hopeful, furious, devastated, overexcited, resigned",
+        "A camping trip — a strange noise outside the tent — brave, terrified, excited, confused, competitive",
+        "A sports day — the relay race is about to start — pumped, nervous, devastated, bored, suspicious",
+        "A school excursion — the bus is stuck in traffic — furious, blissful, terrified, optimistic, resigned",
+        "A pet shop — a very unusual animal is for sale — excited, disgusted, lovesick, terrified, smug",
+        "A sleepover — the scary movie is starting — terrified, brave, excited, suspicious, bored",
+        "A library — all the computers are taken — furious, calm, devastated, resourceful, smug",
+        "A playground — two students both want the best swing — desperate, cheerful, furious, philosophical, resigned"
+      ],
+      "intermediate": [
+        "A kitchen — preparing a family dinner — furious, overjoyed, devastated, terrified, smug",
+        "A job interview — final round, high stakes — nervous, bored, suspicious, elated, disgusted",
+        "A camping trip — something has gone wrong — panicked, blissful, furious, resigned, hysterical",
+        "A hospital waiting room — news is coming — hopeful, terrified, relieved, devastated, bizarrely calm",
+        "A school staffroom — end of term — exhausted, overjoyed, paranoid, furious, nostalgic",
+        "A supermarket — a price dispute — outraged, apologetic, lovesick, confused, triumphant",
+        "A car journey — running very late — frantic, serene, suspicious, furious, weirdly philosophical",
+        "A restaurant — something in the food — disgusted, delighted, terrified, smug, heartbroken",
+        "A gym — mid-workout — exhausted, competitive, lovesick, furious, inexplicably overjoyed",
+        "A wedding reception — speeches underway — emotional, bored, horrified, ecstatic, deeply suspicious"
+      ],
+      "advanced": [
+        "A boardroom — a critical vote is happening — confident, terrified, triumphant, disgusted, suspiciously serene",
+        "A hospital — a doctor delivers an unexpected result — devastated, bizarrely relieved, furious, numbly professional, overwhelmed",
+        "A courtroom — closing arguments — contemptuous, hopeful, terrified, resigned, cold with certainty",
+        "A therapy session — something deeply personal is shared — compassionate, shocked, dismissive, overwhelmed, clinical",
+        "A family kitchen — the estate is being divided — smug, heartbroken, furious, unsettlingly cheerful, devastated",
+        "A farewell — someone is leaving and not coming back — stoic, overwhelmed, furious, in denial, genuinely grateful",
+        "A late-night diner — a long overdue conversation — nervous, furious, blissfully in love, cold, resigned",
+        "A press conference — a public statement is going wrong — furious, terrified, performing calm, smug, devastated",
+        "A rooftop — an announcement is about to be made — hopeful, fearful, euphoric, suspicious, hollow",
+        "A waiting room — all four are waiting for the same result — certain, terrified, furious, resigned, bizarrely serene"
+      ]
+    },
     "variations": [
       "The caller changes all three players' emotions simultaneously rather than one at a time — instant chaos, instant comedy.",
       "Players must cycle through five emotions in sequence without the caller — they change themselves whenever they feel a natural moment to shift."
@@ -778,19 +934,45 @@ const GAMES = [
     "setup": "Ask the audience for a location and a scenario. Three players begin a neutral scene with no particular style — just clear characters and a situation. The fourth player stands to the side as the caller with a list of genres or styles ready.",
     "howToPlay": "The scene plays out normally until the caller shouts \"Freeze!\" and calls out a new style — a film genre, TV show type, theatrical form, or performance style. The players instantly continue the same scene and the same story, but now filtered entirely through the new style. The characters, the location, and the story all remain the same — only the way it is being performed changes. The caller switches styles as often as they like, keeping the scene on its toes.",
     "purpose": "Players must hold two things at once — the ongoing story they are telling, and the conventions of the new style they have just been handed. The story should keep developing through every style change, not reset. Each new style is a lens, not a new scene.",
-    "prompts": [
-      "(Location + scenario + suggested style pool for the caller)",
-      "A dentist's surgery — a routine appointment goes wrong — soap opera, silent film, nature documentary, Shakespearean tragedy, game show",
-      "A kitchen — a meal preparation disaster — cooking show, horror film, courtroom drama, musical, action movie",
-      "A school classroom — a substitute teacher arrives — western, romantic drama, spy thriller, children's TV, documentary",
-      "A supermarket — a confrontation at the checkout — soap opera, nature documentary, sports commentary, fairy tale, reality TV",
-      "A job interview — the candidate is wildly unprepared — silent film, courtroom drama, musical, horror, infomercial",
-      "A camping trip — the tent collapses — nature documentary, soap opera, action movie, Shakespeare, cooking show",
-      "A hospital — unexpected news is delivered — soap opera, western, game show, silent film, sports commentary",
-      "A car journey — the GPS is wrong — action movie, nature documentary, romantic drama, cooking show, children's TV",
-      "A bank — a suspicious transaction — crime thriller, musical, cooking show, soap opera, nature documentary",
-      "A birthday party — the wrong cake arrives — soap opera, horror, sports commentary, silent film, Shakespearean tragedy"
-    ],
+    "prompts": {
+      "desc": "Location + scenario + suggested style pool for the caller",
+      "beginner": [
+        "A school canteen — someone is accused of taking the last brownie — cartoon, action movie, sports commentary, children's adventure show, cooking show",
+        "A playground — the good swing is broken — fairy tale, soap opera, nature documentary, talent show, weather report",
+        "A classroom — the class goldfish has died — children's news show, horror film, sports commentary, cooking show, nature documentary",
+        "A camping trip — the tent keeps collapsing — action movie, cooking show, nature documentary, children's TV, fairy tale",
+        "A birthday party — the entertainer hasn't shown up — soap opera, nature documentary, game show, children's TV, action movie",
+        "A pet shop — a hamster has escaped — action movie, nature documentary, soap opera, game show, children's TV",
+        "A school excursion — the group is lost — adventure show, action movie, soap opera, nature documentary, cooking show",
+        "A sports day — the water balloons have burst — nature documentary, soap opera, children's TV, action movie, sports commentary",
+        "A school bus — the driver is lost — road trip movie, children's TV, soap opera, nature documentary, action movie",
+        "A school library — someone found something odd in a returned book — mystery, children's TV, nature documentary, soap opera, game show"
+      ],
+      "intermediate": [
+        "A dentist's surgery — a routine appointment goes wrong — soap opera, silent film, nature documentary, Shakespearean tragedy, game show",
+        "A kitchen — a meal preparation disaster — cooking show, horror film, courtroom drama, musical, action movie",
+        "A school classroom — a substitute teacher arrives — western, romantic drama, spy thriller, children's TV, documentary",
+        "A supermarket — a confrontation at the checkout — soap opera, nature documentary, sports commentary, fairy tale, reality TV",
+        "A job interview — the candidate is wildly unprepared — silent film, courtroom drama, musical, horror, infomercial",
+        "A camping trip — the tent collapses — nature documentary, soap opera, action movie, Shakespeare, cooking show",
+        "A hospital — unexpected news is delivered — soap opera, western, game show, silent film, sports commentary",
+        "A car journey — the GPS is wrong — action movie, nature documentary, romantic drama, cooking show, children's TV",
+        "A bank — a suspicious transaction — crime thriller, musical, cooking show, soap opera, nature documentary",
+        "A birthday party — the wrong cake arrives — soap opera, horror, sports commentary, silent film, Shakespearean tragedy"
+      ],
+      "advanced": [
+        "A corporate meeting — a resignation is announced — political drama, soap opera, nature documentary, silent film, Shakespearean tragedy",
+        "A hospital waiting room — three people wait for the same news — Chekhov play, soap opera, nature documentary, game show, silent film",
+        "A late-night diner — two people from opposite sides of a conflict share a table — film noir, soap opera, nature documentary, Shakespearean tragedy, infomercial",
+        "A divorce mediation — two people divide their lives — courtroom drama, cooking show, romantic comedy, nature documentary, horror",
+        "A last family dinner in a house about to be sold — period drama, soap opera, nature documentary, horror, game show",
+        "A city rooftop at dusk — a conversation nobody wants to have — absurdist theatre, soap opera, nature documentary, cooking show, sports commentary",
+        "A museum after closing — two characters with unfinished business — gothic thriller, cooking show, soap opera, nature documentary, children's TV",
+        "A waiting room before something life-changing — epic theatre, soap opera, sports commentary, cooking show, nature documentary",
+        "A park bench in winter — an old friendship coming to an end — literary drama, cooking show, soap opera, nature documentary, infomercial",
+        "A boardroom where a decision will ruin someone's life — Shakespearean tragedy, cooking show, nature documentary, soap opera, game show"
+      ]
+    },
     "variations": [
       "Instead of the caller choosing, the audience shouts out styles whenever they like — giving them direct control over the scene.",
       "Players must transition between styles mid-sentence, with no freeze — the style shifts while the words keep coming."
@@ -810,17 +992,45 @@ const GAMES = [
     "setup": "Ask the audience for a location and a scenario. All four players take the stage and begin a normal improvised scene. Two players stand to the side as copycats, watching and waiting.",
     "howToPlay": "The scene plays out naturally. At any moment, one of the copycat players steps forward, holds up their hand to pause the action, and repeats one line that was just spoken in the scene — word for word. Whoever originally said that line immediately steps aside. The copycat takes their place and the scene continues from that moment — but now in a new direction, inspired by the repeated line. The repeated line becomes the first line of a new scene, or it can be used to continue and redirect the existing one. The player who stepped aside now becomes a copycat waiting at the side. The game continues with copycats swapping in and out, each time the pause-and-repeat mechanism is used.",
     "purpose": "The copycat mechanic forces players to listen — not to plan their next line, but to track what has already been said closely enough to quote it back. A good copycat picks a line that has potential: something that could launch the scene in a new direction, or that reveals something about a character that deserves to be explored further. The best Copycat scenes develop a sense of recurring language — phrases that keep coming back, transformed in meaning each time they reappear.",
-    "prompts": [
-      "(Location + scenario — choose ones with strong dialogue and clear characters)",
-      "A car dealership — a customer who knows exactly what they want and a salesperson who has other ideas",
-      "A doctor's surgery — a consultation in which both parties gradually reveal they are not who they first appeared to be",
-      "A café — a job interview that gets increasingly personal",
-      "A hotel reception — a guest checking in who seems to have arrived at the wrong time for the wrong reason",
-      "A train platform — two people who keep missing each other and keep meeting again",
-      "A kitchen — two flatmates in a conversation that started as one thing and became something else entirely",
-      "A park — a dog walker who has stopped walking and a stranger who keeps walking past",
-      "A school office — a parent-teacher meeting that reveals something about both the parent and the teacher"
-    ],
+    "prompts": {
+      "desc": "Location + scenario — choose ones with strong dialogue and clear characters",
+      "beginner": [
+        "A school canteen — two friends arguing about something minor that keeps escalating",
+        "A classroom — two students convincing each other they are definitely not in trouble, while clearly in trouble",
+        "A birthday party — two guests each convinced they gave the best present",
+        "A playground — two kids negotiating the rules of a game they are both making up as they go",
+        "A camping trip — two campers arguing about who packed what and who forgot what",
+        "A sports day — two teammates each convinced they are the reason the team won",
+        "A school bus — two students retelling the same story in completely different ways",
+        "A school corridor — two students each convinced the other one started it",
+        "A slumber party — two kids trying to convince the others to stay up just a little bit longer",
+        "A school library — two students arguing about who actually did the work on the group project"
+      ],
+      "intermediate": [
+        "A car dealership — a customer who knows exactly what they want and a salesperson who has other ideas",
+        "A doctor's surgery — a consultation in which both parties gradually reveal they are not who they first appeared",
+        "A café — a job interview that gets increasingly personal",
+        "A hotel reception — a guest checking in who seems to have arrived at the wrong time for the wrong reason",
+        "A train platform — two people who keep missing each other and keep meeting again",
+        "A kitchen — two flatmates in a conversation that started as one thing and became something else entirely",
+        "A park — a dog walker who has stopped walking and a stranger who keeps passing by",
+        "A school office — a parent-teacher meeting that reveals something about both the parent and the teacher",
+        "A waiting room — two strangers whose conversation reveals they have more in common than either realised",
+        "A gym — a personal trainer and a client whose conversation keeps going somewhere neither expected"
+      ],
+      "advanced": [
+        "A late-night bar — two people who broke up years ago who both happened to come here tonight",
+        "A hospital corridor — two people waiting for the same news from completely different angles",
+        "A funeral reception — two mourners discovering they had very different relationships with the person being mourned",
+        "A city park bench — a conversation between two strangers that neither of them expected to need",
+        "A therapist's waiting room — two patients whose conversation reveals each knows something the other has been hiding",
+        "A kitchen — two siblings discussing their parents' estate and discovering they want very different things",
+        "A train compartment — two strangers realising their destination isn't as final as they thought",
+        "A late-night diner — two characters whose entire shared history arrives in fragments across a single meal",
+        "A rooftop — two characters who made the same choice at very different times and are only now understanding that",
+        "A hotel lobby — two people who last saw each other under circumstances neither has ever spoken about"
+      ]
+    },
     "variations": [
       "Instead of repeating a line to swap in, the copycat must repeat the line in a completely different emotional register — transforming its meaning before the scene continues.",
       "Both copycats can step in simultaneously, each repeating a different recent line — and the scene must somehow honour both."
@@ -840,19 +1050,45 @@ const GAMES = [
     "setup": "The suspect leaves the room or covers their ears. The audience suggests a ridiculous crime — what it was, where it happened, and with what unlikely object or method. The detective, assistant, and witness are told the details. The suspect returns knowing nothing.",
     "howToPlay": "The detective interrogates the suspect, trying to lead them to confess to the crime they don't know they committed. The assistant supports the detective by dropping subtle clues into conversation. The witness adds details through their behaviour and answers. The suspect must piece the crime together from the clues and eventually confess — in full, dramatic detail. The game ends when the confession matches the crime.",
     "purpose": "The comedy comes from the suspect grasping at clues and confessing to increasingly wild interpretations of the crime before landing on the right one. The rest of the group must give clear enough clues to guide them without giving the game away too easily.",
-    "prompts": [
-      "(The ridiculous crime — what + where + how)",
-      "Stealing a giant wheel of cheese — from a supermarket — using a shopping trolley and a fake moustache",
-      "Breaking into a zoo — at midnight — using a ladder made of pool noodles",
-      "Releasing all the helium balloons — at a children's birthday party — with a pair of nail scissors",
-      "Replacing all the paintings in an art gallery — with pictures of cats — using a trolley disguised as a cleaning cart",
-      "Eating an entire wedding cake — before the reception — while hiding under the dessert table",
-      "Switching all the price tags in a department store — on a Tuesday afternoon — using a label gun stolen from the stationery aisle",
-      "Releasing forty-seven ducks — into a shopping centre food court — from inside a very large pram",
-      "Swapping the mayor's speech — at a civic ceremony — with the lyrics of a pop song",
-      "Hiding a live goat — in the school library — during exam week",
-      "Replacing the principal's chair — with an inflatable one — at the school assembly"
-    ],
+    "prompts": {
+      "desc": "The ridiculous crime — what + where + how",
+      "beginner": [
+        "Stealing all the red-coloured food — from the school canteen — using a lunchbox disguised as a clipboard",
+        "Painting the school mascot statue's nose bright pink — on a Monday morning — using face paint and a very small brush",
+        "Replacing all the whiteboard markers — in the science classroom — with dried-up ones over three careful weeks",
+        "Releasing a bag of rubber ducks — into the school pool — at the exact moment of the swimming carnival",
+        "Supergluing the lid of the teacher's biscuit tin — in the staffroom — using a glue stick from the art room",
+        "Swapping all the books in the library — to the wrong shelves — in reverse alphabetical order",
+        "Hiding the PE teacher's whistle — in the custodian's cupboard — inside a volleyball",
+        "Filling the school trophy cabinet — with empty cereal boxes — the night before the awards assembly",
+        "Replacing the school intercom message — with a duck impression — at the morning announcements",
+        "Moving all the teachers' cars — exactly one space forward — using the one spare key nobody knew about"
+      ],
+      "intermediate": [
+        "Stealing a giant wheel of cheese — from a supermarket — using a shopping trolley and a fake moustache",
+        "Breaking into a zoo — at midnight — using a ladder made of pool noodles",
+        "Releasing all the helium balloons — at a children's birthday party — with a pair of nail scissors",
+        "Replacing all the paintings in an art gallery — with pictures of cats — using a trolley disguised as a cleaning cart",
+        "Eating an entire wedding cake — before the reception — while hiding under the dessert table",
+        "Switching all the price tags in a department store — on a Tuesday afternoon — using a label gun from the stationery aisle",
+        "Releasing forty-seven ducks — into a shopping centre food court — from inside a very large pram",
+        "Swapping the mayor's speech — at a civic ceremony — with the lyrics of a pop song",
+        "Hiding a live goat — in the school library — during exam week",
+        "Replacing the principal's chair — with an inflatable one — at the school assembly"
+      ],
+      "advanced": [
+        "Sabotaging a corporate product launch — live on television — by replacing the demo device with a confetti-loaded decoy",
+        "Stealing evidence in a high-profile case — from a secure courtroom — dressed as a cleaner with a very convincing lanyard",
+        "Leaking a confidential memo — to the press — via a copy shop and a series of anonymous envelopes",
+        "Swapping the bids in a property auction — at the final moment — by replacing the auctioneer's notes during a fire alarm they had arranged",
+        "Replacing the keynote speech at a tech conference — with a very polished PowerPoint about penguins — using the host's own laptop",
+        "Staging a fake medical emergency — during a crucial vote — to prevent the motion passing before midnight",
+        "Hiding an embarrassing portrait — in the permanent collection of a national gallery — using a professional-looking frame and a long coat",
+        "Redirecting a shipment of trophies — intended for the wrong competition winner — to an entirely different city",
+        "Intercepting a confidential letter — meant for a company's board — by impersonating the building's concierge for a single afternoon",
+        "Replacing the contents of a time capsule — to be opened at a school centenary — with items that reveal something nobody was supposed to know"
+      ]
+    },
     "variations": [
       "Give the detective a specific interrogation style — good cop, bad cop, overly emotional, completely distracted — to add another layer of comedy.",
       "The witness secretly wants the suspect to get away with it and gives deliberately misleading clues, making the detective's job harder."
@@ -872,19 +1108,45 @@ const GAMES = [
     "setup": "One player is the contestant — they leave the room or cover their ears. The audience secretly assigns a quirk, character trait, or unusual personality to each of the three remaining players. The quirks are known to the audience but not to the contestant. The contestant returns and the game begins.",
     "howToPlay": "The contestant asks each of the three players questions — as if on a blind date TV show — and the players answer every question entirely in character, staying true to their secret quirk without ever stating it directly. After asking several questions, the contestant tries to guess each player's quirk. Once a quirk is correctly identified, that player is out. The game ends when all three quirks have been guessed — or when the contestant gives up and just picks their favourite date.",
     "purpose": "The three players must find ways to express their quirk through every answer, no matter what the question is. The contestant must listen carefully and read between the lines. The audience, who knows all the quirks, gets to enjoy watching the contestant slowly piece it together.",
-    "prompts": [
-      "(Three quirks to assign — one per player)",
-      "Convinced they are royalty / allergic to everything / speaks only in questions",
-      "A retired supervillain / terrified of silence / believes they are being filmed at all times",
-      "A time traveller from the 1800s / competitive about everything / secretly a robot",
-      "A professional cheese taster / wildly superstitious / narrates their own life out loud",
-      "A former child star / deeply suspicious of everything / cannot stop giving advice",
-      "Obsessed with trains / claims to have never slept / believes they can read minds",
-      "A retired spy / absolutely furious about something they won't explain / deeply, urgently in love with cheese",
-      "A motivational speaker who only motivates themselves / afraid of chairs / speaks exclusively in rhyme",
-      "A pirate in modern times / can only count to three / believes every conversation is an audition",
-      "A self-declared genius / everything reminds them of a film / currently running for prime minister"
-    ],
+    "prompts": {
+      "desc": "Three quirks to assign — one per player",
+      "beginner": [
+        "A secret time traveller from last Tuesday / convinced they are being filmed for a documentary / can only answer questions with more questions",
+        "Thinks they are a different person from the one being described / deeply afraid of the word 'yellow' / cannot stop noticing the exits",
+        "A wizard who has recently lost their powers / competitive about absolutely everything / speaks as if finishing someone else's sentence",
+        "Narrates their own life like a nature documentary / always one thought behind everyone else / convinced this is a test",
+        "Has just woken up and believes they are still dreaming / speaks only in advice / finds everything said extremely funny",
+        "A superhero in very effective civilian disguise / here against their will / deeply moved by everything",
+        "Convinced they are the most interesting person here / secretly terrified of pigeons / does everything in slow motion",
+        "Has misunderstood the event and thinks they are here for a job interview / enthusiastic about soup / claims to have met everyone before",
+        "Everything reminds them of a song / deeply concerned about someone called Gerald / has never told a lie and cannot start now",
+        "Convinced they are the host, not the guest / allergic to opinions / finds everything vaguely suspicious"
+      ],
+      "intermediate": [
+        "Convinced they are royalty / allergic to everything / speaks only in questions",
+        "A retired supervillain / terrified of silence / believes they are being filmed at all times",
+        "A time traveller from the 1800s / competitive about everything / secretly a robot",
+        "A professional cheese taster / wildly superstitious / narrates their own life out loud",
+        "A former child star / deeply suspicious of everything / cannot stop giving advice",
+        "Obsessed with trains / claims to have never slept / believes they can read minds",
+        "A retired spy / absolutely furious about something they won't explain / deeply and urgently in love with cheese",
+        "A motivational speaker who only motivates themselves / afraid of chairs / speaks exclusively in rhyme",
+        "A pirate in modern times / can only count to three / believes every conversation is an audition",
+        "A self-declared genius / everything reminds them of a film / currently running for prime minister"
+      ],
+      "advanced": [
+        "Still in character from the last audition they attended / professionally devastated but performing joy / genuinely unsure what year it is",
+        "Recently retired from a secret government role they cannot disclose / believes they are owed a very specific apology / deeply moved by background music",
+        "Has arrived from a parallel universe where everything is almost the same / conducting research for a purpose they won't name / furious about something the contestant cannot know",
+        "The product of a thorough self-improvement programme with no personality underneath / answering from a script they are trying to hide / increasingly certain the others can see through them",
+        "A novelist who has been living entirely inside their latest book / planning to use this conversation in chapter eight / secretly the most nervous person in the room",
+        "A politician between careers who has forgotten what they actually believe / pivoting every answer to a talking point / running on fumes and very good posture",
+        "In a state of delayed grief they haven't acknowledged / performing confidence they don't feel / asking exactly the right questions for reasons they won't explain",
+        "Someone who has been alone for a long time and has forgotten some of the social rules / deeply curious but unable to hide it / carrying something they keep checking on",
+        "A lawyer in a dispute with someone else in the room / performing impartiality with great effort / convinced this will end in litigation",
+        "Someone who was supposed to be somewhere else entirely and has decided to make the most of it / wildly unprepared / becoming increasingly glad they stayed"
+      ]
+    },
     "variations": [
       "One player acts as the game show host, introducing the contestant, managing the questions, and keeping the energy up.",
       "The contestant is also given a secret quirk that the three players must figure out through the questions asked."
