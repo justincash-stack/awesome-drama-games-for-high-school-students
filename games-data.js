@@ -1746,19 +1746,45 @@ const GAMES = [
     "setup": "Ask the audience for a type of family — defined by their occupation, personality, genre, situation, or something they all have in common. The teacher calls out the suggestion and counts down from five. All four players must arrange themselves into a frozen tableau — a still \"family portrait\" — before the count reaches zero.",
     "howToPlay": "On \"freeze,\" all four players hold their position completely still. The audience views the portrait for a few seconds. The teacher or a nominated caller then asks the audience what they can read from the picture — who is who, what the relationships are, what just happened, what is about to happen. Players then unfreeze and briefly explain who their character was, which may or may not match what the audience guessed. Several rounds can be played in quick succession with new family types each time.",
     "purpose": "This game builds strong physical character work and non-verbal storytelling. Players must make instant, committed choices about status, relationship, and emotion — all without a word. The audience learns to read bodies, and the players learn how much story can be told without speaking.",
-    "prompts": [
-      "(Type of family for each portrait)",
-      "A family of retired supervillains at Christmas dinner",
-      "The world's most competitive family of board game players — right after someone flipped the table",
-      "A family of dentists posing for their practice website photo",
-      "A family of astronauts just returned from six months in space",
-      "The world's most dramatic soap opera family receiving bad news",
-      "A family of scientists who have accidentally discovered something they cannot tell anyone about",
-      "A family of professional wrestlers posing for a birthday card",
-      "A family of ghosts who have just realised they are being photographed",
-      "A family of chefs at the moment the restaurant receives its first negative review",
-      "A family of reality TV contestants frozen at the moment the host says \"one of you is going home tonight\""
-    ],
+    "prompts": {
+      "desc": "Type of family for each portrait",
+      "beginner": [
+        "A family of pirates at their treasure chest when they realise it is empty",
+        "A family of superheroes at breakfast before their first mission of the day",
+        "A family of penguins who have just escaped from the zoo for the first time",
+        "A family of robots learning to celebrate a birthday",
+        "A family of wizards at the dinner table when magic goes wrong",
+        "A family of sports stars taking their annual team photo",
+        "A family of farmers who have just won the world's biggest vegetable competition",
+        "A family of musicians at the exact moment the microphone cuts out during their concert",
+        "A family of spies posing as a completely normal family for a passport photo",
+        "A family of zookeepers when all the animals are found sitting in the staff room"
+      ],
+      "intermediate": [
+        "A family of retired supervillains at Christmas dinner",
+        "The world's most competitive family of board game players — right after someone flipped the table",
+        "A family of dentists posing for their practice website photo",
+        "A family of astronauts just returned from six months in space",
+        "The world's most dramatic soap opera family receiving bad news",
+        "A family of scientists who have accidentally discovered something they cannot tell anyone about",
+        "A family of professional wrestlers posing for a birthday card",
+        "A family of ghosts who have just realised they are being photographed",
+        "A family of chefs at the moment the restaurant receives its first negative review",
+        "A family of reality TV contestants frozen at the moment the host says \"one of you is going home tonight\""
+      ],
+      "advanced": [
+        "A family of politicians at the dinner table the night before a public scandal breaks",
+        "A family of lawyers posing for their firm's anniversary photograph, having just lost a landmark case",
+        "A family of doctors at the moment they realise none of them chose medicine voluntarily",
+        "A family of actors on stage for their final bow — one of them has just quit",
+        "A family of diplomats at the formal portrait session after negotiations have failed",
+        "A family of professors at the moment one of them announces they are leaving academia",
+        "A family of soldiers returning home — three are relieved and one clearly is not",
+        "A family of authors at their publisher's annual dinner — one of them has just been dropped",
+        "A family of architects standing before the building they designed, which has just been condemned",
+        "A family of musicians frozen at the final note of their farewell concert, one of whom doesn't want it to end"
+      ]
+    },
     "variations": [
       "After each portrait is frozen, one player steps forward and delivers a single line in character — then refreezes — before the group unfreezes and explains their characters.",
       "The teacher calls two suggestions in quick succession and players must morph from one portrait directly into the other without breaking — a \"portrait transition.\""
@@ -1778,19 +1804,45 @@ const GAMES = [
     "setup": "Ask the audience for a location and a scenario with a clear arc — something that will naturally have a beginning, a middle, and an end. Three players take the stage. The fourth stands to the side as the remote control caller, armed with a set of commands.",
     "howToPlay": "The scene begins normally. At any point the caller can shout a command and the players must respond immediately: \"Fast Forward!\" — the scene accelerates to double or triple speed, with exaggerated physical energy and rapid dialogue. \"Rewind!\" — the scene plays backwards through its last several moments, reversing both action and dialogue in order. \"Pause!\" — every player freezes instantly mid-action. \"Slow Motion!\" — the scene crawls at half speed, every movement and word drawn out. \"Play!\" — normal speed resumes. The caller can string commands together to milk a funny moment or rush through a dull one.",
     "purpose": "This game is a favourite with audiences because the remote control conceit is immediately clear and endlessly entertaining. The best callers watch the scene closely and use their commands to heighten what is already working — pausing a funny moment, rewinding to a great line, fast-forwarding through exposition.",
-    "prompts": [
-      "(Location + scenario — choose ones with a clear rising action)",
-      "A kitchen — a birthday cake is being made for someone who just arrived home unexpectedly early",
-      "A hospital — two doctors must perform a procedure neither of them has done before",
-      "A job interview — the candidate slowly reveals they may be completely wrong for the role",
-      "A camping trip — the group realises too late that they are not alone in the woods",
-      "A restaurant — a marriage proposal goes in an entirely unexpected direction",
-      "A science lab — an experiment starts producing results nobody expected and nobody wanted",
-      "A train — two strangers slowly realise they are on their way to the exact same place for the exact same reason",
-      "An airport — a traveller gradually realises they are at the wrong airport",
-      "A school — a substitute teacher discovers the regular teacher left no instructions and a very unusual class",
-      "A supermarket — a shopper discovers the item they came in for has been discontinued forever"
-    ],
+    "prompts": {
+      "desc": "Location + scenario — choose ones with a clear rising action",
+      "beginner": [
+        "A school canteen — a food fight is about to start and only one person knows how to stop it",
+        "A classroom — a student accidentally triggers the school alarm and has to talk their way out of it",
+        "A birthday party — the birthday cake is on fire and the fire extinguisher is stuck",
+        "A camping trip — a lost hiking group discovers they have been walking in circles since lunch",
+        "A playground — a hamster has escaped and is making its way towards the road",
+        "A school locker room — someone finds something in a bag that definitely does not belong to anyone",
+        "A school bus — the driver has fallen asleep and no-one wants to be the one to wake them",
+        "A school library — a student knocks over the entire archive of reserved books fifteen minutes before closing",
+        "A science class — a student accidentally mixes the wrong things together and it is somehow working",
+        "A sports day — the scoreboard has been knocked over and no-one remembers the actual score"
+      ],
+      "intermediate": [
+        "A kitchen — a birthday cake is being made for someone who just arrived home unexpectedly early",
+        "A hospital — two doctors must perform a procedure neither of them has done before",
+        "A job interview — the candidate slowly reveals they may be completely wrong for the role",
+        "A camping trip — the group realises too late that they are not alone in the woods",
+        "A restaurant — a marriage proposal goes in an entirely unexpected direction",
+        "A science lab — an experiment starts producing results nobody expected and nobody wanted",
+        "A train — two strangers slowly realise they are on their way to the exact same place for the exact same reason",
+        "An airport — a traveller gradually realises they are at the wrong airport",
+        "A school — a substitute teacher discovers the regular teacher left no instructions and a very unusual class",
+        "A supermarket — a shopper discovers the item they came in for has been discontinued forever"
+      ],
+      "advanced": [
+        "A boardroom — a CEO opens what they think is a routine meeting and discovers a vote of no confidence is underway",
+        "A theatre — the lead actor walks out fifteen minutes before opening and one person has to convince them back",
+        "A hospital — a patient in the wrong ward receives the right diagnosis for someone else entirely",
+        "A courtroom — a key witness recants their statement and the trial collapses in real time",
+        "A train — a journalist is handed an envelope that will destroy someone they deeply respect",
+        "An airport — a diplomat loses their briefcase and has thirty minutes before the summit begins",
+        "A gallery — the artist discovers their centrepiece was accidentally sold to the wrong buyer, who has already left",
+        "A newsroom — a story breaks that contradicts everything the lead reporter has spent three years investigating",
+        "A law firm — a paralegal finds an error that will overturn the biggest case the firm has ever won",
+        "A hotel — a wedding is about to begin in one suite while the groom's ex discovers they are staying next door"
+      ]
+    },
     "variations": [
       "Add a \"Mute!\" command — the players continue the scene in total silence, mouthing all dialogue while still acting fully.",
       "The caller can say \"Record and replay!\" — the players repeat their last twenty seconds of scene exactly as it happened, then continue forward."
@@ -1810,19 +1862,45 @@ const GAMES = [
     "setup": "Before the scene begins, ask the audience for two completely unrelated lines of dialogue — the first line that will open the scene, and the last line that must close it. Write them down or remember them clearly. They should be as unconnected as possible. All four players take the stage.",
     "howToPlay": "The scene begins the moment the first audience line is spoken — it must be the very first words said. From there the players build a complete scene with a clear story arc, steering the scene towards a place where the last audience line makes genuine dramatic sense as an ending. The last line must be the final words spoken — nothing comes after it. The audience knows both lines and watches to see how the players will connect them.",
     "purpose": "This is a justification game at heart. The more disconnected the two lines are, the greater the challenge — and the greater the satisfaction when the ending arrives and the connection feels earned. Players should not rush to force the last line — build the scene, and trust that the right moment will come.",
-    "prompts": [
-      "(First line + last line — as unrelated as possible)",
-      "\"You won't believe who I just ran into.\" / \"That's the third time this week the penguins have escaped.\"",
-      "\"Has anyone seen my other shoe?\" / \"I think we can all agree this changes everything.\"",
-      "\"I told you we should have taken the other road.\" / \"Technically, none of this ever happened.\"",
-      "\"Please don't touch that.\" / \"Well. Same time next year then.\"",
-      "\"It says here you have no previous experience.\" / \"I never liked that lamp anyway.\"",
-      "\"The results came back and they're not what we expected.\" / \"In hindsight, the clown was a mistake.\"",
-      "\"I'm just going to say it — something smells strange in here.\" / \"And that is why I no longer own a boat.\"",
-      "\"Nobody panic.\" / \"Can someone please explain why there is a horse in the lift?\"",
-      "\"I think we need to talk about what happened at the party.\" / \"Honestly, the bees were the least of our problems.\"",
-      "\"Right, everyone needs to stay completely calm.\" / \"I'd like to apologise on behalf of the entire department.\""
-    ],
+    "prompts": {
+      "desc": "First line + last line — as unrelated as possible",
+      "beginner": [
+        "\"Did anyone bring snacks?\" / \"Well. The fish is never going back.\"",
+        "\"I'm pretty sure that's supposed to be outside.\" / \"Next time we use a real map.\"",
+        "\"Has anyone asked why the lights are off?\" / \"I'm just saying, the hamster definitely started it.\"",
+        "\"Right, everyone stay where you are.\" / \"No-one is ever going to believe us.\"",
+        "\"Is anyone else's shoelace undone, or is it just me?\" / \"That is definitely not what a weekend looks like.\"",
+        "\"Whose idea was this trip?\" / \"In my defence, the label did say waterproof.\"",
+        "\"Can someone please explain the smell?\" / \"I told you the second tent was a mistake.\"",
+        "\"This is the plan and I'm not changing it.\" / \"Right. We're getting a dog.\"",
+        "\"Has anyone told them we're coming?\" / \"I genuinely thought that was a hat.\"",
+        "\"Something about today feels different.\" / \"On the bright side, we'll never have to explain the goat.\""
+      ],
+      "intermediate": [
+        "\"You won't believe who I just ran into.\" / \"That's the third time this week the penguins have escaped.\"",
+        "\"Has anyone seen my other shoe?\" / \"I think we can all agree this changes everything.\"",
+        "\"I told you we should have taken the other road.\" / \"Technically, none of this ever happened.\"",
+        "\"Please don't touch that.\" / \"Well. Same time next year then.\"",
+        "\"It says here you have no previous experience.\" / \"I never liked that lamp anyway.\"",
+        "\"The results came back and they're not what we expected.\" / \"In hindsight, the clown was a mistake.\"",
+        "\"I'm just going to say it — something smells strange in here.\" / \"And that is why I no longer own a boat.\"",
+        "\"Nobody panic.\" / \"Can someone please explain why there is a horse in the lift?\"",
+        "\"I think we need to talk about what happened at the party.\" / \"Honestly, the bees were the least of our problems.\"",
+        "\"Right, everyone needs to stay completely calm.\" / \"I'd like to apologise on behalf of the entire department.\""
+      ],
+      "advanced": [
+        "\"I want to be honest with you.\" / \"Either way, the invoice has already been sent.\"",
+        "\"We've been here before — I don't mean this room.\" / \"Then I suppose we're done.\"",
+        "\"You can say it. I've already heard it twice today.\" / \"The only way out is through, apparently.\"",
+        "\"Just sit down. I'll get there eventually.\" / \"That's the kindest possible reading of what happened.\"",
+        "\"I don't want to make this harder than it already is.\" / \"Somebody should have told me years ago.\"",
+        "\"I think we've both known for a while.\" / \"Still. It was a good run.\"",
+        "\"Pretend I haven't said anything yet.\" / \"That's the first honest thing you've said all night.\"",
+        "\"Tell me what you actually think — not the version you rehearsed.\" / \"I didn't expect to feel relieved.\"",
+        "\"This isn't the conversation I wanted to have here.\" / \"Nobody gets to choose the right moment.\"",
+        "\"Let me ask you something and please answer it properly.\" / \"I think we can call that a resolution.\""
+      ]
+    },
     "variations": [
       "Give the players only the last line — they must build a scene from scratch that arrives at that ending organically, without knowing it in advance.",
       "Use the same last line for multiple groups — then compare how differently each group got there."
@@ -1842,19 +1920,45 @@ const GAMES = [
     "setup": "Ask the audience for the title of a foreign film that has never been made, and a country or language it comes from. Two players take the stage as the actors. The other two stand to the side as the translators, each paired with one actor.",
     "howToPlay": "The two actors perform a complete scene in an invented language — gibberish that sounds vaguely like the suggested country's language in rhythm, tone, and feeling. Every time an actor finishes a line of gibberish, their paired translator immediately provides the English translation. The translators do not know what the actors are about to say — they must read the physical performance, the emotion, and the energy of each line and invent a translation that fits. Actors and translators must watch each other closely. The actors drive the physicality and emotion; the translators follow and fill in the words.",
     "purpose": "The comedy comes from the gap — or the surprise match — between what the body says and what the translator provides. Actors should use big physical choices and clear emotional shifts to give the translators rich material to work with. Neither pair should try to lead — the best scenes happen when both sides are genuinely responding to each other.",
-    "prompts": [
-      "(Invented film title + country of origin)",
-      "La Dernière Baguette — a French drama about a bakery on the verge of closure",
-      "Das Wunderkind — a German thriller about a child prodigy who knows too much",
-      "Il Segreto del Nonno — an Italian family drama about a grandfather's mysterious past",
-      "Karaoke No Yoru — a Japanese film about a karaoke bar where secrets are revealed",
-      "El Último Tango en el Supermercado — a Spanish romance set in a supermarket",
-      "Björn og Bamsen — a Scandinavian drama about two best friends and a very long winter",
-      "Babushka's Box — a Russian film about what was found in the attic after the grandmother died",
-      "O Mistério do Café — a Portuguese thriller set in a café where the waiter knows everyone's secrets",
-      "Kimchi Crisis — a Korean drama about a family recipe that tears a family apart",
-      "Die Letzte U-Bahn — a German film about strangers who miss the last train and must spend the night in a station"
-    ],
+    "prompts": {
+      "desc": "Invented film title + country of origin",
+      "beginner": [
+        "The Homework Monster — a British comedy about a homework assignment that comes to life",
+        "Das Schulmittagessen — a German thriller about who really took the last sausage at school lunch",
+        "Le Hamster Extraordinaire — a French adventure about a school pet who can predict the future",
+        "Il Professore Strano — an Italian comedy about a teacher who arrives on day one with no idea what subject they teach",
+        "Ninja de la Biblioteca — a Spanish action film about a school librarian who is secretly a ninja",
+        "Penguin på Fel Plats — a Swedish comedy about a penguin who ends up in a suburban high school",
+        "O Gato do Diretor — a Portuguese family film about the principal's cat who secretly runs the school",
+        "Kakashi no Himitsu — a Japanese adventure about a scarecrow that wanders into a classroom",
+        "Det Forsvunne Leksehefte — a Norwegian mystery about a homework book that disappears every time it is handed in",
+        "Taekwondo og Kage — a Danish film about a martial arts champion who opens a cake shop"
+      ],
+      "intermediate": [
+        "La Dernière Baguette — a French drama about a bakery on the verge of closure",
+        "Das Wunderkind — a German thriller about a child prodigy who knows too much",
+        "Il Segreto del Nonno — an Italian family drama about a grandfather's mysterious past",
+        "Karaoke No Yoru — a Japanese film about a karaoke bar where secrets are revealed",
+        "El Último Tango en el Supermercado — a Spanish romance set in a supermarket",
+        "Björn og Bamsen — a Scandinavian drama about two best friends and a very long winter",
+        "Babushka's Box — a Russian film about what was found in the attic after the grandmother died",
+        "O Mistério do Café — a Portuguese thriller set in a café where the waiter knows everyone's secrets",
+        "Kimchi Crisis — a Korean drama about a family recipe that tears a family apart",
+        "Die Letzte U-Bahn — a German film about strangers who miss the last train and must spend the night in a station"
+      ],
+      "advanced": [
+        "La Dernière Délibération — a French political drama about the last night before a historic vote",
+        "Unter Verdacht — a German legal thriller about a defence lawyer who begins to believe their client is guilty",
+        "Il Silenzio tra le Parole — an Italian drama about a translator who cannot bring themselves to convey the truth",
+        "El Testigo — a Spanish thriller about the only witness to an event that reshapes a nation",
+        "Sista Vittnet — a Swedish drama about a journalist who must choose between a story and a source",
+        "A Última Fronteira — a Portuguese film about a doctor at a border clinic who receives an impossible patient",
+        "Haikyo no Kioku — a Japanese art house film about a photographer documenting places people have left behind",
+        "Der Letzte Brief — a German drama about a letter written forty years ago that has finally arrived",
+        "Nuits Blanches à Bruxelles — a French political thriller set in a single sleepless night before a European summit",
+        "La Scala dell'Oblio — an Italian film about a conservatorium professor whose most gifted student has disappeared"
+      ]
+    },
     "variations": [
       "Switch roles halfway through — the translators become the actors and vice versa, continuing the same story.",
       "Allow the translator to occasionally \"mistranslate\" deliberately, forcing the actor to physically justify a completely unexpected version of what they just said."
@@ -1874,19 +1978,45 @@ const GAMES = [
     "setup": "Divide the playing area into four clearly marked quadrants — use tape on the floor, four chairs at the corners, or simply agree on the boundaries. Label each quadrant with a different strong emotion: Happy, Angry, Sad, and Afraid (or substitute audience suggestions). Each player begins in one quadrant, immediately inhabiting that emotion.",
     "howToPlay": "Ask the audience for a simple scenario and a starting relationship between the four characters. The scene begins with all four players in their starting quadrants, each performing in their assigned emotion. As the scene develops, players move freely between quadrants — but the instant a player steps into a new quadrant, they must shift to that quadrant's emotion, even mid-sentence and regardless of what they were just saying or doing. Players can stay put to hold their current emotion, or deliberately cross into a different quadrant to drive the scene from a new emotional place. The scene ends when a natural story moment is reached.",
     "purpose": "Players must simultaneously track the story, maintain their character, and shift emotion the instant they cross into a new zone. The comedy and drama come from the emotional whiplash — an argument that becomes overwhelmingly sad the moment a character steps sideways, or joy erupting in the middle of a tense standoff. The best moments happen when players start using their spatial awareness deliberately, choosing which quadrant to enter to reshape the scene.",
-    "prompts": [
-      "(Scenario + starting relationship between the four characters)",
-      "A surprise family reunion that nobody actually wanted",
-      "Four co-workers trapped in an office lift on the last day before a long holiday",
-      "A wedding rehearsal dinner where someone has just made an unexpected announcement",
-      "Four friends attempting to assemble flat-pack furniture together with one missing instruction sheet",
-      "A school staff room on the morning of a very important inspection",
-      "Four travellers stranded at an airport with only one seat left on the last flight home",
-      "A cooking competition where two of the four contestants already know who is going to win",
-      "A hospital waiting room where everyone is waiting for the same piece of news",
-      "Four members of a book club who have all clearly not read the book",
-      "A housemates' meeting called to discuss something nobody wants to admit they did"
-    ],
+    "prompts": {
+      "desc": "Scenario + starting relationship between the four characters",
+      "beginner": [
+        "Four students assigned to the same group project who have all done completely different things",
+        "Four friends on a camping trip who have lost the map, the food, and the tent pegs",
+        "Four kids at a birthday party when the planned activity is cancelled and nobody has a plan B",
+        "Four students arriving at the library to work on an assignment and discovering it is closed",
+        "Four students on a school bus who have all accidentally switched someone else's bag",
+        "Four friends trying to plan a surprise party for a fifth friend who keeps almost finding out",
+        "Four classmates trapped in a broken elevator between floors after school",
+        "Four students trying to return something they accidentally broke before the teacher notices",
+        "Four kids in a school play backstage when the person with the biggest role freezes",
+        "Four students who have all brought the exact same homemade dish to the class fundraiser"
+      ],
+      "intermediate": [
+        "A surprise family reunion that nobody actually wanted",
+        "Four co-workers trapped in an office lift on the last day before a long holiday",
+        "A wedding rehearsal dinner where someone has just made an unexpected announcement",
+        "Four friends attempting to assemble flat-pack furniture together with one missing instruction sheet",
+        "A school staff room on the morning of a very important inspection",
+        "Four travellers stranded at an airport with only one seat left on the last flight home",
+        "A cooking competition where two of the four contestants already know who is going to win",
+        "A hospital waiting room where everyone is waiting for the same piece of news",
+        "Four members of a book club who have all clearly not read the book",
+        "A housemates' meeting called to discuss something nobody wants to admit they did"
+      ],
+      "advanced": [
+        "Four colleagues on the last night before their company is sold to a competitor",
+        "Four family members waiting in a solicitor's office before a will is read",
+        "Four people in a hospital waiting room — each waiting for a different but equally serious reason",
+        "Four strangers on a delayed flight when the announcement comes that it may be cancelled entirely",
+        "Four former friends reuniting for the first time in ten years — for a reason none of them chose",
+        "Four professionals at a conference after one of them has just publicly failed",
+        "Four members of a band at the moment they find out their recording contract has been cancelled",
+        "Four colleagues in a breakroom when the news breaks that a fifth colleague has been let go",
+        "Four people at a farewell party for someone who has decided, at the last moment, not to leave",
+        "Four diplomats trapped in a lift together during a summit — all four representing opposing sides"
+      ]
+    },
     "variations": [
       "Rotate the emotion labels to different quadrants mid-scene — all four players instantly recalibrate.",
       "Allow the teacher or a designated audience member to call out a new emotion for a specific quadrant on the fly, replacing whatever was there.",
@@ -1908,19 +2038,45 @@ const GAMES = [
     "setup": "Two players take the stage. The other two stand at the back or side, watching closely and ready to call \"Freeze!\" at any moment. Ask the audience for a starting scenario to kick off the first scene.",
     "howToPlay": "The two on-stage players perform a scene with committed physicality — they should be moving, gesturing, and using their bodies actively, not just standing and talking. At any point, one of the waiting players shouts \"Freeze!\" — both on-stage players instantly stop dead in whatever position they are in. The player who called freeze steps forward, taps one of the frozen players on the shoulder, and that player steps out. The new player takes over the frozen player's exact physical position — every detail — and immediately starts a brand new scene inspired by that pose. The remaining on-stage player must accept the new scene. The new scene has nothing to do with the previous one. The game continues with players calling freeze, swapping in, and launching new scenes.",
     "purpose": "The body position is the key — every new scene should start from the physical reality of the frozen pose, not from an idea the incoming player already had. The best initiations are ones where the pose suggests something completely different from the scene it came from. Physical commitment on stage makes for better freezes and richer material.",
-    "prompts": [
-      "(Starting scenarios to kick off the first scene — subsequent scenes generate themselves)",
-      "Two astronauts landing on an unfamiliar planet",
-      "A chef and a food critic in a very tense kitchen inspection",
-      "Two people discovering they have both shown up to the same job interview in identical outfits",
-      "A dentist and a patient with a very complicated situation",
-      "Two strangers stuck in a broken lift for the third time this week",
-      "A driving instructor and a student on day one",
-      "Two hikers who have been going the wrong way for several hours",
-      "A vet and a pet owner with a mystery animal",
-      "A magician and their assistant mid-trick when something goes wrong",
-      "Two window cleaners on a very tall building in high wind"
-    ],
+    "prompts": {
+      "desc": "Starting scenarios to kick off the first scene — subsequent scenes generate themselves",
+      "beginner": [
+        "Two students trying to return a missing library book before the librarian notices",
+        "Two kids convincing each other that the noise they just heard was definitely nothing",
+        "Two friends building a sandcastle that keeps collapsing in increasingly dramatic ways",
+        "A student and a teacher both arriving extremely late to the same class",
+        "Two players on the same team who cannot agree on the next move with five seconds left",
+        "Two campers trying to put up a tent in the dark without waking the others",
+        "Two students accidentally locked in the art room after school",
+        "A student and a school mascot who has got separated from the rest of the parade",
+        "Two kids attempting to sneak a very large birthday cake into a building undetected",
+        "Two players both claiming to be the goalkeeper with the penalty already in progress"
+      ],
+      "intermediate": [
+        "Two astronauts landing on an unfamiliar planet",
+        "A chef and a food critic in a very tense kitchen inspection",
+        "Two people discovering they have both shown up to the same job interview in identical outfits",
+        "A dentist and a patient with a very complicated situation",
+        "Two strangers stuck in a broken lift for the third time this week",
+        "A driving instructor and a student on day one",
+        "Two hikers who have been going the wrong way for several hours",
+        "A vet and a pet owner with a mystery animal",
+        "A magician and their assistant mid-trick when something goes wrong",
+        "Two window cleaners on a very tall building in high wind"
+      ],
+      "advanced": [
+        "A politician and a journalist meeting in an empty café the night before a story breaks",
+        "A surgeon and an anaesthesiologist with a disagreement they must resolve before the procedure begins",
+        "Two former business partners in the same elevator on their way to the same meeting",
+        "A barrister and their client the morning of the verdict",
+        "A director and an actor on the final night of a long run — neither is sure how they feel",
+        "Two architects standing in a building they designed together but no longer agree on",
+        "A doctor and a patient who have been having the same conversation for a decade",
+        "Two foreign ministers waiting for the same interpreter who has not arrived",
+        "An editor and a writer meeting for the first time since the writer's last book was a disaster",
+        "Two people who have not spoken in five years, waiting for the same train on a cold platform"
+      ]
+    },
     "variations": [
       "Any player can call \"Freeze!\" — not just the two waiting — turning it into a more spontaneous group game.",
       "After each freeze, the caller must shout a single word before stepping in — the new scene must somehow relate to that word."
@@ -1940,19 +2096,45 @@ const GAMES = [
     "setup": "Ask the audience for a simple scenario and collect a list of six to eight genres — film styles, theatrical forms, or TV show types — before the scene begins. Three players take the stage; the fourth stands to the side as the caller with the genre list.",
     "howToPlay": "The scene begins in a neutral style — just clear characters and a situation. The caller shouts a genre from the list and all three players instantly shift the same story into that new genre. The story continues — it does not restart. The setting, characters, and plot keep developing, but the way they are being performed changes completely with each new genre. The caller switches genres every thirty to sixty seconds, keeping the players on a constant creative rollercoaster.",
     "purpose": "Unlike Changing Channels — where each player holds a different genre — here all three players shift together into the same genre simultaneously. Players must hold both the ongoing story and the conventions of the new genre at once. The story should keep developing through every switch, not reset. Each genre is a lens, not a new beginning.",
-    "prompts": [
-      "(Scenario + suggested genre pool for the caller)",
-      "Two flatmates discover a mysterious package — western, silent film, soap opera, horror, Bollywood musical, documentary, spy thriller",
-      "A job interview for an impossible position — romantic drama, action movie, nature documentary, Shakespearean tragedy, children's TV, cooking show",
-      "A couple moving house together for the first time — soap opera, horror, sports commentary, silent film, heist movie, nature documentary",
-      "Three friends on a road trip that has gone wrong — western, musical, true crime documentary, romantic comedy, action movie, fairy tale",
-      "A family dinner where an announcement is expected — soap opera, thriller, cooking show, Shakespearean tragedy, wildlife documentary, sitcom",
-      "A scientist who has made a discovery they cannot share — spy thriller, romantic drama, children's TV, western, nature documentary, soap opera",
-      "Two strangers sharing a table in a busy café — silent film, horror, sports commentary, romantic comedy, heist movie, Shakespearean tragedy",
-      "A birthday party where everything goes wrong — fairy tale, action movie, soap opera, wildlife documentary, true crime, cooking competition",
-      "A hospital waiting room — western, musical, heist movie, children's TV, romantic drama, sports commentary",
-      "A bank robbery in slow motion — silent film, soap opera, nature documentary, cooking show, Shakespearean tragedy, romantic comedy"
-    ],
+    "prompts": {
+      "desc": "Scenario + suggested genre pool for the caller",
+      "beginner": [
+        "A class trip goes wrong from the moment the bus leaves — superhero movie, soap opera, nature documentary, cooking show, fairy tale, sports commentary",
+        "The school canteen runs out of food on the most important day of the year — western, action movie, children's TV, soap opera, nature documentary, cooking competition",
+        "A school talent show rehearsal where everything goes wrong — silent film, soap opera, romantic comedy, horror, cooking show, nature documentary",
+        "A school sports team preparing for the grand final with no coach — sports commentary, soap opera, action movie, fairy tale, children's TV, nature documentary",
+        "Four students accidentally switch everyone's bags on the last day of term — romantic comedy, western, soap opera, spy thriller, fairy tale, horror",
+        "A camping trip where the tents are set up in the wrong field — action movie, fairy tale, soap opera, children's TV, nature documentary, sports commentary",
+        "The school play rehearsal falls apart one hour before opening — soap opera, horror, action movie, children's TV, cooking show, nature documentary",
+        "A school quiz goes badly wrong when the teacher loses the answer sheet — western, nature documentary, soap opera, romantic comedy, spy thriller, cooking show",
+        "A science experiment gets out of hand during a school open day — action movie, soap opera, children's TV, nature documentary, cooking show, fairy tale",
+        "Four students are sent to the principal's office for something none of them did — courtroom drama, spy thriller, soap opera, nature documentary, action movie, children's TV"
+      ],
+      "intermediate": [
+        "Two flatmates discover a mysterious package — western, silent film, soap opera, horror, Bollywood musical, documentary, spy thriller",
+        "A job interview for an impossible position — romantic drama, action movie, nature documentary, Shakespearean tragedy, children's TV, cooking show",
+        "A couple moving house together for the first time — soap opera, horror, sports commentary, silent film, heist movie, nature documentary",
+        "Three friends on a road trip that has gone wrong — western, musical, true crime documentary, romantic comedy, action movie, fairy tale",
+        "A family dinner where an announcement is expected — soap opera, thriller, cooking show, Shakespearean tragedy, wildlife documentary, sitcom",
+        "A scientist who has made a discovery they cannot share — spy thriller, romantic drama, children's TV, western, nature documentary, soap opera",
+        "Two strangers sharing a table in a busy café — silent film, horror, sports commentary, romantic comedy, heist movie, Shakespearean tragedy",
+        "A birthday party where everything goes wrong — fairy tale, action movie, soap opera, wildlife documentary, true crime, cooking competition",
+        "A hospital waiting room — western, musical, heist movie, children's TV, romantic drama, sports commentary",
+        "A bank robbery in slow motion — silent film, soap opera, nature documentary, cooking show, Shakespearean tragedy, romantic comedy"
+      ],
+      "advanced": [
+        "A corporate board meeting to vote on destroying something irreplaceable — Shakespearean tragedy, nature documentary, cooking show, soap opera, spy thriller, silent film",
+        "A diplomat and a journalist trapped together while a summit collapses around them — film noir, nature documentary, romantic comedy, Shakespearean tragedy, cooking show, soap opera",
+        "A long-running court case reaches its final day — courtroom drama (straight), soap opera, nature documentary, cooking show, silent film, Shakespearean tragedy",
+        "Two siblings dividing their parents' estate without help — Chekhov play, nature documentary, soap opera, cooking show, action movie, Shakespearean tragedy",
+        "A novelist meets the subject of their book for the first time after publication — psychological thriller, romantic drama, soap opera, nature documentary, cooking show, silent film",
+        "A doctor delivers a difficult diagnosis — period drama, soap opera, cooking show, nature documentary, silent film, sports commentary",
+        "A government minister resigns live on television — political thriller, soap opera, nature documentary, cooking show, Shakespearean tragedy, silent film",
+        "A world-famous musician plays their final concert — epic drama, soap opera, cooking show, nature documentary, sports commentary, silent film",
+        "A returning explorer meets the team that had given them up for dead — adventure drama, soap opera, nature documentary, cooking show, romantic comedy, Shakespearean tragedy",
+        "A letter written twenty years ago is finally opened — period drama, soap opera, nature documentary, cooking show, horror, silent film"
+      ]
+    },
     "variations": [
       "The audience takes over from the caller and shouts genres whenever they like — giving them direct control and accelerating the chaos.",
       "Players must transition between genres mid-sentence with no pause — the style shifts while the words keep coming."
@@ -1972,19 +2154,45 @@ const GAMES = [
     "setup": "Ask the audience for an unusual area of expertise and a country or language region the expert comes from. One player is the expert — they speak only in gibberish. One player is the interviewer who asks questions in English. One player is the translator who converts the expert's gibberish into English after each line. The fourth player acts as a questioner from the floor, asking follow-up questions on behalf of the audience.",
     "howToPlay": "The interviewer introduces the expert and begins asking questions about their field. The expert responds at length in passionate, expressive gibberish — using gesture, demonstration, and physical storytelling to give the translator as much to work with as possible. The translator converts each gibberish response into English immediately after each line or burst. The questioner can jump in at any point with a follow-up question that sends the expert off in a new direction.",
     "purpose": "The comedy emerges from the gap between the expert's passionate delivery and the translator's interpretation. The translator should aim to be faithful to the physical and emotional tone of the gibberish rather than simply making up funny non sequiturs — a sincere translation that happens to be ridiculous is always funnier than an obvious joke.",
-    "prompts": [
-      "(Area of expertise + country or region)",
-      "The world's foremost authority on competitive sleeping — from Switzerland",
-      "A leading researcher into why cats knock things off tables — from Japan",
-      "The inventor of a new mathematical system based entirely on feelings — from Italy",
-      "A renowned expert in the history of bad haircuts — from France",
-      "The world's only professor of the etiquette of queuing — from Britain",
-      "A pioneering scientist who has spent forty years studying clouds — from Iceland",
-      "The inventor of an award-winning dish made entirely from condiments — from South Korea",
-      "A celebrated philosopher who has dedicated their life to the question of why people sniff books — from Germany",
-      "The world's leading expert on the body language of people pretending to be fine — from Brazil",
-      "A distinguished academic who has written seven books on the cultural significance of napping — from Spain"
-    ],
+    "prompts": {
+      "desc": "Area of expertise + country or region",
+      "beginner": [
+        "The world's leading authority on the best way to eat lunch without anyone stealing your food — from Australia",
+        "A celebrated scientist who has spent twelve years studying why dogs tilt their heads — from Canada",
+        "A pioneering researcher into the exact moment a school bag becomes too heavy to carry — from New Zealand",
+        "The inventor of a new sport that combines dancing and doing the dishes — from Brazil",
+        "A renowned expert in the most effective ways to pretend you have done your homework — from Ireland",
+        "A world-famous specialist in why dogs always want to sit exactly where you were about to sit — from Mexico",
+        "A distinguished researcher into the science of why a freshly made bed is impossible to get into — from Portugal",
+        "An award-winning scientist who studies why people always arrive in a group to the bathroom — from the Netherlands",
+        "A celebrated academic devoted to studying why people knock twice before opening a door they planned to open anyway — from Sweden",
+        "The world's only professor of the perfect technique for opening a chip packet quietly in a quiet room — from South Korea"
+      ],
+      "intermediate": [
+        "The world's foremost authority on competitive sleeping — from Switzerland",
+        "A leading researcher into why cats knock things off tables — from Japan",
+        "The inventor of a new mathematical system based entirely on feelings — from Italy",
+        "A renowned expert in the history of bad haircuts — from France",
+        "The world's only professor of the etiquette of queuing — from Britain",
+        "A pioneering scientist who has spent forty years studying clouds — from Iceland",
+        "The inventor of an award-winning dish made entirely from condiments — from South Korea",
+        "A celebrated philosopher who has dedicated their life to the question of why people sniff books — from Germany",
+        "The world's leading expert on the body language of people pretending to be fine — from Brazil",
+        "A distinguished academic who has written seven books on the cultural significance of napping — from Spain"
+      ],
+      "advanced": [
+        "A Nobel Prize nominee whose controversial theory links the collapse of democratic institutions to the rise of the open-plan office — from Denmark",
+        "A renowned philosopher who has spent thirty years arguing that all major decisions are made by whoever speaks first — from France",
+        "A leading economist whose model predicts market crashes based entirely on how people queue for coffee — from Japan",
+        "A distinguished neuroscientist studying whether the brain produces different chemicals when people lie to themselves versus others — from Germany",
+        "A cultural historian documenting how the handshake evolved into a performance of power rather than trust — from Italy",
+        "A political scientist who has mapped every known instance of an apology that made things worse — from Finland",
+        "A sociologist whose controversial research suggests people are angrier in meetings they chose to attend — from the United States",
+        "A forensic linguist who can determine within three sentences whether a person intends to do what they have just promised — from Argentina",
+        "A philosopher who argues the most courageous act available to a modern person is to mean exactly what they say — from South Africa",
+        "A developmental psychologist studying the precise age at which children stop being honest and start being polite — from the United Kingdom"
+      ]
+    },
     "variations": [
       "The translator takes the expert's gibberish in a completely unexpected direction, and the expert must physically justify the \"wrong\" translation in real time.",
       "Swap the translator and questioner roles partway through — the new translator has a completely different interpretation style, shifting the expert's personality entirely."
@@ -2004,19 +2212,45 @@ const GAMES = [
     "setup": "Ask the audience for a location and a scenario. Two players take the stage as the actors. The other two stand to either side as their interpreters — one interpreter paired with each actor.",
     "howToPlay": "The two actors perform a complete scene entirely in gibberish — invented sounds and syllables that carry no actual meaning. Every time an actor finishes a line, their interpreter immediately provides the English translation. Actors communicate entirely through vocal tone, physicality, facial expression, and gesture. The interpreters watch closely and translate based on what they see and hear — not by making up unrelated jokes, but by genuinely reading the actor's emotional and physical performance and putting it into words.",
     "purpose": "This game strips language back to its bare bones and reveals how much meaning is carried by the body rather than by words. The more committed and physically specific the actors are, the richer the material the interpreters have to work with. The audience responds to what they feel the actor meant, not just what the interpreter says.",
-    "prompts": [
-      "(Location + scenario)",
-      "A café — two strangers gradually realise they have both been waiting for the same person",
-      "A kitchen — one character has accidentally ruined the other's most prized possession",
-      "A doctor's surgery — a patient tries to explain a condition that gets stranger with every sentence",
-      "A job interview — the interviewer is interviewing for a job the applicant didn't apply for",
-      "A park — two people discover they have been secretly following each other's life for years",
-      "A supermarket — a dispute over the last item on the shelf that becomes surprisingly emotional",
-      "A train — two strangers who realise too late they are heading to the same destination for the same reason",
-      "A school — a parent-teacher conference that takes a very unexpected turn",
-      "A restaurant — the wrong order arrives and nobody can agree on what was actually ordered",
-      "A gym — a personal trainer delivers feedback that devastates their client in ways they did not anticipate"
-    ],
+    "prompts": {
+      "desc": "Location + scenario",
+      "beginner": [
+        "A playground — two students trying to explain the same event to a teacher, each with a completely different version",
+        "A school canteen — one student convinces another to swap lunches using only mime and sound",
+        "A school library — a student tries to explain they need a very specific book to a librarian who has never heard of it",
+        "A birthday party — two guests discover they have brought identical presents and must negotiate who gives theirs first",
+        "A camping trip — two students try to communicate across opposite sides of the campsite using only hand signals and noise",
+        "A classroom — a student attempts to convince a teacher their pet ate their assignment, with demonstration",
+        "A school corridor — two friends debate whether to report a strange noise coming from behind a locked door",
+        "A sports day — a competitor tries to explain an accidental rule break to an official without using words that exist",
+        "A school bus — two students attempt to trade snacks in total silence while the driver checks the mirror",
+        "A science class — a student explains what happened to the experiment, step by disastrous step"
+      ],
+      "intermediate": [
+        "A café — two strangers gradually realise they have both been waiting for the same person",
+        "A kitchen — one character has accidentally ruined the other's most prized possession",
+        "A doctor's surgery — a patient tries to explain a condition that gets stranger with every sentence",
+        "A job interview — the interviewer is interviewing for a job the applicant didn't apply for",
+        "A park — two people discover they have been secretly following each other's life for years",
+        "A supermarket — a dispute over the last item on the shelf that becomes surprisingly emotional",
+        "A train — two strangers who realise too late they are heading to the same destination for the same reason",
+        "A school — a parent-teacher conference that takes a very unexpected turn",
+        "A restaurant — the wrong order arrives and nobody can agree on what was actually ordered",
+        "A gym — a personal trainer delivers feedback that devastates their client in ways they did not anticipate"
+      ],
+      "advanced": [
+        "A hospital corridor — a doctor tries to tell a colleague the wrong patient may be in surgery without causing a panic",
+        "A boardroom — a presenter realises mid-presentation that their entire slide deck is for the wrong company",
+        "A late-night bar — two strangers try to warn each other about someone who is watching both of them",
+        "A museum — a security guard discovers a famous painting has been replaced with something almost identical",
+        "A courtroom — a lawyer tries to signal to their client that the witness they are about to cross-examine is their client's close friend",
+        "A theatre backstage — a stage manager tries to stop the wrong understudy from going on without anyone in front of house finding out",
+        "A government building — a civil servant tries to discreetly communicate that the person being briefed is not who they say they are",
+        "A hotel lobby — a concierge tries to warn a guest that the journalist they are meeting has been recording the conversation since they arrived",
+        "A train — a passenger tries to alert the person across the aisle that their bag is being carefully searched by someone behind them",
+        "A press conference — a communications director tries to get the speaker to stop mid-answer without the cameras noticing"
+      ]
+    },
     "variations": [
       "Remove the interpreters entirely — the actors perform the whole scene in gibberish with no translation, relying purely on physical storytelling to communicate the story to the audience.",
       "The interpreters occasionally \"mistranslate\" — providing a version that contradicts the actor's physicality, forcing the actor to physically justify the wrong translation."
@@ -2036,18 +2270,45 @@ const GAMES = [
     "setup": "Ask the audience for a location and a scenario with plenty of physical action — things that can be moved through quickly. All four players take the stage. One player acts as the timekeeper and caller; the other three perform.",
     "howToPlay": "The three scene players perform a complete scene in one minute, building a clear story with a beginning, middle, and end. The timekeeper calls time at sixty seconds. Then the same scene is replayed in thirty seconds — hitting all the same major beats, the same story arc, the same characters — just faster. Then fifteen seconds. Then seven seconds. Each replay must contain the whole scene, just increasingly compressed. By the final round, the players are sprinting through the entire story in a blur of movement and sound.",
     "purpose": "The scene that works best for Half Life is one with lots of physical action, clear moments, and distinct beats — two people talking at a table is hard to compress; a chase, a discovery, a dramatic confrontation, and a resolution is perfect. Players must identify the essential bones of the scene and keep hitting them, faster and faster, until the whole thing collapses into joyful chaos.",
-    "prompts": [
-      "(Location + scenario — choose ones with strong physical action and clear story beats)",
-      "A kitchen — a birthday cake is being made when the guest of honour arrives home early",
-      "A spaceship — the crew discovers a stowaway just as the ship begins to malfunction",
-      "A jungle — two explorers find exactly what they were looking for and immediately wish they hadn't",
-      "A restaurant kitchen — a dish is being prepared during the most important service of the chef's career",
-      "A museum after hours — two security guards discover someone has been living inside the building",
-      "A hospital — a patient escapes, is caught, escapes again, and has to explain themselves",
-      "A train platform — two people miss their train, catch a different one, and end up somewhere unexpected",
-      "A sports stadium — a player warms up, gets injured, recovers, and scores the winning point",
-      "A science lab — an experiment succeeds brilliantly, then fails catastrophically, then succeeds again"
-    ],
+    "prompts": {
+      "desc": "Location + scenario — choose ones with strong physical action and clear story beats",
+      "beginner": [
+        "A school gymnasium — the class must stack all the chairs before the bell and someone keeps undoing the progress",
+        "A school corridor — a student is delivering a fragile science project and the hallway keeps getting more crowded",
+        "A playground — a kite is stuck in a tree and four students attempt an increasingly ambitious rescue",
+        "A camping trip — a tent is being assembled by four people who each have a different part of the instructions",
+        "A school canteen — a tray of food is being passed hand to hand across the cafeteria to someone who can't get up",
+        "A school library — all the books have fallen off the shelves and must be reshelved before the librarian returns",
+        "A birthday party — a surprise cake is being relayed from the kitchen to the table without the birthday person seeing",
+        "A sports day — four relay runners discover the baton keeps being dropped at the exact worst moment",
+        "A school excursion — four students realise they are at the wrong museum and sprint to find the group before roll call",
+        "A classroom — four students try to write the same word on the board simultaneously to settle an argument before the teacher returns"
+      ],
+      "intermediate": [
+        "A kitchen — a birthday cake is being made when the guest of honour arrives home early",
+        "A spaceship — the crew discovers a stowaway just as the ship begins to malfunction",
+        "A jungle — two explorers find exactly what they were looking for and immediately wish they hadn't",
+        "A restaurant kitchen — a dish is being prepared during the most important service of the chef's career",
+        "A museum after hours — two security guards discover someone has been living inside the building",
+        "A hospital — a patient escapes, is caught, escapes again, and has to explain themselves",
+        "A train platform — two people miss their train, catch a different one, and end up somewhere unexpected",
+        "A sports stadium — a player warms up, gets injured, recovers, and scores the winning point",
+        "A science lab — an experiment succeeds brilliantly, then fails catastrophically, then succeeds again",
+        "A gallery — a painting falls from its hook and four staff try to re-hang it before the critic who commissioned it arrives"
+      ],
+      "advanced": [
+        "A courtroom — a verdict is delivered, appealed, overturned, and reinstated within a single afternoon session",
+        "A theatre — an actor forgets their lines, improvises, causes a chain reaction, and somehow ends on the right cue",
+        "A hospital — a surgery proceeds normally until two complications occur simultaneously and are resolved in sequence",
+        "A boardroom — a presentation begins, the projector fails, backup fails, the CEO walks out, and is brought back",
+        "A rooftop — a public protest begins, builds, is addressed, partially dispersed, and resumes in a different form",
+        "A newsroom — a breaking story is confirmed, denied, then re-confirmed by a second source within the hour",
+        "A law firm — a signed contract is found to have an error, is voided, rewritten, and re-signed under extraordinary pressure",
+        "A film set — the lead actor arrives late, the director quits, a new director arrives, and the scene is shot three ways",
+        "A government press conference — a minister makes a statement, retracts it, is replaced by a spokesperson who also retracts it",
+        "A train station — a departure is announced, delayed, cancelled, transferred to a new platform, and finally departs as a different train"
+      ]
+    },
     "variations": [
       "After the seven-second version, challenge the players to perform it backwards in seven seconds — the final beat first, working back to the opening.",
       "Play two separate groups' Half Life scenes simultaneously and have the audience vote on which group maintained the most story clarity at the fastest speed."
