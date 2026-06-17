@@ -495,6 +495,26 @@
       border-color: rgba(255,255,255,0.4);
     }
 
+    /* ── UPDATE TOAST ── */
+    #update-toast {
+      display: none;
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--orange);
+      color: var(--black);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 12px 22px;
+      border: 3px solid var(--black);
+      box-shadow: 5px 5px 0 var(--black);
+      z-index: 1000;
+    }
+
     /* ── FAVOURITES ── */
     .fav-section { margin-bottom: 44px; }
     .fav-heading {
@@ -1079,6 +1099,8 @@
       <button class="install-btn" id="install-btn">Install</button>
     </div>
   </div>
+
+  <div id="update-toast" role="status">App updated to the latest version</div>
 
   <!-- PROJECTOR OVERLAY -->
   <div id="proj-overlay" role="dialog" aria-modal="true" aria-label="Projector Mode">

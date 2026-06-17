@@ -513,7 +513,25 @@ dismissBtn.addEventListener('click', () => { banner.style.display = 'none'; });
 /* ── SERVICE WORKER ── */
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js').catch(() => {});
+    navigator.serviceWorker.register('sw.js').then(reg => {
+      reg.addEventListener('updatefound', () => {
+        const newWorker = reg.installing;
+        if (!newWorker) return;
+        newWorker.addEventListener('statechange', () => {
+          if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+            const toast = document.getElementById('update-toast');
+            if (toast) toast.style.display = 'block';
+          }
+        });
+      });
+    }).catch(() => {});
+
+    let refreshing = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (refreshing) return;
+      refreshing = true;
+      setTimeout(() => window.location.reload(), 1200);
+    });
   });
 }
 
