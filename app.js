@@ -513,7 +513,7 @@ dismissBtn.addEventListener('click', () => { banner.style.display = 'none'; });
 /* ── SERVICE WORKER ── */
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js').then(reg => {
+    navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).then(reg => {
       reg.addEventListener('updatefound', () => {
         const newWorker = reg.installing;
         if (!newWorker) return;
@@ -524,6 +524,12 @@ if ('serviceWorker' in navigator) {
           }
         });
       });
+
+      const checkForUpdate = () => reg.update().catch(() => {});
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') checkForUpdate();
+      });
+      window.addEventListener('focus', checkForUpdate);
     }).catch(() => {});
 
     let refreshing = false;

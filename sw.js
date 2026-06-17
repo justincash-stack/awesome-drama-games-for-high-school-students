@@ -1,4 +1,4 @@
-const CACHE = 'drama-games-v5';
+const CACHE = 'drama-games-v6';
 const ASSETS = [
   '/',
   '/index.html',
@@ -12,7 +12,13 @@ const ASSETS = [
 
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting())
+    caches.open(CACHE).then(c =>
+      Promise.all(ASSETS.map(url =>
+        fetch(url, { cache: 'reload' }).then(res => {
+          if (res.ok) return c.put(url, res);
+        }).catch(() => {})
+      ))
+    ).then(() => self.skipWaiting())
   );
 });
 
