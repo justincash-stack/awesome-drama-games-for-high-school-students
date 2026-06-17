@@ -298,7 +298,13 @@ document.addEventListener('fullscreenchange', () => {
   }
 });
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && projOverlay.classList.contains('active')) closeProjector();
+  if (e.key !== 'Escape') return;
+  const scoreboardOverlay = document.getElementById('scoreboard-overlay');
+  if (scoreboardOverlay && scoreboardOverlay.classList.contains('active')) {
+    scoreboardOverlay.classList.remove('active');
+    return;
+  }
+  if (projOverlay.classList.contains('active')) closeProjector();
 });
 
 /* ── IN-CLASS TIMER ── */
@@ -605,3 +611,339 @@ function escHtml(str) {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
 }
+
+/* ── SCOREBOARD: DATA LAYER (localStorage, no backend) ── */
+const SB_STORAGE_KEY = 'drama-scoreboards-v1';
+
+function sbUid(prefix) {
+  return prefix + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+}
+
+function sbCreateDefaultBoard(name) {
+  return {
+    id: sbUid('b'),
+    className: name || '',
+    criteria: [
+      { id: sbUid('c'), name: 'Storyline', max: 5 },
+      { id: sbUid('c'), name: 'Technique', max: 5 },
+      { id: sbUid('c'), name: 'Entertainment', max: 5 }
+    ],
+    teams: [],
+    rows: []
+  };
+}
+
+function sbLoadStore() {
+  try {
+    const raw = localStorage.getItem(SB_STORAGE_KEY);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (parsed && parsed.boards && Object.keys(parsed.boards).length) return parsed;
+    }
+  } catch {}
+  const board = sbCreateDefaultBoard('My Class');
+  return { activeId: board.id, boards: { [board.id]: board } };
+}
+
+let scoreboardStore = sbLoadStore();
+
+function sbSave() {
+  try { localStorage.setItem(SB_STORAGE_KEY, JSON.stringify(scoreboardStore)); } catch {}
+}
+
+function sbGetActiveBoard() {
+  let board = scoreboardStore.boards[scoreboardStore.activeId];
+  if (!board) {
+    const ids = Object.keys(scoreboardStore.boards);
+    if (ids.length) {
+      scoreboardStore.activeId = ids[0];
+      board = scoreboardStore.boards[ids[0]];
+    } else {
+      board = sbCreateDefaultBoard('My Class');
+      scoreboardStore.boards[board.id] = board;
+      scoreboardStore.activeId = board.id;
+    }
+  }
+  if (!board.criteria) board.criteria = [];
+  if (!board.teams) board.teams = [];
+  if (!board.rows) board.rows = [];
+  return board;
+}
+
+function sbCellTotal(board, row, teamId) {
+  const scores = (row.scores && row.scores[teamId]) || {};
+  const crits = board.criteria.length ? board.criteria : [{ id: '_score' }];
+  let sum = 0;
+  crits.forEach(c => {
+    const v = Number(scores[c.id]);
+    if (!isNaN(v)) sum += v;
+  });
+  return sum;
+}
+
+/* ── SCOREBOARD: RENDERING ── */
+function sbCriteriaListHtml(board) {
+  if (!board.criteria.length) {
+    return '<span class="sb-empty-msg" style="margin:0;">No criteria — enter a single score per cell.</span>';
+  }
+  return board.criteria.map(c => `
+    <div class="sb-criterion-chip">
+      <input type="text" data-action="crit-name" data-crit-id="${c.id}" value="${escHtml(c.name)}">
+      <span>/</span>
+      <input type="number" min="1" max="100" data-action="crit-max" data-crit-id="${c.id}" value="${c.max}">
+      <button class="sb-remove-btn" data-action="remove-criterion" data-crit-id="${c.id}" title="Remove criterion">&times;</button>
+    </div>
+  `).join('');
+}
+
+function sbTableHeadHtml(board) {
+  return `<tr>
+    <th class="sb-th-game">Game</th>
+    ${board.teams.map(t => `
+      <th class="sb-th-team">
+        <div class="sb-team-head">
+          <input type="text" class="sb-team-name-input" data-team-id="${t.id}" value="${escHtml(t.name)}" placeholder="Team name">
+          <button class="sb-remove-btn" data-action="remove-team" data-team-id="${t.id}" title="Remove team">&times;</button>
+        </div>
+      </th>`).join('')}
+    <th class="sb-th-actions"></th>
+  </tr>`;
+}
+
+function sbScoreCellHtml(board, row, team) {
+  const scores = (row.scores && row.scores[team.id]) || {};
+  if (board.criteria.length) {
+    const rowsHtml = board.criteria.map(c => {
+      const v = scores[c.id];
+      return `
+        <label class="sb-crit-input-row">
+          <span class="sb-crit-mini-label" data-crit-label="${c.id}">${escHtml(c.name || '')}</span>
+          <input type="number" class="sb-score-input" inputmode="numeric" data-row="${row.id}" data-team="${team.id}" data-crit="${c.id}" min="0" max="${c.max || ''}" value="${v === undefined || v === null ? '' : v}">
+          <span class="sb-crit-max" data-crit-max="${c.id}">/${c.max || ''}</span>
+        </label>`;
+    }).join('');
+    return `
+      <div class="sb-cell-criteria">
+        ${rowsHtml}
+        <div class="sb-subtotal" data-subtotal-row="${row.id}" data-subtotal-team="${team.id}">${sbCellTotal(board, row, team.id)}</div>
+      </div>`;
+  }
+  const v = scores['_score'];
+  return `<input type="number" class="sb-score-input sb-score-input-single" data-row="${row.id}" data-team="${team.id}" data-crit="_score" min="0" value="${v === undefined || v === null ? '' : v}">`;
+}
+
+function sbTableBodyHtml(board) {
+  if (!board.rows.length) {
+    return `<tr><td class="sb-empty-row" colspan="${board.teams.length + 2}">No games added yet — click "+ Add Game Row" below.</td></tr>`;
+  }
+  return board.rows.map(row => `
+    <tr data-row-id="${row.id}">
+      <td class="sb-td-game">
+        <select class="sb-game-select" data-row-id="${row.id}">
+          <option value="">— Select a game —</option>
+          ${sortedGames.map(g => `<option value="${g.id}" ${String(row.gameId) === String(g.id) ? 'selected' : ''}>${escHtml(g.title)}</option>`).join('')}
+        </select>
+      </td>
+      ${board.teams.map(t => `<td class="sb-td-score">${sbScoreCellHtml(board, row, t)}</td>`).join('')}
+      <td class="sb-td-actions">
+        <button class="sb-remove-btn" data-action="remove-row" data-row-id="${row.id}" title="Remove row">&times;</button>
+      </td>
+    </tr>
+  `).join('');
+}
+
+function sbUpdateTotals(board) {
+  const foot = document.getElementById('sb-table-foot');
+  if (!foot) return;
+  const totals = board.teams.map(t => board.rows.reduce((sum, row) => sum + sbCellTotal(board, row, t.id), 0));
+  foot.innerHTML = `
+    <tr class="sb-totals-row active">
+      <td>TOTAL</td>
+      ${totals.map(v => `<td>${v}</td>`).join('')}
+      <td></td>
+    </tr>`;
+}
+
+function renderScoreboard() {
+  const board = sbGetActiveBoard();
+  const boardSelect = document.getElementById('sb-board-select');
+  const ids = Object.keys(scoreboardStore.boards);
+  boardSelect.innerHTML = ids.map(id => {
+    const b = scoreboardStore.boards[id];
+    const label = b.className && b.className.trim() ? b.className : 'Untitled Class';
+    return `<option value="${id}" ${id === board.id ? 'selected' : ''}>${escHtml(label)}</option>`;
+  }).join('');
+
+  document.getElementById('sb-classname-input').value = board.className || '';
+  document.getElementById('sb-criteria-list').innerHTML = sbCriteriaListHtml(board);
+  document.getElementById('sb-table-head').innerHTML = sbTableHeadHtml(board);
+  document.getElementById('sb-table-body').innerHTML = sbTableBodyHtml(board);
+  document.getElementById('sb-table-foot').innerHTML = '';
+}
+
+/* ── SCOREBOARD: OPEN / CLOSE ── */
+const scoreboardOverlay = document.getElementById('scoreboard-overlay');
+
+function openScoreboard() {
+  renderScoreboard();
+  scoreboardOverlay.classList.add('active');
+}
+function closeScoreboardOverlay() {
+  scoreboardOverlay.classList.remove('active');
+}
+
+const projScoreboardBtn = document.getElementById('proj-scoreboard-btn');
+if (projScoreboardBtn) projScoreboardBtn.addEventListener('click', openScoreboard);
+
+const sbCloseBtn = document.getElementById('sb-close-btn');
+if (sbCloseBtn) sbCloseBtn.addEventListener('click', closeScoreboardOverlay);
+
+/* ── SCOREBOARD: BOARD-LEVEL CONTROLS ── */
+const sbBoardSelect = document.getElementById('sb-board-select');
+if (sbBoardSelect) sbBoardSelect.addEventListener('change', e => {
+  scoreboardStore.activeId = e.target.value;
+  sbSave();
+  renderScoreboard();
+});
+
+const sbNewBoardBtn = document.getElementById('sb-new-board-btn');
+if (sbNewBoardBtn) sbNewBoardBtn.addEventListener('click', () => {
+  const board = sbCreateDefaultBoard('New Class');
+  scoreboardStore.boards[board.id] = board;
+  scoreboardStore.activeId = board.id;
+  sbSave();
+  renderScoreboard();
+  const input = document.getElementById('sb-classname-input');
+  if (input) { input.focus(); input.select(); }
+});
+
+const sbDeleteBoardBtn = document.getElementById('sb-delete-board-btn');
+if (sbDeleteBoardBtn) sbDeleteBoardBtn.addEventListener('click', () => {
+  const board = sbGetActiveBoard();
+  const label = board.className && board.className.trim() ? board.className : 'this class';
+  if (!confirm(`Delete the scoreboard for "${label}"? This cannot be undone.`)) return;
+  delete scoreboardStore.boards[board.id];
+  const remaining = Object.keys(scoreboardStore.boards);
+  if (remaining.length) {
+    scoreboardStore.activeId = remaining[0];
+  } else {
+    const nb = sbCreateDefaultBoard('My Class');
+    scoreboardStore.boards[nb.id] = nb;
+    scoreboardStore.activeId = nb.id;
+  }
+  sbSave();
+  renderScoreboard();
+});
+
+const sbAddCriterionBtn = document.getElementById('sb-add-criterion-btn');
+if (sbAddCriterionBtn) sbAddCriterionBtn.addEventListener('click', () => {
+  const board = sbGetActiveBoard();
+  board.criteria.push({ id: sbUid('c'), name: 'Criterion', max: 5 });
+  sbSave();
+  renderScoreboard();
+});
+
+const sbAddTeamBtn = document.getElementById('sb-add-team-btn');
+if (sbAddTeamBtn) sbAddTeamBtn.addEventListener('click', () => {
+  const board = sbGetActiveBoard();
+  board.teams.push({ id: sbUid('t'), name: `Team ${board.teams.length + 1}` });
+  sbSave();
+  renderScoreboard();
+});
+
+const sbAddRowBtn = document.getElementById('sb-add-row-btn');
+if (sbAddRowBtn) sbAddRowBtn.addEventListener('click', () => {
+  const board = sbGetActiveBoard();
+  board.rows.push({ id: sbUid('r'), gameId: null, scores: {} });
+  sbSave();
+  renderScoreboard();
+});
+
+const sbTotalBtn = document.getElementById('sb-total-btn');
+if (sbTotalBtn) sbTotalBtn.addEventListener('click', () => {
+  sbUpdateTotals(sbGetActiveBoard());
+});
+
+/* ── SCOREBOARD: TABLE/CRITERIA DELEGATION (click, input, change) ── */
+const sbBody = document.querySelector('.sb-body');
+
+if (sbBody) sbBody.addEventListener('click', e => {
+  const btn = e.target.closest('[data-action]');
+  if (!btn) return;
+  const action = btn.dataset.action;
+  if (action !== 'remove-team' && action !== 'remove-row' && action !== 'remove-criterion') return;
+  const board = sbGetActiveBoard();
+  if (action === 'remove-team') {
+    board.teams = board.teams.filter(t => t.id !== btn.dataset.teamId);
+  } else if (action === 'remove-row') {
+    board.rows = board.rows.filter(r => r.id !== btn.dataset.rowId);
+  } else if (action === 'remove-criterion') {
+    board.criteria = board.criteria.filter(c => c.id !== btn.dataset.critId);
+  }
+  sbSave();
+  renderScoreboard();
+});
+
+if (sbBody) sbBody.addEventListener('input', e => {
+  const board = sbGetActiveBoard();
+  const t = e.target;
+
+  if (t.id === 'sb-classname-input') {
+    board.className = t.value;
+    sbSave();
+    const opt = document.querySelector(`#sb-board-select option[value="${board.id}"]`);
+    if (opt) opt.textContent = t.value.trim() ? t.value : 'Untitled Class';
+    return;
+  }
+
+  if (t.classList.contains('sb-team-name-input')) {
+    const team = board.teams.find(x => x.id === t.dataset.teamId);
+    if (team) { team.name = t.value; sbSave(); }
+    return;
+  }
+
+  if (t.dataset.action === 'crit-name') {
+    const c = board.criteria.find(x => x.id === t.dataset.critId);
+    if (c) {
+      c.name = t.value;
+      sbSave();
+      document.querySelectorAll(`[data-crit-label="${c.id}"]`).forEach(el => { el.textContent = c.name; });
+    }
+    return;
+  }
+
+  if (t.dataset.action === 'crit-max') {
+    const c = board.criteria.find(x => x.id === t.dataset.critId);
+    if (c) {
+      c.max = parseInt(t.value, 10) || 0;
+      sbSave();
+      document.querySelectorAll(`[data-crit-max="${c.id}"]`).forEach(el => { el.textContent = `/${c.max}`; });
+      document.querySelectorAll(`input.sb-score-input[data-crit="${c.id}"]`).forEach(el => { el.max = c.max; });
+    }
+    return;
+  }
+
+  if (t.classList.contains('sb-score-input')) {
+    const rowId = t.dataset.row, teamId = t.dataset.team, critId = t.dataset.crit;
+    const row = board.rows.find(r => r.id === rowId);
+    if (!row) return;
+    if (!row.scores[teamId]) row.scores[teamId] = {};
+    const val = t.value === '' ? null : Number(t.value);
+    if (val === null || isNaN(val)) delete row.scores[teamId][critId];
+    else row.scores[teamId][critId] = val;
+    sbSave();
+    const subtotalEl = document.querySelector(`[data-subtotal-row="${rowId}"][data-subtotal-team="${teamId}"]`);
+    if (subtotalEl) subtotalEl.textContent = sbCellTotal(board, row, teamId);
+    if (document.querySelector('.sb-totals-row')) sbUpdateTotals(board);
+    return;
+  }
+});
+
+if (sbBody) sbBody.addEventListener('change', e => {
+  const t = e.target;
+  if (t.classList.contains('sb-game-select')) {
+    const board = sbGetActiveBoard();
+    const row = board.rows.find(r => r.id === t.dataset.rowId);
+    if (row) { row.gameId = t.value ? parseInt(t.value, 10) : null; sbSave(); }
+  }
+});

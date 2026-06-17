@@ -825,6 +825,20 @@
       transition: all 0.1s;
     }
     .proj-close-btn:hover { background: var(--yellow); color: var(--black); }
+    .proj-scoreboard-btn {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--yellow);
+      border: 2px solid var(--black);
+      color: var(--black);
+      padding: 6px 14px;
+      cursor: pointer;
+      transition: all 0.1s;
+    }
+    .proj-scoreboard-btn:hover { background: var(--orange); }
     .proj-gametitle {
       font-family: 'Anton', sans-serif;
       font-size: clamp(1.8rem, 4vw, 3.2rem);
@@ -841,9 +855,10 @@
     .proj-top {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      align-items: start;
       gap: 16px;
-      flex: 1 1 50%;
-      overflow: hidden;
+      flex: 0 1 auto;
+      max-height: 48vh;
       padding: 16px 20px;
       min-height: 0;
     }
@@ -853,6 +868,7 @@
       border: 4px solid var(--black);
       box-shadow: 5px 5px 0 var(--black);
       padding: 14px 16px;
+      max-height: 48vh;
       overflow-y: auto;
     }
     .proj-sec-label {
@@ -880,7 +896,7 @@
 
     /* ── PROJECTOR BOTTOM: timer OR prompts, centred ── */
     .proj-bottom {
-      flex: 1 1 50%;
+      flex: 1 1 auto;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -937,7 +953,7 @@
     .t-pre.active { border-color: var(--yellow); background: var(--yellow); color: var(--black); }
     .t-display {
       font-family: 'Anton', sans-serif;
-      font-size: clamp(5rem, 16vw, 11rem);
+      font-size: clamp(6rem, 19vw, 14rem);
       letter-spacing: 0.04em;
       color: var(--yellow);
       text-align: center;
@@ -982,6 +998,220 @@
     .proj-prompts-panel .prompts-intro { font-size: 0.95rem; }
     .proj-prompts-panel .prompt-tab { font-size: 1rem; padding: 10px 22px; }
     .proj-prompts-panel .prompt-list li { font-size: 1.18rem; line-height: 1.5; padding: 10px 14px; }
+
+    /* ── SCOREBOARD OVERLAY ── */
+    #scoreboard-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background-color: var(--purple);
+      background-image: radial-gradient(circle, var(--orange) 4px, transparent 4px);
+      background-size: 28px 28px;
+      color: var(--white);
+      flex-direction: column;
+      overflow-y: auto;
+    }
+    #scoreboard-overlay.active { display: flex; }
+    .sb-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 28px;
+      background: var(--red);
+      border-bottom: 5px solid var(--black);
+      flex-wrap: wrap;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .sb-topbar-left { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .sb-board-select {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: var(--yellow);
+      color: var(--black);
+      border: 2px solid var(--black);
+      padding: 6px 10px;
+      cursor: pointer;
+      max-width: 220px;
+    }
+    .sb-small-btn {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      background: var(--black);
+      color: var(--yellow);
+      border: 2px solid var(--yellow);
+      padding: 6px 12px;
+      cursor: pointer;
+      transition: all 0.1s;
+    }
+    .sb-small-btn:hover { background: var(--yellow); color: var(--black); }
+    .sb-small-btn.sb-danger { border-color: #fff; color: #fff; }
+    .sb-small-btn.sb-danger:hover { background: var(--red); color: #fff; border-color: var(--red); }
+
+    .sb-body { padding: 22px 28px 60px; flex: 1; }
+
+    .sb-classname-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 6px;
+    }
+    .sb-classname-input {
+      display: block;
+      width: 100%;
+      max-width: 520px;
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(1.3rem, 3vw, 2rem);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      background: var(--yellow);
+      color: var(--black);
+      border: 4px solid var(--black);
+      box-shadow: 5px 5px 0 var(--black);
+      padding: 10px 16px;
+      margin-bottom: 22px;
+    }
+    .sb-classname-input::placeholder { color: rgba(0,0,0,0.4); }
+
+    .sb-criteria-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+      background: rgba(255,255,255,0.06);
+      border: 2px solid rgba(255,255,255,0.18);
+      padding: 12px 16px;
+    }
+    .sb-criteria-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+    }
+    .sb-criteria-list { display: flex; gap: 8px; flex-wrap: wrap; }
+    .sb-criterion-chip {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--white);
+      border: 2px solid var(--black);
+      padding: 4px 6px;
+    }
+    .sb-criterion-chip input[type="text"] {
+      width: 96px;
+      border: none;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--black);
+      background: transparent;
+    }
+    .sb-criterion-chip input[type="number"] {
+      width: 36px;
+      border: none;
+      border-left: 2px solid #ddd;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--black);
+      background: transparent;
+      text-align: center;
+    }
+    .sb-remove-btn {
+      background: transparent;
+      border: none;
+      color: rgba(0,0,0,0.4);
+      font-size: 1.05rem;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0 2px;
+      font-weight: 700;
+    }
+    .sb-remove-btn:hover { color: var(--red); }
+
+    .sb-table-wrap {
+      overflow-x: auto;
+      border: 4px solid var(--black);
+      box-shadow: 6px 6px 0 var(--black);
+      background: var(--white);
+    }
+    .sb-table { border-collapse: collapse; width: 100%; min-width: 640px; color: var(--black); }
+    .sb-table th, .sb-table td { border: 2px solid #ddd; padding: 8px 10px; text-align: center; vertical-align: middle; }
+    .sb-th-game, .sb-td-game { text-align: left; min-width: 220px; background: #f7f7f7; }
+    .sb-th-team { min-width: 150px; background: #f7f7f7; }
+    .sb-th-actions, .sb-td-actions { width: 36px; padding: 4px; }
+    .sb-team-head { display: flex; align-items: center; gap: 6px; justify-content: center; }
+    .sb-team-name-input {
+      width: 100%;
+      border: none;
+      background: transparent;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      text-align: center;
+      color: var(--black);
+    }
+    .sb-game-select {
+      width: 100%;
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.88rem;
+      padding: 6px;
+      border: 2px solid #ccc;
+      background: var(--white);
+      color: var(--black);
+    }
+    .sb-cell-criteria { display: flex; flex-direction: column; gap: 3px; align-items: stretch; }
+    .sb-crit-input-row { display: flex; align-items: center; gap: 4px; justify-content: center; font-size: 0.74rem; color: #555; }
+    .sb-crit-mini-label { min-width: 64px; text-align: right; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .sb-score-input { width: 42px; text-align: center; border: 1.5px solid #ccc; padding: 2px; font-family: 'Barlow', sans-serif; font-weight: 700; }
+    .sb-crit-max { color: #888; }
+    .sb-subtotal {
+      margin-top: 4px;
+      font-family: 'Anton', sans-serif;
+      font-size: 1rem;
+      color: var(--black);
+      background: var(--yellow);
+      border: 2px solid var(--black);
+      padding: 2px 0;
+    }
+    .sb-score-input-single { width: 70px; font-size: 1.1rem; padding: 8px; }
+
+    .sb-totals-row { display: none; background: var(--yellow); }
+    .sb-totals-row.active { display: table-row; }
+    .sb-totals-row td { font-family: 'Anton', sans-serif; font-size: 1.1rem; color: var(--black); }
+
+    .sb-actions { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; align-items: center; }
+    .sb-add-row-btn, .sb-add-team-btn {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      background: var(--black);
+      border: 2px solid rgba(255,255,255,0.3);
+      color: var(--white);
+      padding: 9px 18px;
+      cursor: pointer;
+      transition: all 0.1s;
+    }
+    .sb-add-row-btn:hover, .sb-add-team-btn:hover { border-color: var(--yellow); color: var(--yellow); }
+
+    .sb-empty-msg { color: rgba(255,255,255,0.55); font-size: 0.95rem; margin: 14px 0; }
 
     /* ── TEACHER MODAL ── */
     #teacher-modal {
@@ -1183,7 +1413,10 @@
   <div id="proj-overlay" role="dialog" aria-modal="true" aria-label="Projector Mode">
     <div class="proj-topbar">
       <span class="proj-gamenum" id="proj-gamenum"></span>
-      <button class="proj-close-btn" id="proj-close-btn">&#x2715; Exit Projector</button>
+      <div style="display:flex; gap:10px;">
+        <button class="proj-scoreboard-btn" id="proj-scoreboard-btn">&#127942; Scoreboard</button>
+        <button class="proj-close-btn" id="proj-close-btn">&#x2715; Exit Projector Mode</button>
+      </div>
     </div>
     <div class="proj-gametitle" id="proj-gametitle"></div>
     <div class="proj-top">
@@ -1221,6 +1454,42 @@
     </div>
   </div>
 
+  <!-- SCOREBOARD OVERLAY -->
+  <div id="scoreboard-overlay" role="dialog" aria-modal="true" aria-label="Scoreboard">
+    <div class="sb-topbar">
+      <div class="sb-topbar-left">
+        <select id="sb-board-select" class="sb-board-select"></select>
+        <button class="sb-small-btn" id="sb-new-board-btn">+ New Class</button>
+        <button class="sb-small-btn sb-danger" id="sb-delete-board-btn">Delete Class</button>
+      </div>
+      <button class="proj-close-btn" id="sb-close-btn">&#x2715; Back to Projector</button>
+    </div>
+    <div class="sb-body">
+      <div class="sb-classname-label">Class name</div>
+      <input type="text" id="sb-classname-input" class="sb-classname-input" placeholder="e.g. 7 Green">
+
+      <div class="sb-criteria-row">
+        <span class="sb-criteria-label">Scoring criteria (optional):</span>
+        <div class="sb-criteria-list" id="sb-criteria-list"></div>
+        <button class="sb-small-btn" id="sb-add-criterion-btn">+ Add Criterion</button>
+      </div>
+
+      <div class="sb-table-wrap">
+        <table class="sb-table" id="sb-table">
+          <thead id="sb-table-head"></thead>
+          <tbody id="sb-table-body"></tbody>
+          <tfoot id="sb-table-foot"></tfoot>
+        </table>
+      </div>
+
+      <div class="sb-actions">
+        <button class="sb-add-row-btn" id="sb-add-row-btn">+ Add Game Row</button>
+        <button class="sb-add-team-btn" id="sb-add-team-btn">+ Add Team</button>
+        <button class="t-btn t-primary" id="sb-total-btn">&#127942; Total Score</button>
+      </div>
+    </div>
+  </div>
+
   <!-- TEACHER MODAL -->
   <div id="teacher-modal" role="dialog" aria-modal="true" aria-label="For Teachers">
     <div class="teacher-box">
@@ -1247,6 +1516,10 @@
         <p>Start with a Beginner prompt even with older students when introducing a new game — it lets them learn the rules without the added pressure of a harder scenario.</p>
         <h3>Projector Mode</h3>
         <p>Open any game and tap <strong>Projector Mode</strong> to display the setup and instructions on a class screen. Students can see the rules while you facilitate. The built-in timer helps keep rounds on track.</p>
+        <h3>Scoreboard</h3>
+        <p>Inside Projector Mode, tap <strong>Scoreboard</strong> to track team scores across multiple games in a single lesson — it's independent of whichever game you're currently displaying, so you can keep scoring the same class as you move from game to game. Enter team names across the top, pick a game for each row from the dropdown, and score each team against optional criteria (Storyline /5, Technique /5, Entertainment /5 by default — edit, remove, or ignore them and just enter a single number per cell instead). Press <strong>Total Score</strong> to add up each team's column.</p>
+        <p>You can keep more than one scoreboard at once — give each one a <strong>Class Name</strong> (e.g. "7 Green" or "10 Orange") and switch between them from the dropdown in the scoreboard's top bar.</p>
+        <p><strong>Important:</strong> scoreboard data is saved directly in this browser using its local storage, not on a server — there's no login and nothing is sent anywhere. That means it will still be there next lesson as long as you reopen the app on the <strong>same device and browser</strong>. Don't clear your browser's cookies, cache, or site data for this app, or the scoreboards will be permanently erased.</p>
         <h3>Using the Filters</h3>
         <ul>
           <li><strong>Energy:</strong> High-energy games need space and movement. Low-energy games suit quieter, focused moments.</li>
