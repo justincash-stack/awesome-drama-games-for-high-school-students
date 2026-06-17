@@ -45,9 +45,11 @@ self.addEventListener('fetch', e => {
 
   if (isCoreRequest(e.request)) {
     /* Network-first: always try to get the latest version; fall back to
-       the cached copy (or cached index.html) only when offline. */
+       the cached copy (or cached index.html) only when offline.
+       cache: 'no-store' forces a true bypass of the HTTP cache so a
+       host's Cache-Control headers can't make this look like cache-first. */
     e.respondWith(
-      fetch(e.request).then(res => {
+      fetch(e.request, { cache: 'no-store' }).then(res => {
         if (res && res.status === 200) {
           const clone = res.clone();
           caches.open(CACHE).then(c => c.put(e.request, clone));

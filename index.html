@@ -644,22 +644,47 @@
       display: none;
       text-decoration: underline;
     }
-    .teacher-info-btn {
+    /* ── TEACHER TOOLS BAR ── */
+    #teacher-tools-bar {
+      background: var(--cyan);
+      border-bottom: 4px solid var(--black);
+      padding: 12px 28px;
+    }
+    .teacher-tools-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .teacher-tools-label {
+      font-family: 'Anton', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+    .teacher-tools-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .teacher-tools-btn {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 700;
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      background: transparent;
-      border: 2px solid rgba(255,255,255,0.15);
-      color: rgba(255,255,255,0.4);
+      padding: 8px 16px;
+      border: 3px solid var(--black);
+      background: var(--white);
+      color: var(--black);
       cursor: pointer;
-      padding: 4px 10px;
-      margin-left: auto;
-      transition: all 0.1s;
-      border-radius: 2px;
+      box-shadow: 3px 3px 0 var(--black);
+      transition: transform 0.08s, background 0.1s;
     }
-    .teacher-info-btn:hover { border-color: var(--yellow); color: var(--yellow); }
+    .teacher-tools-btn:hover { background: var(--yellow); }
+    .teacher-tools-btn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--black); }
+    .teacher-tools-btn-primary { background: var(--red); color: var(--white); }
+    .teacher-tools-btn-primary:hover { background: #ff5a68; }
 
     /* ── CARD METADATA ── */
     .card-meta { display: flex; gap: 5px; align-items: center; margin-bottom: 6px; }
@@ -1089,8 +1114,8 @@
       gap: 10px;
       flex-wrap: wrap;
       margin-bottom: 22px;
-      background: rgba(255,255,255,0.06);
-      border: 2px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.08);
+      border: 3px solid var(--black);
       padding: 12px 16px;
     }
     .sb-criteria-label {
@@ -1099,22 +1124,29 @@
       font-size: 0.78rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.6);
+      color: rgba(255,255,255,0.7);
     }
-    .sb-criteria-list { display: flex; gap: 8px; flex-wrap: wrap; }
+    .sb-criteria-list { display: flex; gap: 10px; flex-wrap: wrap; }
     .sb-criterion-chip {
       display: flex;
       align-items: center;
       gap: 4px;
       background: var(--white);
-      border: 2px solid var(--black);
-      padding: 4px 6px;
+      border: 3px solid var(--black);
+      box-shadow: 3px 3px 0 var(--black);
+      padding: 5px 7px;
     }
+    .sb-criterion-chip:nth-child(3n+1) { border-color: var(--red); }
+    .sb-criterion-chip:nth-child(3n+1) .sb-remove-btn:hover { color: var(--red); }
+    .sb-criterion-chip:nth-child(3n+2) { border-color: var(--cyan); }
+    .sb-criterion-chip:nth-child(3n+2) .sb-remove-btn:hover { color: #0891b2; }
+    .sb-criterion-chip:nth-child(3n)   { border-color: var(--orange); }
+    .sb-criterion-chip:nth-child(3n) .sb-remove-btn:hover { color: var(--orange); }
     .sb-criterion-chip input[type="text"] {
       width: 96px;
       border: none;
       font-family: 'Barlow', sans-serif;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.85rem;
       color: var(--black);
       background: transparent;
@@ -1139,20 +1171,49 @@
       line-height: 1;
       padding: 0 2px;
       font-weight: 700;
+      transition: color 0.1s;
     }
     .sb-remove-btn:hover { color: var(--red); }
 
     .sb-table-wrap {
       overflow-x: auto;
-      border: 4px solid var(--black);
-      box-shadow: 6px 6px 0 var(--black);
+      border: 5px solid var(--black);
+      box-shadow: 7px 7px 0 var(--orange);
       background: var(--white);
     }
     .sb-table { border-collapse: collapse; width: 100%; min-width: 640px; color: var(--black); }
-    .sb-table th, .sb-table td { border: 2px solid #ddd; padding: 8px 10px; text-align: center; vertical-align: middle; }
-    .sb-th-game, .sb-td-game { text-align: left; min-width: 220px; background: #f7f7f7; }
-    .sb-th-team { min-width: 150px; background: #f7f7f7; }
-    .sb-th-actions, .sb-td-actions { width: 36px; padding: 4px; }
+    .sb-table th, .sb-table td { border: 3px solid var(--black); padding: 9px 10px; text-align: center; vertical-align: middle; }
+    .sb-th-game {
+      text-align: left;
+      min-width: 220px;
+      background: var(--black);
+      color: var(--yellow);
+      font-family: 'Anton', sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+    .sb-td-game {
+      text-align: left;
+      min-width: 220px;
+      background: #fffaf0;
+      border-left: 6px solid var(--red);
+    }
+    .sb-th-team {
+      min-width: 150px;
+      font-family: 'Anton', sans-serif;
+      letter-spacing: 0.04em;
+    }
+    .sb-th-team:nth-child(4n+2) { background: var(--red);    color: #fff; }
+    .sb-th-team:nth-child(4n+3) { background: var(--yellow); color: var(--black); }
+    .sb-th-team:nth-child(4n)   { background: var(--cyan);   color: var(--black); }
+    .sb-th-team:nth-child(4n+1) { background: var(--orange); color: var(--black); }
+    .sb-td-score:nth-child(4n+2) { background: rgba(230,57,70,0.06); }
+    .sb-td-score:nth-child(4n+3) { background: rgba(255,214,10,0.1); }
+    .sb-td-score:nth-child(4n)   { background: rgba(0,180,216,0.08); }
+    .sb-td-score:nth-child(4n+1) { background: rgba(255,102,0,0.08); }
+    .sb-th-actions, .sb-td-actions { width: 36px; padding: 4px; background: var(--black); }
+    .sb-td-actions { background: var(--white); }
     .sb-team-head { display: flex; align-items: center; gap: 6px; justify-content: center; }
     .sb-team-name-input {
       width: 100%;
@@ -1164,36 +1225,49 @@
       text-transform: uppercase;
       letter-spacing: 0.04em;
       text-align: center;
-      color: var(--black);
+      color: inherit;
     }
+    .sb-team-head .sb-remove-btn { color: inherit; opacity: 0.55; }
+    .sb-team-head .sb-remove-btn:hover { opacity: 1; color: inherit; }
     .sb-game-select {
       width: 100%;
-      font-family: 'Barlow', sans-serif;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
       font-size: 0.88rem;
-      padding: 6px;
-      border: 2px solid #ccc;
+      padding: 7px;
+      border: 3px solid var(--black);
       background: var(--white);
       color: var(--black);
     }
     .sb-cell-criteria { display: flex; flex-direction: column; gap: 3px; align-items: stretch; }
     .sb-crit-input-row { display: flex; align-items: center; gap: 4px; justify-content: center; font-size: 0.74rem; color: #555; }
-    .sb-crit-mini-label { min-width: 64px; text-align: right; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .sb-score-input { width: 42px; text-align: center; border: 1.5px solid #ccc; padding: 2px; font-family: 'Barlow', sans-serif; font-weight: 700; }
-    .sb-crit-max { color: #888; }
+    .sb-crit-mini-label { min-width: 64px; text-align: right; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .sb-score-input { width: 42px; text-align: center; border: 2px solid var(--black); padding: 3px; font-family: 'Barlow', sans-serif; font-weight: 700; }
+    .sb-score-input:focus { outline: 2px solid var(--red); }
+    .sb-crit-max { color: #888; font-weight: 700; }
     .sb-subtotal {
       margin-top: 4px;
       font-family: 'Anton', sans-serif;
-      font-size: 1rem;
+      font-size: 1.05rem;
       color: var(--black);
       background: var(--yellow);
       border: 2px solid var(--black);
-      padding: 2px 0;
+      box-shadow: 2px 2px 0 var(--black);
+      padding: 3px 0;
     }
     .sb-score-input-single { width: 70px; font-size: 1.1rem; padding: 8px; }
 
-    .sb-totals-row { display: none; background: var(--yellow); }
+    .sb-totals-row { display: none; }
     .sb-totals-row.active { display: table-row; }
-    .sb-totals-row td { font-family: 'Anton', sans-serif; font-size: 1.1rem; color: var(--black); }
+    .sb-totals-row td {
+      font-family: 'Anton', sans-serif;
+      font-size: 1.15rem;
+      color: var(--black);
+      background: var(--yellow);
+      letter-spacing: 0.05em;
+    }
+    .sb-totals-row td:first-child { background: var(--red); color: #fff; }
+    .sb-totals-row td:last-child { background: var(--black); }
 
     .sb-actions { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; align-items: center; }
     .sb-add-row-btn, .sb-add-team-btn {
@@ -1212,6 +1286,7 @@
     .sb-add-row-btn:hover, .sb-add-team-btn:hover { border-color: var(--yellow); color: var(--yellow); }
 
     .sb-empty-msg { color: rgba(255,255,255,0.55); font-size: 0.95rem; margin: 14px 0; }
+    .sb-empty-row { padding: 22px 16px !important; color: #888; font-style: italic; background: #fdfdfd; }
 
     /* ── TEACHER MODAL ── */
     #teacher-modal {
@@ -1371,7 +1446,16 @@
         <button class="flt" data-filter="skill" data-val="listening">Listening</button>
       </div>
       <button class="filter-clear-all" id="filter-clear-all">Clear filters</button>
-      <button class="teacher-info-btn" id="teacher-info-btn">For Teachers</button>
+    </div>
+  </div>
+
+  <div id="teacher-tools-bar">
+    <div class="teacher-tools-inner">
+      <span class="teacher-tools-label">&#127917; For Teachers</span>
+      <div class="teacher-tools-actions">
+        <button class="teacher-tools-btn" id="teacher-info-btn">&#128214; Teacher Guide</button>
+        <button class="teacher-tools-btn teacher-tools-btn-primary" id="home-scoreboard-btn">&#127942; Scoreboard</button>
+      </div>
     </div>
   </div>
 
@@ -1436,7 +1520,7 @@
     <div class="proj-bottom">
       <button class="proj-toggle-btn" id="proj-toggle-prompts">&#128203; Display Prompts</button>
       <div class="proj-timer-panel" id="proj-timer-panel">
-        <div class="t-display" id="t-display">–:––</div>
+        <div class="t-display" id="t-display">0:00</div>
         <div class="t-presets">
           <button class="t-pre" data-secs="60">1 Min</button>
           <button class="t-pre" data-secs="90">90 Sec</button>

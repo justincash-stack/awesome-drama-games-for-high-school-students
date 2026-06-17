@@ -14,6 +14,7 @@ const container   = document.getElementById('games-container');
 const searchEl    = document.getElementById('search');
 const searchWrap  = document.getElementById('search-wrap');
 const filterBar   = document.getElementById('filter-bar');
+const teacherToolsBar = document.getElementById('teacher-tools-bar');
 const detailEl    = document.getElementById('game-detail-content');
 const backBtn     = document.getElementById('back-btn');
 
@@ -299,9 +300,9 @@ document.addEventListener('fullscreenchange', () => {
 });
 document.addEventListener('keydown', e => {
   if (e.key !== 'Escape') return;
-  const scoreboardOverlay = document.getElementById('scoreboard-overlay');
-  if (scoreboardOverlay && scoreboardOverlay.classList.contains('active')) {
-    scoreboardOverlay.classList.remove('active');
+  const scoreboardOverlayEl = document.getElementById('scoreboard-overlay');
+  if (scoreboardOverlayEl && scoreboardOverlayEl.classList.contains('active')) {
+    closeScoreboardOverlay();
     return;
   }
   if (projOverlay.classList.contains('active')) closeProjector();
@@ -354,7 +355,7 @@ function timerFormat(s) {
 
 function timerUpdateDisplay() {
   if (!tDisplay) return;
-  tDisplay.textContent = timerSecs > 0 || timerTotal > 0 ? timerFormat(timerSecs) : '–:––';
+  tDisplay.textContent = timerSecs > 0 || timerTotal > 0 ? timerFormat(timerSecs) : '0:00';
   tDisplay.classList.remove('warn', 'danger', 'done');
   if (timerSecs <= 0 && timerTotal > 0) {
     tDisplay.classList.add('done');
@@ -436,6 +437,7 @@ function route() {
     gameView.style.display   = 'block';
     searchWrap.style.display = 'none';
     filterBar.style.display  = 'none';
+    if (teacherToolsBar) teacherToolsBar.style.display = 'none';
     renderGame(id);
     window.scrollTo(0, 0);
   } else {
@@ -443,6 +445,7 @@ function route() {
     gameView.style.display   = 'none';
     searchWrap.style.display = 'block';
     filterBar.style.display  = 'block';
+    if (teacherToolsBar) teacherToolsBar.style.display = 'block';
     document.title = '100 Awesome Drama Games for High School Students';
     renderHome(searchEl.value);
     window.scrollTo(0, 0);
@@ -781,19 +784,39 @@ function renderScoreboard() {
   document.getElementById('sb-table-foot').innerHTML = '';
 }
 
-/* ── SCOREBOARD: OPEN / CLOSE ── */
+/* ── SCOREBOARD: OPEN / CLOSE ──
+   #scoreboard-overlay is a sibling of #proj-overlay, not a descendant.
+   The Fullscreen API only renders the fullscreen element's own subtree —
+   a sibling stays invisible no matter its z-index — so when Projector
+   Mode is fullscreen we must switch the fullscreen target to the
+   scoreboard while it's open, then switch it back on close. */
 const scoreboardOverlay = document.getElementById('scoreboard-overlay');
 
 function openScoreboard() {
   renderScoreboard();
   scoreboardOverlay.classList.add('active');
+  const sbCloseBtnEl = document.getElementById('sb-close-btn');
+  if (sbCloseBtnEl) {
+    sbCloseBtnEl.innerHTML = projOverlay.classList.contains('active')
+      ? '&#x2715; Back to Projector'
+      : '&#x2715; Close Scoreboard';
+  }
+  if (document.fullscreenElement === projOverlay && scoreboardOverlay.requestFullscreen) {
+    scoreboardOverlay.requestFullscreen().catch(() => {});
+  }
 }
 function closeScoreboardOverlay() {
   scoreboardOverlay.classList.remove('active');
+  if (document.fullscreenElement === scoreboardOverlay && projOverlay.classList.contains('active') && projOverlay.requestFullscreen) {
+    projOverlay.requestFullscreen().catch(() => {});
+  }
 }
 
 const projScoreboardBtn = document.getElementById('proj-scoreboard-btn');
 if (projScoreboardBtn) projScoreboardBtn.addEventListener('click', openScoreboard);
+
+const homeScoreboardBtn = document.getElementById('home-scoreboard-btn');
+if (homeScoreboardBtn) homeScoreboardBtn.addEventListener('click', openScoreboard);
 
 const sbCloseBtn = document.getElementById('sb-close-btn');
 if (sbCloseBtn) sbCloseBtn.addEventListener('click', closeScoreboardOverlay);
