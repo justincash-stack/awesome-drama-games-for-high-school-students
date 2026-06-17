@@ -946,6 +946,8 @@
       box-shadow: 4px 4px 0 var(--black);
       transition: transform 0.08s, background 0.1s;
       flex-shrink: 0;
+      position: relative;
+      z-index: 5;
     }
     .proj-toggle-btn:hover { background: var(--yellow); }
     .proj-toggle-btn:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--black); }
@@ -978,7 +980,7 @@
     .t-pre.active { border-color: var(--yellow); background: var(--yellow); color: var(--black); }
     .t-display {
       font-family: 'Anton', sans-serif;
-      font-size: clamp(6rem, 19vw, 14rem);
+      font-size: clamp(3.5rem, min(19vw, 16vh), 14rem);
       letter-spacing: 0.04em;
       color: var(--yellow);
       text-align: center;
