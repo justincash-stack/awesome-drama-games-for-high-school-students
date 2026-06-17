@@ -294,7 +294,14 @@ function closeProjector() {
 
 projCloseBtn.addEventListener('click', closeProjector);
 document.addEventListener('fullscreenchange', () => {
-  if (!document.fullscreenElement && projOverlay.classList.contains('active')) {
+  /* Some browsers exit fullscreen automatically when a text input gains
+     focus (e.g. certain mobile keyboards). Don't treat that as "the
+     teacher wants to exit Projector Mode" while they're mid-edit in the
+     Scoreboard — only auto-close on a genuine, deliberate fullscreen exit
+     with no scoreboard in the way. */
+  const scoreboardOverlayEl = document.getElementById('scoreboard-overlay');
+  const scoreboardOpen = scoreboardOverlayEl && scoreboardOverlayEl.classList.contains('active');
+  if (!document.fullscreenElement && projOverlay.classList.contains('active') && !scoreboardOpen) {
     closeProjector();
   }
 });
