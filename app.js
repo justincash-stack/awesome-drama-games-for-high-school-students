@@ -154,8 +154,8 @@ function renderGame(id) {
   const skills = g.skills || [];
   const metaTagsHtml = (energy || skills.length) ? `
     <div class="detail-meta">
-      ${energy ? `<span class="detail-energy-badge ${energy}">&#9889; ${energy} energy</span>` : ''}
-      ${skills.map(s => `<span class="skill-tag">${escHtml(s)}</span>`).join('')}
+      ${energy ? `<button type="button" class="detail-energy-badge ${energy}" data-filter="energy" data-val="${energy}">&#9889; ${energy} energy</button>` : ''}
+      ${skills.map(s => `<button type="button" class="skill-tag" data-filter="skill" data-val="${escHtml(s)}">${escHtml(s)}</button>`).join('')}
     </div>` : '';
 
   detailEl.innerHTML = `
@@ -176,7 +176,7 @@ function renderGame(id) {
         ${g.setup ? `
         <div class="game-section">
           <div class="section-label">Set-up</div>
-          <p class="section-text">${escHtml(g.setup)}${hasPrompts(g.prompts) ? ' Or use the prompts suggested below.' : ''}</p>
+          <p class="section-text">${escHtml(g.setup)}${hasPrompts(g.prompts) ? ' Or use the prompts suggested below, differentiated by difficulty level.' : ''}</p>
         </div>` : ''}
         ${g.howToPlay ? `
         <div class="game-section">
@@ -231,12 +231,42 @@ function buildPrompts(prompts, gameId) {
 }
 
 /* ── PROJECTOR MODE ── */
-const projOverlay  = document.getElementById('proj-overlay');
-const projGamenum  = document.getElementById('proj-gamenum');
-const projTitle    = document.getElementById('proj-gametitle');
-const projSetup    = document.getElementById('proj-setup');
-const projHowto    = document.getElementById('proj-howto');
-const projCloseBtn = document.getElementById('proj-close-btn');
+const projOverlay   = document.getElementById('proj-overlay');
+const projGamenum   = document.getElementById('proj-gamenum');
+const projTitle     = document.getElementById('proj-gametitle');
+const projSetup     = document.getElementById('proj-setup');
+const projHowto     = document.getElementById('proj-howto');
+const projPurpose   = document.getElementById('proj-purpose');
+const projCloseBtn  = document.getElementById('proj-close-btn');
+const projTogglePromptsBtn = document.getElementById('proj-toggle-prompts');
+const projTimerPanel  = document.getElementById('proj-timer-panel');
+const projPromptsPanel = document.getElementById('proj-prompts-panel');
+
+function showProjectorTimer() {
+  projTimerPanel.classList.remove('proj-hidden');
+  projPromptsPanel.classList.remove('active');
+  projTogglePromptsBtn.innerHTML = '&#128203; Display Prompts';
+}
+
+function showProjectorPrompts() {
+  projTimerPanel.classList.add('proj-hidden');
+  projPromptsPanel.classList.add('active');
+  projTogglePromptsBtn.innerHTML = '&#9201; Show Timer';
+}
+
+projTogglePromptsBtn.addEventListener('click', () => {
+  if (projPromptsPanel.classList.contains('active')) showProjectorTimer();
+  else showProjectorPrompts();
+});
+
+projPromptsPanel.addEventListener('click', e => {
+  const tab = e.target.closest('.prompt-tab');
+  if (!tab) return;
+  const level  = tab.dataset.level;
+  const gameId = tab.dataset.game;
+  projPromptsPanel.querySelectorAll(`.prompt-tab[data-game="${gameId}"]`).forEach(t => t.classList.toggle('active', t === tab));
+  projPromptsPanel.querySelectorAll(`.prompt-panel[data-game="${gameId}"]`).forEach(p => p.classList.toggle('active', p.dataset.panel === level));
+});
 
 function openProjector(id) {
   const g = GAMES.find(x => x.id === id);
@@ -245,6 +275,9 @@ function openProjector(id) {
   projTitle.textContent   = g.title;
   projSetup.textContent   = g.setup || '';
   projHowto.textContent   = g.howToPlay || '';
+  projPurpose.textContent = g.purpose || '';
+  projPromptsPanel.innerHTML = buildPrompts(g.prompts, g.id);
+  showProjectorTimer();
   projOverlay.classList.add('active');
   timerReset();
   document.body.style.overflow = 'hidden';
@@ -371,8 +404,7 @@ document.querySelectorAll('.t-pre').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.t-pre').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const mins = parseInt(btn.dataset.mins, 10);
-    timerTotal = mins * 60;
+    timerTotal = parseInt(btn.dataset.secs, 10);
     timerReset();
   });
 });
@@ -477,8 +509,26 @@ detailEl.addEventListener('click', e => {
     const gameId  = tab.dataset.game;
     detailEl.querySelectorAll(`.prompt-tab[data-game="${gameId}"]`).forEach(t => t.classList.toggle('active', t === tab));
     detailEl.querySelectorAll(`.prompt-panel[data-game="${gameId}"]`).forEach(p => p.classList.toggle('active', p.dataset.panel === level));
+    return;
+  }
+  const tagBtn = e.target.closest('[data-filter]');
+  if (tagBtn) {
+    goToFilteredHome(tagBtn.dataset.filter, tagBtn.dataset.val);
   }
 });
+
+/* ── TAG → FILTERED HOME ── */
+function goToFilteredHome(filterType, value) {
+  if (filterType === 'energy') {
+    activeFilters.energy = value;
+    activeFilters.skills.clear();
+  } else if (filterType === 'skill') {
+    activeFilters.skills = new Set([value]);
+    activeFilters.energy = null;
+  }
+  syncFilterUI();
+  location.hash = '';
+}
 
 /* ── BACK BUTTON ── */
 backBtn.addEventListener('click', () => { location.hash = ''; });

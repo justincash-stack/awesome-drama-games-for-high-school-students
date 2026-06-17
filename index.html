@@ -690,7 +690,13 @@
       text-transform: uppercase;
       padding: 3px 10px;
       border-radius: 2px;
+      border: none;
+      appearance: none;
+      cursor: pointer;
+      transition: filter 0.1s, transform 0.08s;
     }
+    .detail-energy-badge:hover { filter: brightness(1.12); }
+    .detail-energy-badge:active { transform: translateY(1px); }
     .detail-energy-badge.high   { background: var(--red);    color: #fff; }
     .detail-energy-badge.medium { background: var(--yellow); color: var(--black); }
     .detail-energy-badge.low    { background: var(--cyan);   color: var(--black); }
@@ -717,7 +723,12 @@
       color: rgba(255,255,255,0.7);
       background: rgba(255,255,255,0.07);
       border-radius: 2px;
+      appearance: none;
+      cursor: pointer;
+      transition: all 0.1s;
     }
+    .skill-tag:hover { border-color: var(--yellow); color: var(--yellow); background: rgba(255,214,10,0.1); }
+    .skill-tag:active { transform: translateY(1px); }
 
     /* ── TIERED PROMPTS TABS ── */
     .prompt-tabs {
@@ -777,8 +788,10 @@
       position: fixed;
       inset: 0;
       z-index: 9999;
-      background: #0a0a0a;
-      color: #fff;
+      background-color: var(--purple);
+      background-image: radial-gradient(circle, var(--orange) 4px, transparent 4px);
+      background-size: 28px 28px;
+      color: var(--white);
       flex-direction: column;
     }
     #proj-overlay.active { display: flex; }
@@ -786,15 +799,16 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 12px 28px;
-      border-bottom: 2px solid #1e1e1e;
+      padding: 10px 28px;
+      background: var(--red);
+      border-bottom: 5px solid var(--black);
       flex-shrink: 0;
     }
     .proj-gamenum {
       font-family: 'Anton', sans-serif;
       font-size: 0.8rem;
       letter-spacing: 0.2em;
-      color: rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.75);
       text-transform: uppercase;
     }
     .proj-close-btn {
@@ -803,111 +817,171 @@
       font-size: 0.8rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      background: transparent;
-      border: 2px solid rgba(255,255,255,0.2);
-      color: rgba(255,255,255,0.5);
-      padding: 5px 14px;
+      background: var(--black);
+      border: 2px solid var(--yellow);
+      color: var(--yellow);
+      padding: 6px 14px;
       cursor: pointer;
       transition: all 0.1s;
     }
-    .proj-close-btn:hover { border-color: #ef4444; color: #ef4444; }
+    .proj-close-btn:hover { background: var(--yellow); color: var(--black); }
     .proj-gametitle {
       font-family: 'Anton', sans-serif;
-      font-size: clamp(2.4rem, 5.5vw, 4.8rem);
+      font-size: clamp(1.8rem, 4vw, 3.2rem);
       letter-spacing: 0.04em;
       text-transform: uppercase;
       color: var(--yellow);
-      padding: 14px 28px 8px;
+      text-shadow: 3px 3px 0 rgba(0,0,0,0.35);
+      background: var(--red);
+      padding: 10px 28px 16px;
       line-height: 1;
       flex-shrink: 0;
+      border-bottom: 5px solid var(--black);
     }
-    .proj-body {
+    .proj-top {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      flex: 1;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      flex: 1 1 50%;
       overflow: hidden;
-      padding: 0 20px;
+      padding: 16px 20px;
       min-height: 0;
     }
     .proj-col {
-      padding: 14px;
+      background: var(--white);
+      color: var(--black);
+      border: 4px solid var(--black);
+      box-shadow: 5px 5px 0 var(--black);
+      padding: 14px 16px;
       overflow-y: auto;
     }
-    .proj-col + .proj-col { border-left: 2px solid #1e1e1e; }
     .proj-sec-label {
       font-family: 'Anton', sans-serif;
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
-      color: rgba(255,255,255,0.28);
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      color: var(--white);
+      background: var(--black);
       text-transform: uppercase;
       margin-bottom: 10px;
-      background: #1a1a1a;
       display: inline-block;
-      padding: 3px 8px;
+      padding: 3px 10px;
     }
     .proj-sec-text {
-      font-size: clamp(0.95rem, 1.9vw, 1.28rem);
-      line-height: 1.7;
-      color: rgba(255,255,255,0.86);
+      font-size: clamp(0.82rem, 1.4vw, 1.05rem);
+      line-height: 1.6;
+      color: #1a1a1a;
     }
-    /* ── TIMER (in projector) ── */
-    .proj-timer-bar {
+    .proj-purpose-text {
+      background: var(--yellow);
+      border: 3px solid var(--black);
+      padding: 10px 12px;
+      font-weight: 600;
+    }
+
+    /* ── PROJECTOR BOTTOM: timer OR prompts, centred ── */
+    .proj-bottom {
+      flex: 1 1 50%;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 16px;
-      padding: 12px 28px;
-      border-top: 2px solid #1a1a1a;
-      background: #0f0f0f;
-      flex-shrink: 0;
-      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+      padding: 20px 24px;
+      border-top: 5px solid var(--black);
+      min-height: 0;
+      overflow-y: auto;
     }
-    .t-presets { display: flex; gap: 5px; }
+    .proj-toggle-btn {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--orange);
+      border: 3px solid var(--black);
+      color: var(--black);
+      padding: 10px 22px;
+      cursor: pointer;
+      box-shadow: 4px 4px 0 var(--black);
+      transition: transform 0.08s, background 0.1s;
+      flex-shrink: 0;
+    }
+    .proj-toggle-btn:hover { background: var(--yellow); }
+    .proj-toggle-btn:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--black); }
+
+    .proj-timer-panel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+    .proj-timer-panel.proj-hidden,
+    .proj-prompts-panel { display: none; }
+    .proj-prompts-panel.active { display: block; }
+
+    .t-presets { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
     .t-pre {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 700;
-      font-size: 0.73rem;
-      letter-spacing: 0.06em;
+      font-size: 0.85rem;
+      letter-spacing: 0.07em;
       text-transform: uppercase;
       background: transparent;
-      border: 2px solid #2a2a2a;
-      color: rgba(255,255,255,0.35);
-      padding: 5px 10px;
+      border: 3px solid rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.65);
+      padding: 7px 16px;
       cursor: pointer;
       transition: all 0.1s;
     }
     .t-pre:hover { border-color: var(--yellow); color: var(--yellow); }
-    .t-pre.active { border-color: var(--yellow); color: var(--yellow); }
+    .t-pre.active { border-color: var(--yellow); background: var(--yellow); color: var(--black); }
     .t-display {
       font-family: 'Anton', sans-serif;
-      font-size: clamp(2rem, 4vw, 3.4rem);
+      font-size: clamp(5rem, 16vw, 11rem);
       letter-spacing: 0.04em;
-      color: #fff;
-      min-width: 160px;
+      color: var(--yellow);
       text-align: center;
       font-variant-numeric: tabular-nums;
+      text-shadow: 5px 5px 0 rgba(0,0,0,0.4);
       transition: color 0.3s;
+      line-height: 1;
     }
-    .t-display.warn   { color: #f97316; }
+    .t-display.warn   { color: var(--orange); }
     .t-display.danger { color: var(--red); }
     .t-display.done   { color: var(--red); animation: tFlash 0.55s infinite alternate; }
     @keyframes tFlash { from { opacity:1; } to { opacity:0.3; } }
-    .t-btns { display: flex; gap: 8px; }
+    .t-btns { display: flex; gap: 10px; }
     .t-btn {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 700;
-      font-size: 0.83rem;
+      font-size: 0.9rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      background: #1c1c1c;
-      border: 2px solid #333;
-      color: rgba(255,255,255,0.7);
-      padding: 8px 16px;
+      background: var(--black);
+      border: 3px solid rgba(255,255,255,0.3);
+      color: var(--white);
+      padding: 10px 20px;
       cursor: pointer;
       transition: all 0.1s;
     }
-    .t-btn:hover { background: #2a2a2a; border-color: var(--yellow); color: var(--yellow); }
-    .t-btn.t-primary { background: var(--yellow); border-color: var(--yellow); color: var(--black); }
+    .t-btn:hover { border-color: var(--yellow); color: var(--yellow); }
+    .t-btn.t-primary { background: var(--yellow); border-color: var(--black); color: var(--black); }
     .t-btn.t-primary:hover { background: #ffe040; }
+
+    .proj-prompts-panel {
+      width: 100%;
+      max-width: 920px;
+      max-height: 100%;
+      overflow-y: auto;
+      background: var(--white);
+      color: var(--black);
+      border: 4px solid var(--black);
+      box-shadow: 6px 6px 0 var(--black);
+      padding: 18px 24px;
+    }
+    .proj-prompts-panel .prompts-intro { font-size: 0.95rem; }
+    .proj-prompts-panel .prompt-tab { font-size: 1rem; padding: 10px 22px; }
+    .proj-prompts-panel .prompt-list li { font-size: 1.18rem; line-height: 1.5; padding: 10px 14px; }
 
     /* ── TEACHER MODAL ── */
     #teacher-modal {
@@ -992,6 +1066,9 @@
     }
     @media (max-width: 400px) {
       .games-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 760px) {
+      .proj-top { grid-template-columns: 1fr; overflow-y: auto; }
     }
   </style>
 </head>
@@ -1109,7 +1186,7 @@
       <button class="proj-close-btn" id="proj-close-btn">&#x2715; Exit Projector</button>
     </div>
     <div class="proj-gametitle" id="proj-gametitle"></div>
-    <div class="proj-body">
+    <div class="proj-top">
       <div class="proj-col">
         <div class="proj-sec-label">Set-up</div>
         <div class="proj-sec-text" id="proj-setup"></div>
@@ -1118,21 +1195,29 @@
         <div class="proj-sec-label">How to Play</div>
         <div class="proj-sec-text" id="proj-howto"></div>
       </div>
+      <div class="proj-col">
+        <div class="proj-sec-label">Purpose</div>
+        <div class="proj-sec-text proj-purpose-text" id="proj-purpose"></div>
+      </div>
     </div>
-    <div class="proj-timer-bar">
-      <div class="t-presets">
-        <button class="t-pre" data-mins="2">2 min</button>
-        <button class="t-pre" data-mins="5">5 min</button>
-        <button class="t-pre" data-mins="10">10 min</button>
-        <button class="t-pre" data-mins="15">15 min</button>
-        <button class="t-pre" data-mins="20">20 min</button>
+    <div class="proj-bottom">
+      <button class="proj-toggle-btn" id="proj-toggle-prompts">&#128203; Display Prompts</button>
+      <div class="proj-timer-panel" id="proj-timer-panel">
+        <div class="t-display" id="t-display">–:––</div>
+        <div class="t-presets">
+          <button class="t-pre" data-secs="60">1 Min</button>
+          <button class="t-pre" data-secs="90">90 Sec</button>
+          <button class="t-pre" data-secs="120">2 Min</button>
+          <button class="t-pre" data-secs="180">3 Min</button>
+          <button class="t-pre" data-secs="240">4 Min</button>
+        </div>
+        <div class="t-btns">
+          <button class="t-btn t-primary" id="t-start">Start</button>
+          <button class="t-btn" id="t-reset">Reset</button>
+          <button class="t-btn" id="t-extend">+1 Min</button>
+        </div>
       </div>
-      <div class="t-display" id="t-display">–:––</div>
-      <div class="t-btns">
-        <button class="t-btn t-primary" id="t-start">Start</button>
-        <button class="t-btn" id="t-reset">Reset</button>
-        <button class="t-btn" id="t-extend">+1 min</button>
-      </div>
+      <div class="proj-prompts-panel" id="proj-prompts-panel"></div>
     </div>
   </div>
 
