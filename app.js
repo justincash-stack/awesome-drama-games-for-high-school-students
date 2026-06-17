@@ -864,6 +864,16 @@ if (sbTotalBtn) sbTotalBtn.addEventListener('click', () => {
   sbUpdateTotals(sbGetActiveBoard());
 });
 
+const sbClearScoresBtn = document.getElementById('sb-clear-scores-btn');
+if (sbClearScoresBtn) sbClearScoresBtn.addEventListener('click', () => {
+  const board = sbGetActiveBoard();
+  const label = board.className && board.className.trim() ? board.className : 'this class';
+  if (!confirm(`Clear all scores for "${label}"? Team names, games, and criteria will be kept.`)) return;
+  board.rows.forEach(row => { row.scores = {}; });
+  sbSave();
+  renderScoreboard();
+});
+
 /* ── SCOREBOARD: TABLE/CRITERIA DELEGATION (click, input, change) ── */
 const sbBody = document.querySelector('.sb-body');
 
