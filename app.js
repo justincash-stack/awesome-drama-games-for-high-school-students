@@ -282,29 +282,15 @@ function openProjector(id) {
   projOverlay.classList.add('active');
   timerReset();
   document.body.style.overflow = 'hidden';
-  if (projOverlay.requestFullscreen) projOverlay.requestFullscreen().catch(() => {});
 }
 
 function closeProjector() {
   projOverlay.classList.remove('active');
   timerStop();
   document.body.style.overflow = '';
-  if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
 }
 
 projCloseBtn.addEventListener('click', closeProjector);
-document.addEventListener('fullscreenchange', () => {
-  /* Some browsers exit fullscreen automatically when a text input gains
-     focus (e.g. certain mobile keyboards). Don't treat that as "the
-     teacher wants to exit Projector Mode" while they're mid-edit in the
-     Scoreboard — only auto-close on a genuine, deliberate fullscreen exit
-     with no scoreboard in the way. */
-  const scoreboardOverlayEl = document.getElementById('scoreboard-overlay');
-  const scoreboardOpen = scoreboardOverlayEl && scoreboardOverlayEl.classList.contains('active');
-  if (!document.fullscreenElement && projOverlay.classList.contains('active') && !scoreboardOpen) {
-    closeProjector();
-  }
-});
 document.addEventListener('keydown', e => {
   if (e.key !== 'Escape') return;
   const scoreboardOverlayEl = document.getElementById('scoreboard-overlay');
@@ -791,12 +777,7 @@ function renderScoreboard() {
   document.getElementById('sb-table-foot').innerHTML = '';
 }
 
-/* ── SCOREBOARD: OPEN / CLOSE ──
-   #scoreboard-overlay is a sibling of #proj-overlay, not a descendant.
-   The Fullscreen API only renders the fullscreen element's own subtree —
-   a sibling stays invisible no matter its z-index — so when Projector
-   Mode is fullscreen we must switch the fullscreen target to the
-   scoreboard while it's open, then switch it back on close. */
+/* ── SCOREBOARD: OPEN / CLOSE ── */
 const scoreboardOverlay = document.getElementById('scoreboard-overlay');
 
 function openScoreboard() {
@@ -808,15 +789,9 @@ function openScoreboard() {
       ? '&#x2715; Back to Projector'
       : '&#x2715; Close Scoreboard';
   }
-  if (document.fullscreenElement === projOverlay && scoreboardOverlay.requestFullscreen) {
-    scoreboardOverlay.requestFullscreen().catch(() => {});
-  }
 }
 function closeScoreboardOverlay() {
   scoreboardOverlay.classList.remove('active');
-  if (document.fullscreenElement === scoreboardOverlay && projOverlay.classList.contains('active') && projOverlay.requestFullscreen) {
-    projOverlay.requestFullscreen().catch(() => {});
-  }
 }
 
 const projScoreboardBtn = document.getElementById('proj-scoreboard-btn');
